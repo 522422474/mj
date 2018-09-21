@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "d4fa2e23-0e67-4395-903c-908733f6c47b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "artword_yikanpai": {
+      "ver": "1.0.3",
+      "uuid": "45d5dd70-a359-4b6b-9a75-e1852858be22",
+      "rawTextureUuid": "d4fa2e23-0e67-4395-903c-908733f6c47b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 139,
+      "height": 57,
+      "rawWidth": 139,
+      "rawHeight": 57,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

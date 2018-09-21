@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_face_you_chu_22",
+    "texture": "9fTVlruMZIUboP06dlWv5n",
+    "rect": [
+      0,
+      1,
+      86,
+      59
+    ],
+    "offset": [
+      -4,
+      -0.5
+    ],
+    "originalSize": [
+      94,
+      60
+    ]
+  }
+}

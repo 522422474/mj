@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wenzidikuang",
+    "texture": "a9SbKasS5JqKOEGhlvm2c4",
+    "rect": [
+      0,
+      0,
+      431,
+      71
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      431,
+      71
+    ],
+    "capInsets": [
+      16,
+      14,
+      15,
+      13
+    ]
+  }
+}

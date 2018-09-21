@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "erShui",
+    "texture": "28ri9QjLxJspt9FrZrSSLQ",
+    "rect": [
+      0,
+      0,
+      61,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      61,
+      46
+    ]
+  }
+}

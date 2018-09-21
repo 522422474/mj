@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "santiao1",
+    "texture": "9aAUywK2VA6Z/8rai1oZl7",
+    "rect": [
+      0,
+      0,
+      278,
+      70
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      278,
+      70
+    ]
+  }
+}

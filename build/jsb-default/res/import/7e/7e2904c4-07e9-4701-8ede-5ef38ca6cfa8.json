@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn-zhanji",
+    "texture": "5c/WnFau1H+KENlMcAE/or",
+    "rect": [
+      2,
+      0,
+      92,
+      97
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      97,
+      98
+    ]
+  }
+}

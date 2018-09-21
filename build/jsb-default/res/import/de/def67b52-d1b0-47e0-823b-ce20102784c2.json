@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tiezhihui",
+    "texture": "32LCpSfhpKIbw0AStLXo2L",
+    "rect": [
+      0,
+      0,
+      154,
+      90
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      154,
+      90
+    ]
+  }
+}

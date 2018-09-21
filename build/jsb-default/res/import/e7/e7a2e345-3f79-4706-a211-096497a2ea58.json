@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chakantarenhuifang01",
+    "texture": "5ag2R3sLBCwaS13g0V9uKP",
+    "rect": [
+      0,
+      0,
+      269,
+      84
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      269,
+      84
+    ]
+  }
+}

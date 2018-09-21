@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paimengban",
+    "texture": "14UrOd6dtCqoIv725gPnBQ",
+    "rect": [
+      0,
+      0,
+      126,
+      172
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      126,
+      172
+    ]
+  }
+}

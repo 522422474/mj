@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_pingnum_0",
+    "texture": "cc4pG4nsxNc4v8nHdAsA72",
+    "rect": [
+      2,
+      1,
+      39,
+      43
+    ],
+    "offset": [
+      -106.5,
+      105.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

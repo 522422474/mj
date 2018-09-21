@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shirenniuniuanniu01",
+    "texture": "4flWgdQhlM/otISLWn7zuW",
+    "rect": [
+      0,
+      0,
+      267,
+      110
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      267,
+      110
+    ]
+  }
+}

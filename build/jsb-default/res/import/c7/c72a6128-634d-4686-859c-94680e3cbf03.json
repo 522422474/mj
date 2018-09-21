@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Img_GameTable_TimeBg",
+    "texture": "80r3dfSG9F7IJecBclNkFN",
+    "rect": [
+      0,
+      1,
+      124,
+      132
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      124,
+      134
+    ]
+  }
+}

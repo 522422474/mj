@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "buchashui",
+    "texture": "356WwU709GWLmwUoE0ST+X",
+    "rect": [
+      1,
+      1,
+      126,
+      51
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      128,
+      53
+    ]
+  }
+}

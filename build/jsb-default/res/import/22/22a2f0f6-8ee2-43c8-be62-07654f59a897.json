@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shenqi2",
+    "texture": "10rhKy7P5EwLReSqqggXF+",
+    "rect": [
+      0,
+      0,
+      296,
+      92
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      296,
+      92
+    ]
+  }
+}

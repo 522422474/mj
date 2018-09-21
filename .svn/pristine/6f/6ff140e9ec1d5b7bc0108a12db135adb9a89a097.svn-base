@@ -1,0 +1,16 @@
+var gameDefine = require('gameDefine');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+
+    },
+
+    onLoad: function () {
+
+    },
+
+    backBtnClick: function () {
+        openView('hundred_backHome', gameDefine.GameType.Game_Niu_Hundred);
+    },
+});

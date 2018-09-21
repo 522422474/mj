@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_PutCard_P",
+    "texture": "7c7PQuHyJJQLwPKVJ/Beji",
+    "rect": [
+      1,
+      1,
+      246,
+      103
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      248,
+      105
+    ]
+  }
+}

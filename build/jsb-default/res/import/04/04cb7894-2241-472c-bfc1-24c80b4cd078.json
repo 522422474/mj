@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "replay_bg",
+    "texture": "e1thXmYzFGo63EnVlbTeDR",
+    "rect": [
+      0,
+      0,
+      715,
+      89
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      715,
+      89
+    ]
+  }
+}

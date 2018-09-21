@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_qingxuanzebipaiduixiang",
+    "texture": "6chNdBOiFO56L1ncpescZN",
+    "rect": [
+      0,
+      0,
+      245,
+      33
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      245,
+      33
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "choumashuzikuang",
+    "texture": "6fNNnFs6JPXpJ2qigJUZxg",
+    "rect": [
+      0,
+      0,
+      165,
+      41
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      165,
+      42
+    ]
+  }
+}

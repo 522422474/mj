@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "duihuakuang",
+    "texture": "12Pei0WTtLvZMmpt7jp92l",
+    "rect": [
+      1,
+      0,
+      58,
+      51
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      59,
+      51
+    ],
+    "capInsets": [
+      17,
+      8,
+      7,
+      7
+    ]
+  }
+}

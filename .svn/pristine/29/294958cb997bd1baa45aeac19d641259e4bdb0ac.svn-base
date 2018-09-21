@@ -1,0 +1,129 @@
+var roomUtil = require('roomUtil');
+var hhdz_roomUtil = require('hhdz_roomUtil');
+var hhdz_data = require('hhdz_data');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        scrollView: cc.ScrollView,
+        item: cc.Node,
+
+        _historyData: undefined
+    },
+
+    onLoad: function () {
+        registEvent('rbw-tableInfo', this, this.onTableInfoHandler);
+    },
+
+    onDestroy: function () {
+        unregistEvent('rbw-tableInfo', this, this.onTableInfoHandler);
+    },
+
+    onEnable: function () {
+        this.setHistoryData();
+    },
+
+    onTableInfoHandler: function(){
+        this.setHistoryData();
+    },
+
+    setHistoryData: function(){
+        var tableData = hhdz_data.getTableInfoData();
+        if(tableData == undefined){
+            return;
+        }
+        if(tableData.winHistory == undefined){
+            return;
+        }
+        this._historyData = tableData.winHistory;
+
+        this.updateRunChart();
+    },
+
+    loadItemImg: function(node, winner){
+        if(node == undefined || winner == undefined){
+            return;
+        }
+        var textureUrl = hhdz_roomUtil.getWinnerFlagImg(winner);
+        if(textureUrl == null){
+            return;
+        }
+        var texture = cc.textureCache.addImage(cc.url.raw(textureUrl));
+        if(texture){
+            node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture);
+        }
+    },
+
+    updateRunChart: function(){
+        if(this._historyData == undefined){
+            return;
+        }
+
+        var content = this.scrollView.content;
+        for(var k = 0; k < content.getChildrenCount(); k++){
+            var child = content.getChildren()[k];
+            if(child){
+                child.active = false;
+            }
+        }
+
+        var itemW = 40;
+
+        var sumLine = parseInt(this._historyData.length/6);
+        this._historyData.length%6 > 0 ? sumLine++ : null;
+
+        var width = itemW * sumLine;
+        width < 800 ? width = 500 : null;
+
+        content.width = width;
+
+        var last = undefined;
+        var number = 0;
+        var line = 0;
+        var index = 0;
+
+        for(var i = this._historyData.length; i >= 0; i--){
+            var winner = this._historyData[i];
+            if(winner == undefined || isNaN(winner)){
+                continue;
+            }
+            var node = content.getChildren()[index];
+            if(node == undefined){
+                node = cc.instantiate(this.item);
+                node.parent = content;
+            }
+            node.active = true;
+            cc.log('------------');
+            cc.log('..last:'+last);
+            if(last != undefined){
+                if(last != winner || number >= 6){
+                    number = 0;
+                    line++;
+                }
+            }
+            last = winner;
+
+            node.x = this.item.x + itemW*line;
+            node.y = this.item.y + itemW*number;
+
+
+            cc.log('..winner:'+winner);
+            cc.log('..line:'+line);
+            cc.log('..number:'+number);
+
+            number++;
+            index++;
+
+            if(parseInt(node.name) == winner){
+                continue;
+            }
+            node.name = winner.toString();
+            this.loadItemImg(node, winner);
+        }
+    },
+
+    onClose: function(){
+        this.node.active = false;
+    }
+});

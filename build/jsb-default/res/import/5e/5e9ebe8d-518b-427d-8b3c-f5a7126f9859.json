@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "0ping",
+    "texture": "15Wq+NoIdIkp9ESSQS2Xqb",
+    "rect": [
+      1,
+      3,
+      33,
+      41
+    ],
+    "offset": [
+      0.5,
+      -1
+    ],
+    "originalSize": [
+      34,
+      45
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "anniudiban04",
+    "texture": "dfZm8oXYNM+7Tqr5+aJnOV",
+    "rect": [
+      0,
+      0,
+      6,
+      5
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      6,
+      5
+    ]
+  }
+}

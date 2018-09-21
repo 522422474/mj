@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huatiao2",
+    "texture": "35yQoGWF1MAov8Dk2A4V9c",
+    "rect": [
+      11,
+      8,
+      367,
+      7
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      389,
+      24
+    ],
+    "capInsets": [
+      13,
+      0,
+      14,
+      0
+    ]
+  }
+}

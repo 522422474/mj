@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xiachutongpaimb",
+    "texture": "1emt/e3zdN6KXfOTCvDFPd",
+    "rect": [
+      0,
+      0,
+      73,
+      85
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      73,
+      85
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+var soundMngr = require('SoundMngr');
+var gameDefine = require('gameDefine');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        uiWaitLayer: cc.Node,
+
+        tableUI: {
+            default: [],
+            type: cc.Node
+        },
+
+        coinEndLayer: cc.Node,
+        resultLayer: cc.Node,
+        settingLayer: cc.Node,
+        dissolveLayer: cc.Node,
+        summaryLayer: cc.Node,
+        debugLayer: cc.Node,
+        talkBtn: cc.Button,
+        yuyinNode: cc.Node,
+        yuyinShortNode: cc.Node
+    },
+
+    onLoad: function () {
+        registEvent('ddz-onGameStart', this, this.showTableLayer);
+        registEvent('onJoinerLost', this, this.showJoinerLost);
+        registEvent('shortRecord', this, this.YVShortRecordCallback);
+        registEvent('onServerNotice', this, handlerServerNotice);
+        registEvent('coinEnd', this, this.showCoinEndLayer);
+
+        scheduleLamp(this);
+
+        if (GameDataDDZ.game.gameStart) {
+            this.showTableLayer();
+        } else {
+            this.showWaitLayer();
+        }
+        this.lostMessage = false;
+
+        var self = this;
+        this.talkBtn.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+            yunwaStartTalk();
+            self.yuyinNode.active = true;
+            GameData.isPlayVioce = true;
+            self.yuyinNode.getComponent(cc.Animation).play("yuyin");
+            cc.audioEngine.pauseAll();
+
+        });
+
+        this.talkBtn.node.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
+            var movePos = event.touch.getLocation();
+            var talkBtnMovePos = this.convertToNodeSpace(movePos);
+            var radius = {
+                x: this.getContentSize().width / 2,
+                y: this.getContentSize().height / 2
+            };
+            var distance = cc.pDistance(talkBtnMovePos, radius);
+            if (distance > this.getContentSize().width) {
+                self.yuyinNode.getComponent(cc.Animation).play("CancelSend");
+                GameData.isPlayVioce = false;
+            }
+        });
+
+        this.talkBtn.node.on(cc.Node.EventType.TOUCH_END, function () {
+            yunwaStopTalk();
+            self.yuyinNode.active = false;
+            cc.audioEngine.resumeAll();
+        });
+
+        this.talkBtn.node.on(cc.Node.EventType.TOUCH_CANCEL, function () {
+            yunwaStopTalk();
+            GameData.isPlayVioce = false;
+            self.yuyinNode.active = false;
+            cc.audioEngine.resumeAll();
+        });
+
+        if(gameDefine.roomType.Room_Match != GameData.room.opts.roomType) {
+            this.talkBtn.node.active = true;
+        } else {
+            this.talkBtn.node.active = false;
+        }
+
+        //打开界面时就隐藏，开局时才显示
+        if (GameDataDDZ.game.initcards) {
+            this.showTableUI(true);
+        } else {
+            this.showTableUI(false);
+        }
+    },
+
+    onDestroy: function () {
+        unregistEvent('ddz-onGameStart', this, this.showTableLayer);
+        unregistEvent('onJoinerLost', this, this.showJoinerLost);
+        unregistEvent('shortRecord', this, this.YVShortRecordCallback);
+        unregistEvent('onServerNotice', this, handlerServerNotice);
+        unregistEvent('coinEnd', this, this.showCoinEndLayer);
+
+        GameData.initGameData();
+        GameDataDDZ.initRoomData();
+    },
+    showWaitLayer: function () {
+        var flag = true;
+        this.uiWaitLayer.active = flag;
+        this.showTableUI(!flag);
+        this.resultLayer.active = !flag;
+        soundMngr.instance.playMusic('ddz/sound/ddz_bg');
+        if(gameDefine.currencyType.Currency_Coin == GameData.room.opts.currencyType) {
+            this.uiWaitLayer.active = false;
+        }
+    },
+
+    showTableLayer: function () {
+        var flag = true;
+        this.showTableUI(flag);
+        this.uiWaitLayer.active = !flag;
+        this.resultLayer.active = !flag;
+        soundMngr.instance.playMusic('ddz/sound/ddz_bg');
+    },
+
+    showCoinEndLayer: function(data) {
+        var time = data.detail;
+        time === undefined ? time = 0 : null;
+
+        var self = this;
+        this.scheduleOnce(function () {
+            var template = this.node.getComponent('DDZ-coinEnd');
+            if(template){
+                template.onShow();
+            }
+            self.uiWaitLayer.active = false;
+        }, time);
+    },
+
+    showTableUI: function (show) {
+        for (var i = 0; i < this.tableUI.length; i++) {
+            var node = this.tableUI[i];
+            node.active = show;
+        }
+    },
+
+    showSettingLayer: function (evt, data) {
+        if (data == 1) {
+            openView('DDZ-SettingsPanel', gameDefine.GameType.Game_Poker_DDZ);
+        } else {
+            this.settingLayer.active = false;
+        }
+    },
+
+    showdissolveLayer: function (evt, data) {
+        if (data == 1) {
+            this.dissolveLayer.active = true;
+            this.dissolveLayer.on(cc.Node.EventType.TOUCH_START, function (evt) {
+                evt.stopPropagation();
+            });
+        } else {
+            this.dissolveLayer.active = false;
+        }
+    },
+
+    showSummaryLayer: function () {
+        this.summaryLayer.active = true;
+        this.dissolveLayer.active = false;
+        GameData.realNum = 0;
+        this.summaryLayer.on(cc.Node.EventType.TOUCH_START, function (evt) {
+            evt.stopPropagation();
+        });
+        sendEvent('onShowSummary');
+        if (GameData.player.uid == GameData.room.creator) {
+            cc.sys.localStorage.setItem("creatorIsCheckIp", false);
+        } else {
+            cc.sys.localStorage.setItem("isCheckIp", false);
+        }
+    },
+
+    showDebugLayer: function () {
+        this.debugLayer.active = !this.debugLayer.active;
+    },
+
+    showJoinerLost: function (data) {
+    },
+
+    showChat: function () {
+        if (inCD(3000)) return;
+        openView('ChatPanel');
+    },
+    YVShortRecordCallback: function () {
+        this.yuyinShortNode.getComponent(cc.Animation).play("ShortRecoed");
+        this.yuyinShortNode.getComponent('HideComponent').show(1);
+    },
+    AnimationDelayTime: function (data) {
+        this._AnimationDelayTime = data.detail;
+    }
+});

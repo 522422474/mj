@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_jushu",
+    "texture": "268crBfcVF6p8JXzsp3izF",
+    "rect": [
+      0,
+      0,
+      93,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      40
+    ]
+  }
+}

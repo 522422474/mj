@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sitaosantiao_tex",
+    "texture": "2awKcm/ttMor/j06WSus+q",
+    "rect": [
+      1,
+      1,
+      980,
+      433
+    ],
+    "offset": [
+      -21,
+      38.5
+    ],
+    "originalSize": [
+      1024,
+      512
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_oneFen_D",
+    "texture": "b2qacEswVNPqgwNLuQzEd7",
+    "rect": [
+      2,
+      1,
+      244,
+      102
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      248,
+      105
+    ]
+  }
+}

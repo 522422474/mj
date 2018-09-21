@@ -1,0 +1,46 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "CardBtnView",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "CardBtnView",
+    "_components": [
+      {
+        "__type__": "a01bfVwUwFC5Lyp2pqW7gCM",
+        "node": {
+          "__id__": 1
+        }
+      },
+      {
+        "__type__": "cc.Button",
+        "node": {
+          "__id__": 1
+        },
+        "_N$target": {
+          "__id__": 1
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "155yIGi6dBOKK1fS1DyTY4"
+      },
+      "fileId": "35ff8jTWvxG05xNNtRfN93B"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 90,
+      "height": 136
+    }
+  }
+]

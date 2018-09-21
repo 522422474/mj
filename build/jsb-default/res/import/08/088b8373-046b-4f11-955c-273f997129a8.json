@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zongfenwenzi",
+    "texture": "14DIqZ79RAxpQEk8WMyLE4",
+    "rect": [
+      1,
+      0,
+      78,
+      28
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      79,
+      28
+    ]
+  }
+}

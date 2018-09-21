@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "juanzhou",
+    "texture": "f8SW59+2NHipb95GYwQ4hR",
+    "rect": [
+      0,
+      1,
+      1260,
+      562
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1260,
+      564
+    ]
+  }
+}

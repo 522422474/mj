@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "anquan",
+    "texture": "87BDrpGOtEBqUdl9PrDShG",
+    "rect": [
+      0,
+      1,
+      36,
+      43
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      36,
+      44
+    ]
+  }
+}

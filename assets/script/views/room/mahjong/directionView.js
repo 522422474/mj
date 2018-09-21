@@ -1,0 +1,170 @@
+var game = require('gameConfig');
+var soundMngr = require('SoundMngr');
+var gameDefine = require('gameDefine');
+var roomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        direction_pos: cc.Sprite,
+        direction_turn: cc.Node,
+
+        countdown_num1: cc.Sprite,
+        countdown_num2: cc.Sprite,
+        _countdown_index: 0,
+
+        leftCardNumLabel: cc.Label,
+        lastRoundLabel: cc.RichText,
+
+        quanNode: cc.Node,
+        juNode: cc.Node
+    },
+
+    onLoad: function() {
+        require('util').registEvent('onRoomInfo', this, this.onShow);
+        require('util').registEvent('onGameTurn', this, this.onShowTurn);
+    },
+
+    onDestroy: function () {
+        unrequire('util').registEvent('onRoomInfo', this, this.onShow);
+        unrequire('util').registEvent('onGameTurn', this, this.onShowTurn);
+    },
+
+    onEnable: function() {
+        this.onShow();
+        this.startCountDown();
+    },
+
+    onShow: function() {
+        this.showPosition();
+        this.showLeftCard();
+        this.showRoundType();
+        this.showRoundString();
+    },
+
+    onShowTurn: function() {
+        var state = roomHandler.room.status;
+        if (state == gameDefine.RoomState.GAMEING) {
+            this.startCountDown();
+        } else {
+            this.stopCountDown();
+        }
+        this.showTurn();
+    },
+
+    startCountDown: function() {
+        this._countdown_index = 10;
+        this.schedule(this.runCountDown, 1);
+    },
+
+    stopCountDown: function() {
+        this.unschedule(this.runCountDown);
+    },
+
+    showPosition: function() {
+        var index = GameData.getPlayerIndex(GameData.player.uid);
+        var rotation = 0;
+
+        if (index == 0) {
+            rotation = 90;
+        } else if (index == 1) {
+            rotation = 270;
+        } else if (index == 2) {
+            rotation = 180;
+        } else if (index == 3) {
+            rotation = 0;
+        }
+        this.direction_pos.node.rotation = rotation;
+    },
+
+    showTurn: function() {
+        var turnUid = game.getGameData().game.turn;
+        var index = GameData.getPlayerIndex(turnUid);
+        if (index < 0) return;
+
+        var direction;
+        if (index == 0) {
+            direction = 'dong';
+        } else if (index == 3) {
+            direction = 'nan';
+        } else if (index == 2) {
+            direction = 'xi';
+        } else if (index == 1) {
+            direction = 'bei';
+        } else {
+            direction = 'dong';
+        }
+
+        var texture = cc.textureCache.addImage(cc.url.raw('resources/table/' + direction + '.png'));
+        this.direction_pos.spriteFrame = new cc.SpriteFrame(texture);
+
+        cc.find('down', this.direction_turn).active = false;
+        cc.find('right', this.direction_turn).active = false;
+        cc.find('up', this.direction_turn).active = false;
+        cc.find('left', this.direction_turn).active = false;
+
+        direction = GameData.getPlayerPosByUid(turnUid);
+        if (direction == null) return;
+
+        cc.find(direction, this.direction_turn).active = true;
+    },
+
+    runCountDown: function() {
+        this.showCountDown(this._countdown_index.toString());
+        if (this._countdown_index <= 0) {
+            this._countdown_index = 10;
+        } else {
+            var turnUid = game.getGameData().game.turn;
+            if (this._countdown_index == 3 && turnUid == GameData.player.uid) {
+                soundMngr.instance.playAudioOther('countdown');
+            }
+            this._countdown_index--;
+        }
+    },
+
+    showCountDown: function(num) {
+        var ary = num.split('');
+        if (ary.length == 0)  return;
+
+        var url1, url2;
+        if (ary.length == 1) {
+            url1 = cc.url.raw('resources/number/jinzi0.png');
+            url2 = cc.url.raw('resources/number/jinzi' + num + '.png');
+        } else if (ary.length == 2) {
+            url1 = cc.url.raw('resources/number/jinzi' + ary[0] + '.png');
+            url2 = cc.url.raw('resources/number/jinzi' + ary[1] + '.png');
+        } else {
+            return;
+        }
+        var texture1 = cc.textureCache.addImage(url1);
+        var texture2 = cc.textureCache.addImage(url2);
+        this.countdown_num1.spriteFrame = new cc.SpriteFrame(texture1);
+        this.countdown_num2.spriteFrame = new cc.SpriteFrame(texture2);
+    },
+
+    //局数
+    showRoundString: function() {
+        var roundNum = roomHandler.room.roundNum,
+            roundMax = roomHandler.room.opts.roundMax;
+        this.lastRoundLabel.string = roundNum + '/' + roundMax;
+    },
+
+    //剩余牌数
+    showLeftCard: function() {
+        var leftNumber = game.getGameData().game.cardleft;
+        this.leftCardNumLabel.string = leftNumber;
+    },
+
+    //牌局类型
+    showRoundType: function() {
+        var roundType = roomHandler.room.opts.roundType;
+        if (roundType == gameDefine.roundType.quan) {
+            this.quanNode.active = true;
+            this.juNode.active = false;
+        } else {
+            this.quanNode.active = false;
+            this.juNode.active = true;
+        }
+    }
+});

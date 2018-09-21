@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tiandakeng02",
+    "texture": "16JEBpTnNKwbSb7lhtmz94",
+    "rect": [
+      0,
+      0,
+      281,
+      120
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      281,
+      120
+    ]
+  }
+}

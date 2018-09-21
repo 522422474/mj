@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huier4_icon",
+    "texture": "44UueHQ85Dl44jz8jqfB1C",
+    "rect": [
+      0,
+      0,
+      30,
+      27
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      30,
+      27
+    ]
+  }
+}

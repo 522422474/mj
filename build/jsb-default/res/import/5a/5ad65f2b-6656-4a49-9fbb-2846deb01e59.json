@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "paixingdonghua_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"width\":273,\"y\":150,\"height\":68,\"name\":\"px_guang01\",\"x\":1},{\"width\":146,\"y\":1,\"height\":147,\"name\":\"px_guang02\",\"x\":1}],\"name\":\"paixingdonghua\",\"imagePath\":\"paixingdonghua_tex.png\"}",
+  "texture": {
+    "__uuid__": "ddWefY2PNGSIx6MgOSwiZy"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_daohuosuo2",
+    "texture": "3cYVhxZQtBDpCk8ahp2iY6",
+    "rect": [
+      0,
+      0,
+      53,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      53,
+      46
+    ]
+  }
+}

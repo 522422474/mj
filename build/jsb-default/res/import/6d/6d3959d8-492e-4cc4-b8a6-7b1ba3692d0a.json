@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_zhajinhua_P",
+    "texture": "02gbimmgJBz45xMShqmiwY",
+    "rect": [
+      0,
+      0,
+      281,
+      120
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      281,
+      120
+    ]
+  }
+}

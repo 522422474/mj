@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_diBian",
+    "texture": "4fOD1ZUfJGUbJ6ju1aGsoS",
+    "rect": [
+      0,
+      7,
+      1280,
+      106
+    ],
+    "offset": [
+      0,
+      -3.5
+    ],
+    "originalSize": [
+      1280,
+      113
+    ]
+  }
+}

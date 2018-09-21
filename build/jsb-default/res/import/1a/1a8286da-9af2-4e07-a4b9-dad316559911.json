@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "peng1",
+    "texture": "91czlQH35LfbSXJSLD3KOC",
+    "rect": [
+      5,
+      5,
+      92,
+      88
+    ],
+    "offset": [
+      2.5,
+      -2.5
+    ],
+    "originalSize": [
+      97,
+      93
+    ]
+  }
+}

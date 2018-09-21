@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "daojishikuang",
+    "texture": "356hjlt7dKd483Ct2xFPIx",
+    "rect": [
+      0,
+      0,
+      190,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      190,
+      190
+    ]
+  }
+}

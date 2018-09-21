@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "julebubiaotidi",
+    "texture": "99+g9HJvJFrYzmh1ZQi9Yk",
+    "rect": [
+      0,
+      0,
+      545,
+      60
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      545,
+      60
+    ]
+  }
+}

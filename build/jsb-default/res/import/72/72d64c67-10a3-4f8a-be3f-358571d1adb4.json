@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xiayiye01",
+    "texture": "4dFk9RRFJIRrwfuqT9W53I",
+    "rect": [
+      1,
+      0,
+      236,
+      99
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      238,
+      100
+    ]
+  }
+}

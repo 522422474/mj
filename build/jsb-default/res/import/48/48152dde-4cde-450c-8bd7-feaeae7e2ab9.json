@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "banner",
+    "texture": "d2N7ZLUOdJdbd0O42K1vTM",
+    "rect": [
+      0,
+      0,
+      998,
+      524
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      998,
+      524
+    ]
+  }
+}

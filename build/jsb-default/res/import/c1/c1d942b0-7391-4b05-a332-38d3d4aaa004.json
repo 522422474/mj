@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sheng",
+    "texture": "0bzJc/V31LKIkvlp8/bovz",
+    "rect": [
+      0,
+      0,
+      131,
+      150
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      131,
+      150
+    ]
+  }
+}

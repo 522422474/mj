@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "youjinzhong2",
+    "texture": "60CfCUhWlDv7yq313+RgPA",
+    "rect": [
+      0,
+      0,
+      44,
+      168
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      44,
+      168
+    ]
+  }
+}

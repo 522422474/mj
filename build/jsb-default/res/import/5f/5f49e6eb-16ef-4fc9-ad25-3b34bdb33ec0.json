@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "heguan_tex",
+    "texture": "feGhOICUdHKJJweGdEbgZ4",
+    "rect": [
+      1,
+      1,
+      253,
+      214
+    ],
+    "offset": [
+      -0.5,
+      20
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

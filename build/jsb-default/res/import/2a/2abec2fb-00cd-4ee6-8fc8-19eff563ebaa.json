@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-bgxia",
+    "texture": "70EAzUA0NKcak7FKyUpcv4",
+    "rect": [
+      0,
+      3,
+      1280,
+      84
+    ],
+    "offset": [
+      0,
+      -1.5
+    ],
+    "originalSize": [
+      1280,
+      87
+    ]
+  }
+}

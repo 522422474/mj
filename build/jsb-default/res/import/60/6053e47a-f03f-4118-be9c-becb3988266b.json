@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "changchunmajiang02",
+    "texture": "36oePko5lMWrwvEGXHMjnM",
+    "rect": [
+      0,
+      0,
+      281,
+      120
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      281,
+      120
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kuaisukaishianniu02",
+    "texture": "1bAA6VV1pFhLpBdzToB5ky",
+    "rect": [
+      0,
+      1,
+      325,
+      119
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      325,
+      120
+    ]
+  }
+}

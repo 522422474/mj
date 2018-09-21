@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiabeixiao",
+    "texture": "e8egrrLJBKg6lb5wuuvMnA",
+    "rect": [
+      0,
+      0,
+      69,
+      41
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      69,
+      41
+    ]
+  }
+}

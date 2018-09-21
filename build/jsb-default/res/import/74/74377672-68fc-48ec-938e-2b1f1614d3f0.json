@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "poker_305",
+    "texture": "47VZD+3VxL/o0L0K2pA/U7",
+    "rect": [
+      0,
+      0,
+      212,
+      301
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      212,
+      301
+    ]
+  }
+}

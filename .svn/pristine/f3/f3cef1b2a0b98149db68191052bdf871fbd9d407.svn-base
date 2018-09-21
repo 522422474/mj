@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "454a80f8-3d3a-4077-a4d8-201520582444",
+  "atlasJson": "{\"imagePath\":\"pengjiubei_tex.png\",\"SubTexture\":[{\"width\":109,\"y\":1,\"height\":148,\"name\":\"2\",\"x\":116},{\"width\":113,\"y\":1,\"height\":144,\"name\":\"jiubei1\",\"x\":1}],\"name\":\"pengjiubei\"}",
+  "texture": "6f22f839-70de-4c3f-a87f-6ff13cf5e0f5",
+  "subMetas": {}
+}

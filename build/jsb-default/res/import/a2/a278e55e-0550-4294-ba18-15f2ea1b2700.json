@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "guizebiaotidi",
+    "texture": "7d5NybnSNIn4ivGwpjyLSv",
+    "rect": [
+      1,
+      2,
+      490,
+      52
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      492,
+      56
+    ]
+  }
+}

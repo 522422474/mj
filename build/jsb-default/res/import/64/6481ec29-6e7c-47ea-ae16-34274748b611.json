@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jb_bt_sanzhangpai",
+    "texture": "29nIavAt9K7Iq6tv8U6uGC",
+    "rect": [
+      0,
+      0,
+      494,
+      111
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      494,
+      111
+    ]
+  }
+}

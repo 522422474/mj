@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yaoqingweixinhaoyou01",
+    "texture": "c8ohZ99p1NmqJJkufvREc6",
+    "rect": [
+      2,
+      3,
+      467,
+      171
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      471,
+      180
+    ]
+  }
+}

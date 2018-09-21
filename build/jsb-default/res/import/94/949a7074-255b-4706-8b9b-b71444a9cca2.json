@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.BitmapFont",
+  "_name": "artword_pingnum",
+  "spriteFrame": {
+    "__uuid__": "06cKqc5I5FL49XpIm94Uw9"
+  },
+  "fontSize": 32,
+  "_fntConfig": {
+    "commonHeight": 32,
+    "fontSize": 32,
+    "atlasName": "artword_pingnum_0.png",
+    "fontDefDictionary": {
+      "48": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 43,
+          "height": 45
+        },
+        "xOffset": 0,
+        "yOffset": 0,
+        "xAdvance": 43
+      }
+    },
+    "kerningDict": {}
+  }
+}

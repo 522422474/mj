@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "woshulelan",
+    "texture": "0aDuO9Xv1MAJ+cJIgZEJXi",
+    "rect": [
+      122,
+      30,
+      410,
+      243
+    ],
+    "offset": [
+      -2,
+      -15
+    ],
+    "originalSize": [
+      658,
+      273
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "touxiangwaifaguang_tex",
+  "_atlasJson": "{\"imagePath\":\"touxiangwaifaguang_tex.png\",\"name\":\"touxiangwaifaguang\",\"SubTexture\":[{\"width\":127,\"y\":1,\"height\":127,\"name\":\"touxiangwaifaguang01\",\"x\":136},{\"width\":133,\"y\":1,\"height\":133,\"name\":\"touxiangwaifaguang02\",\"x\":1}]}",
+  "texture": {
+    "__uuid__": "48Ia6wthxPqKWMu6m9bxtX"
+  }
+}

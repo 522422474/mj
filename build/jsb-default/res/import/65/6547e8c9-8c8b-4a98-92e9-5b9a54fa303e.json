@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "duizi",
+    "texture": "a4K354tbNOVo2d2bu78ArI",
+    "rect": [
+      1,
+      0,
+      101,
+      42
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      102,
+      42
+    ]
+  }
+}

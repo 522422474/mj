@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chupaianniu2",
+    "texture": "084etNHyFGKoTAM8ZmL9LX",
+    "rect": [
+      0,
+      0,
+      214,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      214,
+      79
+    ]
+  }
+}

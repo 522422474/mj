@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "k_neibujinshu",
+    "texture": "5ef6jfbFhCCIRn8jiJVcUL",
+    "rect": [
+      0,
+      0,
+      551,
+      88
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      551,
+      88
+    ]
+  }
+}

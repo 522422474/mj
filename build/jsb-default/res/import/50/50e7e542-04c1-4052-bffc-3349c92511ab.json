@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lodingditu",
+    "texture": "35NjzNG6NHupXZ6AZyDqYF",
+    "rect": [
+      2,
+      3,
+      938,
+      64
+    ],
+    "offset": [
+      0.5,
+      -0.5
+    ],
+    "originalSize": [
+      941,
+      69
+    ]
+  }
+}

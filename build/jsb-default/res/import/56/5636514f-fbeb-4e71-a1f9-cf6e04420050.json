@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "quanya02",
+    "texture": "90ZN06sdlHRYi+h32/0GFl",
+    "rect": [
+      1,
+      0,
+      167,
+      98
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      169,
+      99
+    ]
+  }
+}

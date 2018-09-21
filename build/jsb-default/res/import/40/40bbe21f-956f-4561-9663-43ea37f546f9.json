@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "quanxiao_tex",
+    "texture": "abuEjkOaxJmbQp5rhIQVhN",
+    "rect": [
+      1,
+      1,
+      920,
+      634
+    ],
+    "offset": [
+      -51,
+      194
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

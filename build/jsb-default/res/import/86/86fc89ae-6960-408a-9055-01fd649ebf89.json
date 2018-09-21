@@ -1,0 +1,72 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "hundred_runScore",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "hundred_runScore",
+    "_components": [
+      {
+        "__id__": 2
+      },
+      {
+        "__type__": "3c47fNbiqNNuIIfydDFvIMH",
+        "node": {
+          "__id__": 1
+        },
+        "scoreLabel": {
+          "__id__": 2
+        },
+        "fonts": [
+          {
+            "__uuid__": "c8NQEZl05DP7VT20hCooWX"
+          },
+          {
+            "__uuid__": "044pK7OaNAtbskujsfhnlg"
+          },
+          {
+            "__uuid__": "044pK7OaNAtbskujsfhnlg"
+          }
+        ]
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "86/ImuaWBAipBVAf1knr+J"
+      },
+      "fileId": "8f5e0bn2C5AYLUXT07/C+kq"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 1,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 90.75,
+      "height": 50
+    }
+  },
+  {
+    "__type__": "cc.Label",
+    "node": {
+      "__id__": 1
+    },
+    "_useOriginalSize": false,
+    "_N$file": {
+      "__uuid__": "c8NQEZl05DP7VT20hCooWX"
+    },
+    "_isSystemFontUsed": false,
+    "_spacingX": -9,
+    "_N$string": "999"
+  }
+]

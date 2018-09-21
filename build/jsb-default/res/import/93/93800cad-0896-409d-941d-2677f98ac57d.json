@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tongyongdikuang",
+    "texture": "e4GfMO5uxL45OWlWdQmTBU",
+    "rect": [
+      0,
+      0,
+      106,
+      106
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      106,
+      106
+    ],
+    "capInsets": [
+      41,
+      41,
+      40,
+      41
+    ]
+  }
+}

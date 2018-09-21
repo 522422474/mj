@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5ad65f2b-6656-4a49-9fbb-2846deb01e59",
+  "atlasJson": "{\"SubTexture\":[{\"width\":273,\"y\":150,\"height\":68,\"name\":\"px_guang01\",\"x\":1},{\"width\":146,\"y\":1,\"height\":147,\"name\":\"px_guang02\",\"x\":1}],\"name\":\"paixingdonghua\",\"imagePath\":\"paixingdonghua_tex.png\"}",
+  "texture": "dd59e7d8-d8f3-4648-8c7a-320392c22672",
+  "subMetas": {}
+}

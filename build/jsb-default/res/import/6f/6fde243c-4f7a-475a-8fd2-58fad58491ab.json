@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "niuniuscore_winnum_0",
+    "texture": "8e/HKi1DxAU60LGC7lOnU3",
+    "rect": [
+      2,
+      3,
+      245,
+      87
+    ],
+    "offset": [
+      -3.5,
+      81.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

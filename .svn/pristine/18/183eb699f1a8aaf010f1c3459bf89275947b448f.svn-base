@@ -1,0 +1,201 @@
+var RoomHandler = require('roomHandler');
+var gameDefine = require('gameDefine');
+var soundMngr = require('SoundMngr');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        uid: 0,
+        headBg: cc.Node,
+        headBtn: cc.Button,
+        headIcon: cc.Sprite,
+        zhuangIcon: cc.Sprite,
+        nameLabel: cc.Label,
+        _player : null,
+
+        zhuangBg: cc.Node,
+    },
+
+    onLoad: function () {
+    },
+
+    setPlayer : function(data)
+    {
+        this._player = data;
+        if (this._player.uid) {
+            this.uid = this._player.uid;    
+        }
+    },
+
+    setName: function(name) {
+        this.nameLabel.string = getShortStr(name,4);
+    },
+
+    setHeadIcon: function(headimgurl) {
+        if (headimgurl == undefined || headimgurl == '') {
+            this.headIcon.spriteFrame = null;
+            return;
+        }
+
+        var self = this;
+        cc.loader.load({url: headimgurl, type: 'png'}, function (error, texture) {
+            if (!error && texture) {
+                self.headIcon.spriteFrame = new cc.SpriteFrame(texture);
+            }  
+        });
+    },
+    initHeadIcon: function (type) {
+        var texture;
+        if (type == 0) {
+            texture = cc.textureCache.addImage(cc.url.raw('resources/niuNiuTable/playerHead/touxiangkong.png'));
+        } else {
+            texture = cc.textureCache.addImage(cc.url.raw('resources/hundredNiuNiu/uiResources/playerInfo/kongHead.png'));
+        }
+        
+        this.headIcon.spriteFrame = new cc.SpriteFrame(texture);
+    },
+    showHeadBg: function (show) {
+        this.headBg.active = show;
+    },
+
+    showZhuang: function(show) {
+        this.zhuangIcon.node.active = show;
+    },
+
+    enableHeadBtn: function(flag) {
+        this.headBtn.node.active = flag;
+    },
+    HeadBtnIsClick: function (flag) {
+        this.headBtn.interactable = flag;
+    },
+    onHeadBtnClicked: function(evt) {
+        soundMngr.instance.playAudioOther('button');
+        var sceneName = cc.director.getScene().name;
+        cc.log("..sceneName:", sceneName);
+        if (sceneName == 'home'){
+            createPlayerInfoPanel(this._player);
+        } else {
+            var self = this;
+            var fun = function(panel){
+                if(panel){
+                    var template = panel.getComponent('uiRoomPlayerInfo');
+                    if(template){
+                        template.onShow(self._player);
+                    }
+                }
+            };
+            var roomData = RoomHandler.getRoomData();
+            if(roomData && roomData.opts && roomData.opts.gameType){
+                cc.log('..gameType:'+roomData.opts.gameType);
+                openPlayerInfoView(roomData.opts.gameType, fun);
+            }
+        }
+    },
+
+    setIsOnline : function (isOnline) {
+        var disConncetNode = cc.find('/Disconnect', this.node);
+        disConncetNode.active = !isOnline;
+    },
+    getLiuGuang : function(isPlay){
+        var liuguang = cc.find('liuguang',this.node);
+        liuguang.active = isPlay;
+    },
+
+    //房卡
+    setCoin : function(value)
+    {
+        var coinNode = cc.find('coin',this.node);
+        var showStr = '';
+        if(value > 0)
+        {
+            showStr = '+' + value;
+            coinNode.color =  new cc.Color(255, 204, 0);
+        }
+        else if(value < 0)
+        {
+            showStr = value;
+            coinNode.color =  new cc.Color(0, 255, 246);
+        }
+        else
+        {
+            showStr = value;
+            coinNode.color =  new cc.Color(0, 255, 36);
+        }
+        coinNode.getComponent(cc.Label).string = showStr;
+    },
+    //金币
+    setGold : function(value, type)
+    {
+        var coinNode;
+        if (type == gameDefine.GameType.Game_niu_niu) {
+            coinNode = cc.find('coin',this.node);
+        }else if (type == gameDefine.GameType.Game_Niu_Hundred) {
+            coinNode = cc.find('labelNode/coin',this.node);
+        }
+        var showStr = '';
+        value != undefined ? showStr = value : null;
+        var newValue = 0;
+        if (showStr != null) {
+            newValue = ConversionCoinValue(showStr);
+        }else {
+            newValue = null;
+        }
+        coinNode.getComponent(cc.Label).string = newValue;
+        coinNode.color =  new cc.Color(255, 204, 0);
+    },
+
+    //百人牛牛
+    setCoinShow: function(show){
+        var nameNode = this.nameLabel.node;
+        var coinNode = cc.find('labelNode/coin',this.node);
+        if (show) {
+            nameNode.active = show;
+            coinNode.active = show;
+        } else {
+            nameNode.active = !show;
+            coinNode.active = show;
+        }
+    },
+    getZhuangImg: function (index) {
+        var url = '';
+        switch (index){
+            case 1:
+                url = cc.url.raw('resources/hundredNiuNiu/uiResources/playerInfo/icon_zhuang.png');
+            break;
+            case 2:
+                url = cc.url.raw('resources/hundredNiuNiu/uiResources/playerInfo/dafuhao.png');
+            break;
+            case 7:
+                url = cc.url.raw('resources/hundredNiuNiu/uiResources/playerInfo/shensuanzi.png');
+            break;
+        }
+        var texture = cc.textureCache.addImage(url);
+        this.zhuangIcon.spriteFrame = new cc.SpriteFrame(texture);
+        if (index == 1) {
+            this.zhuangIcon.node.x = -45;
+            this.zhuangIcon.node.y = 43;
+        }
+    },
+    setLabelPosition: function (index) {
+        var labelNode = cc.find('labelNode',this.node);
+        var posX = 0, posY = 0;
+        if (index == 0) {
+            posX = 132;posY = -37; 
+        } else if (index == 1) {
+            posX = 138;posY = 2; 
+        } else {
+            posX = 0;posY = -89; 
+        }
+        labelNode.setPosition(cc.p(posX,posY));
+    },
+    showZhuangNumNode: function (isAc) {
+        this.zhuangBg.active = isAc;
+    },
+    lianZhuangNum: function (num) {
+        var zhuangLb = cc.find('zhuangLabel',this.zhuangBg);
+        zhuangLb.getComponent('cc.Label').string = '连庄'+num+'次';
+    },
+    // update: function (dt) {
+
+    // },
+});

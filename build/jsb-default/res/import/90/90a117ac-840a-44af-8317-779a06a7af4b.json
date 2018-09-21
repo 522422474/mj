@@ -1,0 +1,24 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "poker_resultPrefab",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "poker_resultPrefab",
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "90oReshApEr4MXd5oGp69L"
+      },
+      "fileId": "4ed99DBIzpAdoiFNeWTLbeG"
+    }
+  }
+]

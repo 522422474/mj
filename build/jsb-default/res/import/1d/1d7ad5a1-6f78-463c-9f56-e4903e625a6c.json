@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "deise4",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      552,
+      746,
+      76,
+      100
+    ],
+    "offset": [
+      2,
+      -12
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

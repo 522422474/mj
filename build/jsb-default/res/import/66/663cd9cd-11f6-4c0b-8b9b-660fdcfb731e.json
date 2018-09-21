@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wenzi1",
+    "texture": "d2cvDZRgZHAqGFdEmyIeCG",
+    "rect": [
+      0,
+      0,
+      172,
+      42
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      172,
+      42
+    ]
+  }
+}

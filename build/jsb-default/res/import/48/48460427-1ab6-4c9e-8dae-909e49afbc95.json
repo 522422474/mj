@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_coin",
+    "texture": "3bDESA2epPe4B0SliF4F/V",
+    "rect": [
+      1,
+      1,
+      27,
+      27
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      29,
+      28
+    ]
+  }
+}

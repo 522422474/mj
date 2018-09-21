@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paixingdiban",
+    "texture": "62wuMT+N5J74TWQDfPKp2a",
+    "rect": [
+      0,
+      0,
+      135,
+      184
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      135,
+      184
+    ]
+  }
+}

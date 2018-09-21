@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biaoqing01",
+    "texture": "baK2U+HD5HALhKDYMps/Dr",
+    "rect": [
+      0,
+      0,
+      67,
+      266
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      67,
+      266
+    ]
+  }
+}

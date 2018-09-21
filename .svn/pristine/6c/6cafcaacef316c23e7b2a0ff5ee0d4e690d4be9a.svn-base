@@ -1,0 +1,23 @@
+var game = require('gameConfig');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        spineNode: cc.Node,
+        actionLayer: cc.Node,
+        actionSecondaryLayer: cc.Node,
+    },
+
+    onLoad: function () {
+
+    },
+
+    onDestroy: function () {
+
+    },
+
+    onEnable: function () {
+        
+    }
+});

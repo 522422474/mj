@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shibaiyin",
+    "texture": "ec0e2kByxMOrtIpNvypu/1",
+    "rect": [
+      0,
+      12,
+      496,
+      145
+    ],
+    "offset": [
+      0,
+      -5.5
+    ],
+    "originalSize": [
+      496,
+      158
+    ]
+  }
+}

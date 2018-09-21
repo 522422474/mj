@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "couyise_tex",
+    "texture": "a2kvLIigBBDYTJ3c6U85rQ",
+    "rect": [
+      1,
+      2,
+      720,
+      887
+    ],
+    "offset": [
+      -151,
+      66.5
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

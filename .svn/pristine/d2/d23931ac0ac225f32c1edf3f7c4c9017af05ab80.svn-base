@@ -1,0 +1,27 @@
+var roomUtil = require('roomUtil');
+var roomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        roomNum: cc.Label
+    },
+
+    onLoad: function () {},
+
+    onDestroy: function () {},
+
+    onEnable: function () {
+        cc.log('..roomNumView onEnable.');
+        this.showRoomNum();
+    },
+
+    showRoomNum: function () {
+        var roomData = roomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+        this.roomNum.string = roomUtil.getRoomString(roomData.id);
+    }
+});

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hulu_tex",
+    "texture": "c9JyPpUU5F16ZIXeanoA7Y",
+    "rect": [
+      1,
+      16,
+      308,
+      214
+    ],
+    "offset": [
+      -101,
+      5
+    ],
+    "originalSize": [
+      512,
+      256
+    ]
+  }
+}

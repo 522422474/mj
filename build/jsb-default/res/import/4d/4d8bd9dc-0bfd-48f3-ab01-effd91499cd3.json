@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "qingnaixindengdai_tex",
+    "texture": "e50R9Zg91DuJLUzgdSvK0u",
+    "rect": [
+      1,
+      1,
+      207,
+      46
+    ],
+    "offset": [
+      -23.5,
+      8
+    ],
+    "originalSize": [
+      256,
+      64
+    ]
+  }
+}

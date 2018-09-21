@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_xiazhudiban",
+    "texture": "9eOLi71fRLgZ3tHP2n2kMG",
+    "rect": [
+      0,
+      0,
+      147,
+      35
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      147,
+      35
+    ],
+    "capInsets": [
+      7,
+      2,
+      9,
+      0
+    ]
+  }
+}

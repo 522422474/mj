@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "smallBg",
+    "texture": "5eEjVrDP1Bw557Qk5B6G9X",
+    "rect": [
+      1,
+      0,
+      895,
+      462
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      896,
+      462
+    ]
+  }
+}

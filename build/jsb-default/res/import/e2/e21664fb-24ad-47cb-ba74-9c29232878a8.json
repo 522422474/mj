@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tishikuang",
+    "texture": "74bSrCyPtEkZlKsR0Tjl5Z",
+    "rect": [
+      0,
+      0,
+      67,
+      68
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      67,
+      68
+    ],
+    "capInsets": [
+      16,
+      16,
+      17,
+      16
+    ]
+  }
+}

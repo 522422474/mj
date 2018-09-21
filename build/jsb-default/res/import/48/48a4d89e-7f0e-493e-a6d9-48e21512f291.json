@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xuanxiangkabg2",
+    "texture": "2eWyBuQ3pMtZ+xvp4Ig+nd",
+    "rect": [
+      0,
+      0,
+      720,
+      71
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      720,
+      71
+    ]
+  }
+}

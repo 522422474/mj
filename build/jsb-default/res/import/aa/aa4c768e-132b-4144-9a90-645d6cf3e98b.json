@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_face_shang_shou_51",
+    "texture": "68U1Na/5RGE6ArAN89Ri5j",
+    "rect": [
+      2,
+      7,
+      60,
+      69
+    ],
+    "offset": [
+      -0.5,
+      1.5
+    ],
+    "originalSize": [
+      65,
+      86
+    ]
+  }
+}

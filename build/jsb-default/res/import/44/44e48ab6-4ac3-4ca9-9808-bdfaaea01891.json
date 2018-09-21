@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "momoqipailogo",
+    "texture": "9fBIU8mPJL7b+ku6Ih4nP7",
+    "rect": [
+      0,
+      0,
+      951,
+      411
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      951,
+      411
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yuyinguanbi",
+    "texture": "54ehEc11pPeqxMWJ7o4XuN",
+    "rect": [
+      0,
+      0,
+      299,
+      300
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      299,
+      300
+    ]
+  }
+}

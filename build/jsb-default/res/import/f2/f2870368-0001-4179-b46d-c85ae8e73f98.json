@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "likai",
+    "texture": "dbR8IZKBBDGZNpjN060Gcb",
+    "rect": [
+      0,
+      0,
+      202,
+      83
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      202,
+      84
+    ]
+  }
+}

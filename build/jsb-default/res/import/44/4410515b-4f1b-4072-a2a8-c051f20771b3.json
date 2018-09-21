@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_back_zuo_chu",
+    "texture": "73JlrXFmlApIm7/qdI0rEp",
+    "rect": [
+      3,
+      3,
+      69,
+      61
+    ],
+    "offset": [
+      1,
+      -1.5
+    ],
+    "originalSize": [
+      73,
+      64
+    ]
+  }
+}

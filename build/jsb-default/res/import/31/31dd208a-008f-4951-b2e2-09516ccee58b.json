@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "butongyi01",
+    "texture": "cdX6QV9BxL6qlo1hdegXO8",
+    "rect": [
+      0,
+      0,
+      269,
+      103
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      269,
+      105
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "paomadeng_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"width\":257,\"y\":1,\"height\":105,\"name\":\"zhuangpaomadeng\",\"x\":1},{\"width\":257,\"y\":108,\"height\":105,\"name\":\"zhuangpaomadeng2\",\"x\":1}],\"name\":\"paomadeng\",\"imagePath\":\"paomadeng_tex.png\"}",
+  "texture": {
+    "__uuid__": "a4KrMztoNAd7X+Llryh41O"
+  }
+}

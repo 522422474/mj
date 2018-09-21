@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "weizidiwen",
+    "texture": "8e+q0o+s5P7qSjjUTJImMR",
+    "rect": [
+      0,
+      0,
+      170,
+      28
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      170,
+      28
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shangchengbiaoti",
+    "texture": "5dfHgrN9hF74Or1o8Qo6qt",
+    "rect": [
+      0,
+      0,
+      133,
+      65
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      133,
+      65
+    ]
+  }
+}

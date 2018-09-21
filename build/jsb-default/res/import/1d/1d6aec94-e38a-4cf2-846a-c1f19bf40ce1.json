@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_Invitation_N",
+    "texture": "7fZstXV3hM4YRHzpviASnH",
+    "rect": [
+      0,
+      0,
+      469,
+      158
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      469,
+      158
+    ]
+  }
+}

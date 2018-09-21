@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "kaishixiazhu_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"width\":1279,\"y\":1,\"height\":322,\"name\":\"piaofubeijing\",\"x\":1},{\"width\":562,\"y\":201,\"height\":192,\"name\":\"kaishixiazhu\",\"x\":1282},{\"width\":550,\"y\":1,\"height\":198,\"name\":\"tingzhixiazhu\",\"x\":1282}],\"name\":\"kaishixiazhu\",\"imagePath\":\"kaishixiazhu_tex.png\"}",
+  "texture": {
+    "__uuid__": "7aKh2ggLBPb4AbDmEhhKPB"
+  }
+}

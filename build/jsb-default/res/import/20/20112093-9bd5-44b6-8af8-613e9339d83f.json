@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huitui",
+    "texture": "17xf3U9dlNnLuqo3DQM54I",
+    "rect": [
+      0,
+      0,
+      107,
+      98
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      107,
+      101
+    ]
+  }
+}

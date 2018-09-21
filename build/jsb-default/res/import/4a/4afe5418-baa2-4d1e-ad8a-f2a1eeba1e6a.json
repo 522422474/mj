@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_jiabei_N",
+    "texture": "baZL8nbndATo0U92a6lCan",
+    "rect": [
+      0,
+      0,
+      225,
+      95
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      225,
+      95
+    ]
+  }
+}

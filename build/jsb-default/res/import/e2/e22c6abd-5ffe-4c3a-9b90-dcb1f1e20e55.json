@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liebiaowenzidi",
+    "texture": "0fD6/7MQpM5JogQ8hnVbiW",
+    "rect": [
+      0,
+      0,
+      14,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      14,
+      37
+    ],
+    "capInsets": [
+      3,
+      0,
+      3,
+      7
+    ]
+  }
+}

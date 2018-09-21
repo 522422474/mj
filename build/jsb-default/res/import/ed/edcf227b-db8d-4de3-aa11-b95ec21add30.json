@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dengdaiwanjiajiaofen",
+    "texture": "62htAmN15ARrLWHa+dfHTb",
+    "rect": [
+      0,
+      0,
+      273,
+      39
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      273,
+      39
+    ]
+  }
+}

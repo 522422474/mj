@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tdkliaotiankuang",
+    "texture": "0bPjD8I3pFeZ9/piAKpPts",
+    "rect": [
+      0,
+      0,
+      588,
+      513
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      588,
+      513
+    ]
+  }
+}

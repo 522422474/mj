@@ -1,0 +1,44 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "bufu",
+  "_duration": 0.6833333333333333,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "46K3NdF+FHxZ3qROLTIoj5"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "16je90479NvauAsQPiBAl3"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "7belT28mxCZ5r5v4T7ZfIm"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "9b3FdwsrlNl7mXWLE4EPIv"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "46K3NdF+FHxZ3qROLTIoj5"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zengsong02",
+    "texture": "222WWsrQVFmqspH9vvGBr3",
+    "rect": [
+      1,
+      1,
+      87,
+      41
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      89,
+      42
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_losenum_0",
+    "texture": "d9DsdGfOZKWr8KfxE/QuTN",
+    "rect": [
+      1,
+      0,
+      213,
+      135
+    ],
+    "offset": [
+      -20.5,
+      60.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yaobuqi",
+    "texture": "2cXi3jQk9IVKUq18sl0QbL",
+    "rect": [
+      0,
+      0,
+      188,
+      74
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      188,
+      74
+    ]
+  }
+}

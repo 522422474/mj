@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jianglifangka",
+    "texture": "c8op12/YFAiIwffWM71nan",
+    "rect": [
+      0,
+      0,
+      250,
+      52
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      250,
+      52
+    ]
+  }
+}

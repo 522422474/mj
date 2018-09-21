@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_menXlun",
+    "texture": "70v3aSieJASIKttINGSKha",
+    "rect": [
+      0,
+      0,
+      215,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      215,
+      79
+    ]
+  }
+}

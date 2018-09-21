@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jushu",
+    "texture": "11SpcGbmRK/r293dKERDAC",
+    "rect": [
+      0,
+      0,
+      93,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      40
+    ]
+  }
+}

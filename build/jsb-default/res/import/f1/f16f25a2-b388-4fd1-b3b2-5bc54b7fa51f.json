@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhunbei02",
+    "texture": "8drawCMMtKiqLpobONoMf0",
+    "rect": [
+      0,
+      0,
+      296,
+      114
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      296,
+      114
+    ]
+  }
+}

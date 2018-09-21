@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tuichuyouxi01",
+    "texture": "072WIOE0lL3a5ZxT2YlHlz",
+    "rect": [
+      0,
+      0,
+      269,
+      105
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      269,
+      105
+    ]
+  }
+}

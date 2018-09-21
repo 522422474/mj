@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liaotianfuhao",
+    "texture": "e6vrJRPT1PbrCYOOE5YaLV",
+    "rect": [
+      1,
+      1,
+      60,
+      57
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      62,
+      60
+    ]
+  }
+}

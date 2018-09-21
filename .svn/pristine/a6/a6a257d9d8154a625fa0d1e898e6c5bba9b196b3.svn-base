@@ -1,0 +1,380 @@
+var game = require('gameConfig');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        play_layer_up: cc.Node,
+        play_layer_down: cc.Node,
+        play_layer_left: cc.Node,
+        play_layer_right: cc.Node,
+
+        disCardArrow: cc.Prefab,
+        cardButtonPrefab: cc.Prefab,
+        cardHuierPrefab: cc.Prefab,
+        cardTingPrefab: cc.Prefab,
+        cardMaskPrefab: cc.Prefab,
+    },
+
+    onLoad: function () {
+        registEvent('onCardBtnStart', this, this.onCardBtnStart);
+        registEvent('onCardBtnMove', this, this.onCardBtnMove);
+        registEvent('onCardBtnEnd', this, this.onCardBtnEnd);
+        registEvent('onCardBtnCancel', this, this.onCardBtnCancel);
+        registEvent('initCardDis', this, this.showDisCards);
+        registEvent('initCardChi', this, this.showUsedCards);
+        registEvent('initCardPeng', this, this.showUsedCards);
+        registEvent('initCardGang', this, this.showUsedCards);
+        registEvent('initCardHand', this, this.showMyHandCards);
+        registEvent('initCardHandNum', this, this.showHandCards);
+    },
+
+    onDestroy: function () {
+        unregistEvent('onCardBtnStart', this, this.onCardBtnStart);
+        unregistEvent('onCardBtnMove', this, this.onCardBtnMove);
+        unregistEvent('onCardBtnEnd', this, this.onCardBtnEnd);
+        unregistEvent('onCardBtnCancel', this, this.onCardBtnCancel);
+        unregistEvent('initCardDis', this, this.showDisCards);
+        unregistEvent('initCardChi', this, this.showUsedCards);
+        unregistEvent('initCardPeng', this, this.showUsedCards);
+        unregistEvent('initCardGang', this, this.showUsedCards);
+        unregistEvent('initCardHand', this, this.showMyHandCards);
+        unregistEvent('initCardHandNum', this, this.showHandCards);
+    },
+
+    onEnable: function () {
+        this.play_layer_up.active = false;
+        //this.play_layer_down.active = false;
+        this.play_layer_left.active = false;
+        this.play_layer_right.active = false;
+
+        this._cardArrow = cc.instantiate(this.disCardArrow);
+        this._cardArrow.active = false;
+
+        var gameData = game.getGameData();
+        for (var uid in gameData.cards) {
+            var cards = gameData.cards[uid],
+                obtain = gameData.game.obtain;
+            sendEvent('initCardDis', {uid: uid, dis: cards['dis']});
+            sendEvent('initCardChi', {uid: uid, chi: cards['chi'], peng: cards['peng'], gang: cards['gang']});
+            sendEvent('initCardPeng', {uid: uid, chi: cards['chi'], peng: cards['peng'], gang: cards['gang']});
+            sendEvent('initCardGang', {uid: uid, chi: cards['chi'], peng: cards['peng'], gang: cards['gang']});
+            sendEvent('initCardHand', {uid: uid, hand: cards['hand'], obtain: obtain});
+            sendEvent('initCardHandNum', {uid: uid, num: cards['handnum']});
+        }
+    },
+
+    showMyHandCards: function (data) {
+        var uid = data.detail.uid, cards = data.detail.hand, obtain = data.detail.obtain;
+        if (uid != GameData.player.uid) return;
+
+        var cardsNode = cc.find('cardHand', this.play_layer_down);
+        if (cardsNode == null) return;
+
+        var gameRule = game.getGameRule(), flag = true;
+        var showCards = [], wildCards = [];
+        if (obtain > 0) showCards.push(obtain);
+        for (var i = cards.length - 1; i >= 0; --i) {
+            var c = cards[i];
+            if (flag && c == obtain) {
+                flag = false;
+                continue;
+            }
+            gameRule.isWildCard(c) ? wildCards.push(c) : showCards.push(c);
+        }
+        showCards = showCards.concat(wildCards);
+
+        var maxSize = GameData.client.handsize;
+        for (var idx = 0, cardIdx = 0, num = showCards.length; idx <= maxSize; ++idx) {
+            var node = cc.find('cardHand'+idx, cardsNode);
+
+            if (idx == 0) {
+                node.active = (uid == GameData.game.turn);
+                num = (uid == GameData.game.turn) ? num-1 : num;
+            } else {
+                node.active = (idx <= num);
+            }
+
+            if (node.active) {
+                var card = showCards[cardIdx++];
+                this.showCardContent(node, card, 'mj_face_xia_shou');
+                this.setCardButton(node, card, idx);
+                /*this.setMaskVisible(cardNode, false);
+                this.setMyHuierVisible(node, card, 'down');
+                this.setMyTingVisible(node, card);*/
+            }
+        }
+        cardsNode.active = true;
+    },
+
+    showHandCards: function (data) {
+        var uid = data.detail.uid, num = data.detail.num;
+        if (uid == GameData.player.uid) return;
+
+        var pos = GameData.getPlayerPosByUid(uid);
+        var parent = this['play_layer_'+pos];
+        if (parent == null) return;
+
+        var cardsNode = cc.find('cardHand', parent);
+        if (cardsNode == null) return;
+
+        var node0 = cc.find('cardHand0', cardsNode);
+        var turn = (uid == GameData.game.turn);
+        node0.active = turn;
+        num = turn ? num-1 : num;
+
+        var handSize = GameData.client.handsize;
+        for (var idx = 1; idx <= handSize; ++idx) {
+            var node = cc.find('cardHand'+idx, cardsNode);
+            node.active = idx <= num;
+        }
+        cardsNode.active = true;
+        parent.active = true;
+    },
+
+    showUsedCards: function (data) {
+        var uid = data.detail.uid, chi = data.detail.chi, peng = data.detail.peng, gang = data.detail.gang;
+        var size = parseInt(GameData.client.handsize / 3);
+        var cards = [].concat(gang, peng, chi);
+
+        var pos = GameData.getPlayerPosByUid(uid);
+        var parent = this['play_layer_'+pos];
+        if (parent == null) return;
+
+        var pengNode = cc.find('cardPeng', parent);
+        if (pengNode == null) return;
+
+        var img = this.getCardImgStr(pos);
+        var gameRule = game.getGameRule();
+        for (var i = 0; i<size; ++i) {
+            var node = cc.find('cardPeng'+(i+1), pengNode);
+            if (node == null) continue;
+
+            node.active = (i < cards.length);
+            if (i >= cards.length) continue;
+
+            cards[i].sort(function(a, b) {return a-b;});
+
+            for (var n = 0; n < 4; ++n) {
+                var faceNode = node.getChildByName('card_face'+(n+1));
+                if (n < cards[i].length) {
+                    var cardId = cards[i][n];
+                    this.showCardContent(faceNode, cardId, img);
+
+                    if (n == 3 && gameRule.isWildCard(cardId) == true) {
+                        this.addHuierIcon(faceNode, pos);
+                    }
+                    faceNode.active = true;
+                } else {
+                    faceNode.active = false;
+                }
+            }
+            if (cards[i].length == 5) { //暗杠
+                node.getChildByName('card_face4').active = false;
+                node.getChildByName('card_back4').active = true;
+            } else {
+                node.getChildByName('card_back4').active = false;
+            }
+        }
+    },
+
+    showDisCards: function (data) {
+        var uid = data.detail.uid, cards = data.detail.dis;
+        var pos = GameData.getPlayerPosByUid(uid);
+        var joinermax = GameData.room.opts.joinermax, cardMax = 0;
+        var parent = this['play_layer_'+pos];
+        if (parent == null) return;
+
+        var node4 = cc.find('cardDis_4', parent);
+        if (node4) node4.active = false;
+        var node3 = cc.find('cardDis_3', parent);
+        if (node3) node3.active = false;
+        var node2 = cc.find('cardDis_2', parent);
+        if (node2) node2.active = false;
+        var disNode = cc.find('cardDis_' + joinermax, parent);
+        disNode.active = true;
+
+        if (joinermax == 4) cardMax = 24;
+        if (joinermax == 3) cardMax = 36;
+        if (joinermax == 2) cardMax = 60;
+
+        var img = this.getCardImgStr(pos);
+        for (var i = 1; i <= cardMax; i++) {
+            var node = cc.find('card_face' + i, disNode);
+            if (i <= cards.length) {
+                var iconUrl = '';
+                var card = cards[i - 1];
+                node.active = true;
+
+                this.showCardContent(node, card, img);
+
+                if (uid == GameData.game.lastdisUid && card == GameData.game.lastdisCard) {
+                    this._cardArrow.active = true;
+                    this._cardArrow.parent = node;
+                    this._cardArrow.position.x = 0;
+                    this._cardArrow.position.y = 0;
+                    cc.find('left', this._cardArrow).active = pos == 'left' ? true : false;
+                    cc.find('down', this._cardArrow).active = pos == 'down' ? true : false;
+                    cc.find('right', this._cardArrow).active = pos == 'right' ? true : false;
+                    cc.find('up', this._cardArrow).active = pos == 'up' ? true : false;
+                }
+            } else {
+                node.active = false;
+            }
+        }
+    },
+
+    showCardContent: function (cardNode, cardId, cardHeader) {
+        var card = cardNode.getComponent('Card');
+        if (card != null) card.id = cardId;
+
+        var iconUrl = 'resources/mjcard2d/' + cardHeader + '_' + cardId + '.png';
+        var texture = cc.textureCache.addImage(cc.url.raw(iconUrl));
+        cardNode.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture);
+    },
+
+    setCardButton: function (cardNode, cardId, index) {
+        var cardBtn = cardNode.getChildByName(cardNode.name + '_button');
+        if (cardBtn == null) {
+            cardBtn = cc.instantiate(this.cardButtonPrefab);
+            cardBtn.name = cardNode.name + '_button';
+            cardNode.addChild(cardBtn);
+        }
+        var cardButton = cardBtn.getComponent('cardBtnView');
+        cardButton.setCardId(cardId);
+        cardButton.setIndex(index);
+    },
+
+    setMyHuierVisible: function (cardNode, cardId, direction) {
+        var show = false;
+        if (RuleHandler.instance.isHuier(cardId)) {
+            show = true;
+        }
+
+        var huierNode = cardNode.getChildByName(cardNode.name + '_huier');
+        if (huierNode == null) {
+            if (show == true) {
+                huierNode = cc.instantiate(this.cardHuierPrefab);
+                cc.find('up', huierNode).active = false;
+                cc.find('down', huierNode).active = false;
+                cc.find('right', huierNode).active = false;
+                cc.find('left', huierNode).active = false;
+
+                cc.find(direction, huierNode).active = true;
+                huierNode.y = huierNode.y - 18;
+                cardNode.addChild(huierNode);
+                huierNode.name = cardNode.name + '_huier';
+            }
+        } else {
+            huierNode.active = show;
+        }
+    },
+
+    setMyTingVisible: function (cardNode, cardId) {
+        var tingDiscard = false;
+        for (var i = 0; i < this.tingData.length; i++) {
+            var data = this.tingData[i];
+            if (data.discard == cardId) {
+                tingDiscard = true;
+                break;
+            }
+        }
+
+        var tingNode = cardNode.getChildByName(cardNode.name + '_ting');
+        if (tingNode == null) {
+            if (tingDiscard == true) {
+                tingNode = cc.instantiate(this.cardTingPrefab);
+                tingNode.y = tingNode.y - 10;
+                cardNode.addChild(tingNode);
+                tingNode.name = cardNode.name + '_ting';
+            }
+        } else {
+            tingNode.active = tingDiscard;
+        }
+
+        if (GameData.game.turn != GameData.player.uid) {
+            if (tingNode != null) {
+                tingNode.active = false;
+            }
+        }
+    },
+
+    getCardImgStr: function(pos) {
+        if (pos == 'down') return 'mj_face_xia_chu';
+        else if (pos == 'up') return 'mj_face_shang_shou';
+        else if (pos == 'left') return 'mj_face_zuo_chu';
+        else if (pos == 'right') return 'mj_face_you_chu';
+        return '';
+    },
+
+    onCardBtnStart: function (data) {
+    },
+    onCardBtnMove: function (data) {
+        var card = data.detail.card;
+
+        //显示听牌
+        if (this.turnUid == GameData.player.uid) {
+            //this.tingTip.show(card, this.tingData);
+            this.showMask(card);
+        }
+    },
+    onCardBtnEnd: function (data) {
+        var index = data.detail.index;
+        var type = data.detail.type;
+
+        switch (type){
+            case -1:{   //属于滑动出牌，但没超过指定范围，算弹起
+                if(index == this.selectedCard){
+                    this.selectedCard = -1;
+                }
+                this.onHandCardClicked(data);
+                //this.tingTip.hide();
+            }break;
+            case 0:{    //属于点击出牌
+                this.onHandCardClicked(data);
+            }break;
+            case 1:{    //属于滑动出牌
+                this.selectedCard = index;
+                this.onHandCardClicked(data);
+            }break;
+        }
+    },
+
+    onCardBtnCancel: function (data) {
+        //this.tingTip.hide();
+    },
+    onHandCardClicked: function (data) {
+
+        var card = data.detail.card;
+        var index = data.detail.index;
+        var node = cc.find('cardHand/cardHand' + index, this.play_layer_down);
+
+        if (this.selectedCard == index) {
+            var self = this;
+            //发送出牌请求
+            if (this.turnUid == GameData.player.uid) {
+                this._curGameData.requestDisCard(card, function (ret) {
+                    if (ret.result == errorCode.Success) {
+                        node.stopAllActions();
+                        self.selectedCard = -1;
+                        self.moveBackMyCards();
+                    }
+                });
+            }
+            //this.tingTip.hide();
+        } else {
+            if (this.selectedCard >= 0) {
+                var last = cc.find('cardHand/cardHand' + this.selectedCard, this.play_layer_down);
+                last.runAction(cc.moveTo(0.01, this.myHandsInitPosition[this.selectedCard]));
+            }
+            node.runAction(cc.moveTo(0.01, cc.p(this.myHandsInitPosition[index].x, 30)));
+
+            this.selectedCard = index;
+            if (this.turnUid == GameData.player.uid) {
+                //this.tingTip.show(card, this.tingData);
+                this.showMask(card);
+            }
+        }
+    },
+
+});

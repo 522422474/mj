@@ -1,0 +1,32 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "paomadengdonghua",
+  "_duration": 1.0166666666666666,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "09jaDYY7lIrodM4e3rFhB0"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "d6nMrvUkxI2aI41DrGsw5q"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "09jaDYY7lIrodM4e3rFhB0"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

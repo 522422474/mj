@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "changyongyudk",
+    "texture": "2byT9UAppFToRCOle2zk52",
+    "rect": [
+      0,
+      0,
+      525,
+      58
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      525,
+      58
+    ]
+  }
+}

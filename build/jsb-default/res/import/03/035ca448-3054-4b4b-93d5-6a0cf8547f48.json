@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mei3",
+    "texture": "d8xio0CGhNF4orsOX7xhUC",
+    "rect": [
+      2,
+      2,
+      60,
+      56
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      64,
+      59
+    ]
+  }
+}

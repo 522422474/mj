@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biejiazhipaiyy",
+    "texture": "42L5OBIXBPC5eV4ucuMkFK",
+    "rect": [
+      0,
+      0,
+      259,
+      230
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      259,
+      230
+    ]
+  }
+}

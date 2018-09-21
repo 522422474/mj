@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "liuguang_tex",
+  "_atlasJson": "{\"imagePath\":\"liuguang_tex.png\",\"SubTexture\":[{\"width\":156,\"y\":1,\"height\":146,\"name\":\"liuguang\",\"x\":1}],\"name\":\"liuguang\"}",
+  "texture": {
+    "__uuid__": "3d2qpFo0ZBu4aRgrgamD/V"
+  }
+}

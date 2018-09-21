@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "woyaoshangzhuang01",
+    "texture": "c1GrH1jf1H2YIbxPLcdBMp",
+    "rect": [
+      0,
+      0,
+      258,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      258,
+      100
+    ]
+  }
+}

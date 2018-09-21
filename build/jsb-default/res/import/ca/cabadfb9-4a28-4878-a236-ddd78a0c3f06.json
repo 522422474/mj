@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-zuju2",
+    "texture": "82dzfI9qlHDbrHA01eh56R",
+    "rect": [
+      2,
+      0,
+      239,
+      128
+    ],
+    "offset": [
+      1,
+      0
+    ],
+    "originalSize": [
+      241,
+      128
+    ]
+  }
+}

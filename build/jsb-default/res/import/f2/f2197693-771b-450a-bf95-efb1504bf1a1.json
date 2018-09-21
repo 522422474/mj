@@ -1,0 +1,32 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "warningAnimation",
+  "_duration": 0.85,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a5/cZcT2NLhbquzJa9jgmF"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "d93LeHreFES7RlCX4BhbHU"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "a5/cZcT2NLhbquzJa9jgmF"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

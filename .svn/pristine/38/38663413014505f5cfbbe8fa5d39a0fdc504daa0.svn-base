@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "566b91b2-6f2b-4927-9036-dd046b8f43ef",
+  "atlasJson": "{\"imagePath\":\"qingzhuang_tex.png\",\"SubTexture\":[{\"width\":216,\"y\":1,\"height\":123,\"name\":\"01\",\"x\":1},{\"width\":216,\"y\":126,\"height\":123,\"name\":\"02\",\"x\":1}],\"name\":\"qingzhuang\"}",
+  "texture": "21a3d897-a67f-44ba-8a38-7b6890870856",
+  "subMetas": {}
+}

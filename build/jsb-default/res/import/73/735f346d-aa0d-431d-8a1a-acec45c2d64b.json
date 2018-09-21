@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zongshuwenzidikuang",
+    "texture": "2eiHXP9KNMPbl4Al258mMr",
+    "rect": [
+      0,
+      0,
+      68,
+      68
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      68,
+      68
+    ],
+    "capInsets": [
+      13,
+      15,
+      13,
+      14
+    ]
+  }
+}

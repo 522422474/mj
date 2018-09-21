@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paijujijiangkaishi",
+    "texture": "f48heP92lPS5rJ6OhNsV0d",
+    "rect": [
+      0,
+      1,
+      214,
+      34
+    ],
+    "offset": [
+      -1,
+      -0.5
+    ],
+    "originalSize": [
+      216,
+      35
+    ]
+  }
+}

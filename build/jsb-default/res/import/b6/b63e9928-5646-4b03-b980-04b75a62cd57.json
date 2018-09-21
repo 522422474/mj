@@ -1,0 +1,56 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "deise",
+  "_duration": 1.2166666666666666,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "67OanU89FBE5GBnOrmMXkO"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "10qqw9MbhLgYkHNGf3pJeM"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "58dOAe7ehP86WO9iM1F8TC"
+            }
+          },
+          {
+            "frame": 0.6,
+            "value": {
+              "__uuid__": "1detWhb3hGPJ9W5JA+Ylps"
+            }
+          },
+          {
+            "frame": 0.8,
+            "value": {
+              "__uuid__": "b1MEYDSNJMh4aWWHdcHndI"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "feD04l7kpFIJcFyyXW4viK"
+            }
+          },
+          {
+            "frame": 1.2,
+            "value": {
+              "__uuid__": "67OanU89FBE5GBnOrmMXkO"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

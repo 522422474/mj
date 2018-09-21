@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_dengdaitarenzhunbei",
+    "texture": "c02luCXI5O66LIpFY9F+mw",
+    "rect": [
+      0,
+      0,
+      214,
+      33
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      214,
+      33
+    ]
+  }
+}

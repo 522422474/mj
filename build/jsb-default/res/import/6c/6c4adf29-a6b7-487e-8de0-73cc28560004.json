@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "landai",
+    "texture": "2d3Db06BtIeqZfi4KM6EFG",
+    "rect": [
+      0,
+      0,
+      642,
+      85
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      642,
+      85
+    ]
+  }
+}

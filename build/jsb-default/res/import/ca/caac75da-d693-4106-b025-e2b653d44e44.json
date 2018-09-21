@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "youxitixing",
+    "texture": "f2dJheN6tJ9aEuWAo0x6N/",
+    "rect": [
+      0,
+      0,
+      1139,
+      25
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1139,
+      25
+    ]
+  }
+}

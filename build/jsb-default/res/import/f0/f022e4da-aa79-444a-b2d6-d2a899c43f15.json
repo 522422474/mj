@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yingjialiangpai_tex",
+    "texture": "6cwsW0v7BEuaj0NrugSzBG",
+    "rect": [
+      1,
+      1,
+      1279,
+      487
+    ],
+    "offset": [
+      -383.5,
+      11.5
+    ],
+    "originalSize": [
+      2048,
+      512
+    ]
+  }
+}

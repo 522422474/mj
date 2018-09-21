@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tijiaoshenqing01",
+    "texture": "8cgQ3CFa9Pn77BcBtvuQDF",
+    "rect": [
+      0,
+      0,
+      281,
+      105
+    ],
+    "offset": [
+      -1,
+      8.5
+    ],
+    "originalSize": [
+      283,
+      122
+    ]
+  }
+}

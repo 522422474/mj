@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "woxianchu",
+    "texture": "0eKR1eKDFM6qFc5lZbmz9+",
+    "rect": [
+      0,
+      0,
+      105,
+      43
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      105,
+      43
+    ]
+  }
+}

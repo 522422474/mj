@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_fanshu",
+    "texture": "b2W7S1bsNLl4FOh3E1Hi/M",
+    "rect": [
+      0,
+      0,
+      93,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      40
+    ]
+  }
+}

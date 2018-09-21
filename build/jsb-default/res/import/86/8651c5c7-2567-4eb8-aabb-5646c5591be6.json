@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiapiaozhong",
+    "texture": "47y0l/BahDVIT2Z3BzjpsY",
+    "rect": [
+      0,
+      0,
+      127,
+      55
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      127,
+      55
+    ]
+  }
+}

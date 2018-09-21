@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "guo",
+    "texture": "93QdFOCgNOM6hgKS6PCW8M",
+    "rect": [
+      0,
+      0,
+      142,
+      147
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      142,
+      147
+    ]
+  }
+}

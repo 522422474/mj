@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "poster_tianjin_1",
+    "texture": "7f5BjUsZ1CgZvmhMxG8bD+",
+    "rect": [
+      0,
+      0,
+      1049,
+      590
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1049,
+      590
+    ]
+  }
+}

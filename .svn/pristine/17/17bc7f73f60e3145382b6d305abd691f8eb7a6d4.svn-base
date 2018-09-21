@@ -1,0 +1,510 @@
+var tdk_roomData = require('tdkRoomData');
+var hongzhongData = require('hongzhongData');
+var ZJH_roomData = require('ZJH-RoomData');
+var hhdz_data = require('hhdz_data');
+
+var gameDefine = require('gameDefine');
+var errorCode = require('errorCode');
+var roomHandler = {
+	room: {},				//房间数据
+	coinData: {},			//金币场结算数据
+	scores: {},				//总分数
+	players: [],			//玩家数据
+	onlines: [],			//玩家在线数据
+    readyData: {},			//准备数据
+    readyCountDown: 0,		//准备倒计时
+    dissolveData: {},		//房间解散数据
+    playGame: {},			//是否玩过游戏
+    recordData: [],
+};
+
+module.exports = roomHandler;
+
+//创建房间
+roomHandler.createRoom = function(createData) {
+	var self = this;
+	openView('Loading');
+
+	GameNet.getInstance().request("room.roomHandler.createRoom", createData, function(ret) {
+		if (!ret || ret.result == undefined) {
+			messageBoxWithoutCB('_createRoomCallBack error');
+			closeView('Loading');
+			return;
+		}
+
+		//房间创建失败
+		if (ret.result != errorCode.Success) {
+			var errorChar = '';
+			switch(ret.result){
+				case errorCode.LessCard: errorChar = '房卡不足.'; break;
+				case errorCode.NoJoinThisClub: errorChar = '抱歉!您不在该俱乐部.'; break;
+				case errorCode.AgentMoneyNotEnough: errorChar = '代理钻石不足,请通知代理及时充值.'; break;
+				case errorCode.AgentRoomMax: errorChar = '同时只能代开20个房间.'; break;
+				case errorCode.LessPoint: errorChar = '积分不足.'; break;
+                case errorCode.LessCoin: errorChar = '金币不足.'; break;
+				default: errorChar = '创建房间失败 ' + ret.result; break;
+			}
+			messageBoxWithoutCB(errorChar);
+			closeView('Loading');
+			return;
+		}
+
+		// 代理开房
+		if (ret.isAgentRoom) {
+			createMoveMessage('代开房间成功.');
+			openView("agentPanel");
+			closeView('Loading');
+			self.reqAgentRoom();
+			self.reqAgentResultRoom();
+			return;
+		}
+
+		if (!ret.roomid) {
+			messageBoxWithoutCB('createRoom cb error roomid');
+			closeView('Loading');
+			return;
+		}
+
+		//玩家开房
+		GameData.saveCreateRoomOpts();
+		self.enterRoom(ret.roomid);
+		// closeView('Loading');
+	});
+};
+
+//进入房间
+roomHandler.enterRoom = function(roomid) {
+	var num = Number(roomid);
+	//检查房间号
+	if (num < 100000 || num > 999999) {
+		messageBoxWithoutCB('房间号无效');
+		closeView('Loading');
+		return;
+	}
+	//赋值地里位置信息
+	var enterData = {roomid:num, posInfo:getPosInfo()};
+	openView('Loading');
+	//发送请求
+	GameNet.getInstance().request("room.roomHandler.enterRoom", enterData, function(ret) {
+    // GameData.setCommonRoomId(roomid);
+    textClipboard("1");
+		if (!ret || ret.result == undefined) {
+			closeView('Loading');
+			messageBoxWithoutCB('enterRoom without ret');
+			return;
+		}
+		if (ret.result != errorCode.Success) {
+			var errorChar = '';
+			switch(ret.result){
+				case errorCode.roomNotFound: errorChar = '房间不存在.'; break;
+				case errorCode.roomFull: errorChar = '房间已满.'; break;
+				case errorCode.LessCard: errorChar = '房卡不足.'; break;
+				case errorCode.LessPoint: errorChar = '积分不足.'; break;
+				case errorCode.NoJoinThisClub: errorChar = '抱歉!您不在该俱乐部.'; break;
+                case errorCode.LessCoin: errorChar = '金币不足.'; break;
+				default: errorChar = '进入房间失败'; break;
+			}
+			closeView('Loading');
+			createMoveMessage(errorChar);
+		}
+		GameData.initGameData();
+	});
+};
+
+//退出房间
+roomHandler.quitRoom = function(roomid) {
+	GameNet.getInstance().request("room.roomHandler.quitRoom", {roomid: roomid}, function (rtn) {
+		if (rtn.result == errorCode.Success) {
+			GameData.player.roomid = undefined;
+			cc.director.loadScene('home');
+		}
+	});
+};
+
+//解散房间
+roomHandler.deleteRoom = function(roomid, action) {
+	GameNet.getInstance().request("room.roomHandler.disbandRoom", {roomid:roomid, action:action}, function (rtn) {});
+};
+
+//设置准备
+roomHandler.setReady = function() {
+	GameNet.getInstance().request("room.roomHandler.ready", {}, function (rtn) {});
+}
+
+//请求代理房间信息
+roomHandler.reqAgentRoom = function () {
+	GameNet.getInstance().request("game.playerHandler.reqAgentRoom", {}, function (rtn) {
+		GameData.AgentRoomsData = rtn;
+		sendEvent('refreshAgentRoomUINew');
+	});
+};
+
+//请求代理房间结算信息
+roomHandler.reqAgentResultRoom = function () {
+	GameNet.getInstance().request("game.playerHandler.AgentResultRoom", {}, function (rtn) {
+		GameData.AgentResultRoom = rtn;
+		sendEvent('refreshAgentRoomUIResult');
+	});
+};
+
+roomHandler.getRoomData = function(){
+	return this.room;
+};
+roomHandler.getPlayersData = function(){
+	return this.players;
+};
+roomHandler.getPlayersCoin = function(){
+	var playersCoin = {};
+	for (var key in this.players) {
+		if (this.players[key]) {
+			playersCoin[this.players[key].uid] = this.players[key].coin;
+		}
+	}
+	return playersCoin;
+};
+roomHandler.getPlayerByUid = function(uid){
+	for (var i=0; i<GameData.joiners.length; i++) {
+		var player = GameData.joiners[i];
+		if (player && player.uid == uid) {
+			return player;
+		}
+	}
+	return null;
+};
+roomHandler.getPlayerPosByUid = function (uid) {
+    for (var i = 0; i < GameData.joiners.length; i++) {
+        if (GameData.joiners[i] && GameData.joiners[i].uid && GameData.joiners[i].uid == uid) {
+            return i;
+        }
+    }
+    return null;
+}
+roomHandler.getLocalPosition = function (index) {
+    var selfIndex = 0;
+    var temp = [];
+    for (var i = 0; i < GameData.joiners.length; i++) {
+        temp.push(i);
+    }
+    var selfIndx = this.getPlayerPosByUid(GameData.player.uid);
+    var prev = temp.slice(temp.indexOf(selfIndx));
+    prev = prev.concat(temp.slice(0, temp.indexOf(selfIndx)));
+    return prev.indexOf(index);
+}
+roomHandler.getScoreData = function(){
+	return this.scores;
+};
+roomHandler.getOnLinesData = function(){
+	return this.onlines;
+};
+roomHandler.getRoomReadyData = function(){
+	return this.readyData;
+};
+roomHandler.getRoomDissolveData = function(){
+	return this.dissolveData;
+};
+roomHandler.getRecordData = function(){
+	return this.recordData;
+};
+roomHandler.getCoinData = function(){
+	return this.coinData;
+};
+roomHandler.getPlayGame = function(){
+	return this.playGame;
+};
+roomHandler.getPlayGamePlayerArr = function() {
+	var arr = [];
+	for (var i = 0; i<GameData.joiners.length; i++) {
+		for (var key in this.playGame) {
+			if (GameData.joiners[i]) {
+				if (GameData.joiners[i].uid == key && this.playGame[key] > 0) {
+					arr.push(parseInt(key));
+				}
+			}
+		}
+	}
+	return arr;
+};
+roomHandler.isPlayerOnline = function(uid) {
+	return (this.onlines.indexOf(uid) != -1);
+};
+roomHandler.isPlayGameByUid = function(uid) {
+	for (var key in this.playGame) {
+		if (key == uid){
+			if (this.playGame[key] > 0) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}
+};
+
+roomHandler.onRoomInfoSetData = function(data){
+	if(data == undefined){
+		return;
+	}
+    this.room = data.room;
+    this.scores = data.scores;
+    this.players = data.players;
+    this.onlines = data.onlines;
+    this.playGame = data.playerGames;
+    if (data.record == undefined) {}
+    else{
+    	this.recordData = data.record;
+    }
+
+    GameData.room = data.room;
+    GameData.players = data.players;
+    GameData.setGameType(data.room.opts.gameType);
+    GameData.player.roomid = data.room.id;
+    GameData.client.gameType = data.room.opts.gameType;
+    GameData.joiners = [];
+
+
+    for (var i = 0; i < data.players.length; i++) {
+        var player = data.players[i];
+        GameData.joiners[i] = player;
+        // if (data.players[i] && data.players[i] != null) {
+        //     player = data.players[i];
+        //     GameData.joiners[i] = player;
+        // }
+    }
+    // for (var i = 0; i < GameData.joiners.length; i++) {
+    //     if(GameData.joiners[i] === null || GameData.joiners[i] === undefined){
+    //         GameData.joiners.splice(i,1);
+    //     }
+    // }
+    if (GameData.room.status == gameDefine.RoomState.GAMEING && GameData.room.opts.gameType == gameDefine.GameType.Game_MJ_HuaDian) {
+        GameData.game.gameStart = true;
+    }
+    if (data.room.opts.gameType == gameDefine.GameType.Game_Poker_TianjinDDZ)
+    {
+        GameDataTJDDZ.setPosition();
+    }
+    else if (data.room.opts.gameType == gameDefine.GameType.Game_Poker_DDZ)
+    {
+        GameDataDDZ.setPosition();
+    }
+    else if (data.room.opts.gameType == gameDefine.GameType.Game_Poker_paodekuai)
+    {
+        GameDataPDK.setPosition();
+    }
+	else if (data.room.opts.gameType == gameDefine.GameType.Game_Poker_ZJH)
+	{
+		ZJH_roomData.setPosition();
+	}
+    else
+    {
+        GameData.setPosition();
+    }
+    //初始化桦甸数据
+    if (GameData.room.status <= gameDefine.RoomState.READY) {
+        profileHuaDian.initGameData();
+    }
+};
+roomHandler.onPrepareInfoSetData = function(data){
+	if(data == undefined){
+		return;
+	}
+    this.readyData = data;
+};
+roomHandler.onRoomDissolveSetData = function(data){
+    if(data == undefined){
+        return;
+    }
+    this.dissolveData = data;
+};
+
+roomHandler.getCurGameDataOnType = function(){
+	if(this.room && this.room.opts){
+        switch (this.room.opts.gameType){
+            case gameDefine.GameType.Game_Mj_HZ:{
+                return hongzhongData;
+            }break;
+			default: return undefined;
+        }
+	}
+    return undefined;
+};
+
+roomHandler.registMessage = function() {
+	cc.log("....roomHandler registMessage.");
+
+	var self = this;
+	GameNet.getInstance().setCallBack('onRoomMsg', function (data) {
+		self.room = data.room;
+		self.scores = data.scores;
+		//self.players = data.players;
+		//self.onlines = data.onlines;
+
+		WriteLog("onRoomMsg:" + JSON.stringify(data));
+		GameData.room = data.room;
+		GameData.players = data.players;
+		GameData.setGameType(data.room.opts.gameType);
+		GameData.player.roomid = data.room.id;
+		GameData.joiners.splice(0, GameData.joiners.length);
+		for (var uid in data.players) {
+			var player = data.players[uid];
+			GameData.joiners[player.seat] = player;
+		}
+		GameData.setPosition();
+		GameData.allScores = data.scores;
+		GameData.showResult = true;
+		sendEvent('onRoomMsg', data);
+	});
+
+	GameNet.getInstance().setCallBack('onRoomInfo', function (data) {
+		self.onRoomInfoSetData(data);
+		sendEvent('onRoomInfo', data);
+	});
+
+	GameNet.getInstance().setCallBack('onRoomEnter', function (data) {
+		var sceneName, gameType = self.room.opts.gameType;
+		switch (gameType) {
+			case gameDefine.GameType.Game_Mj_Tianjin: sceneName = 'table'; break;
+			case gameDefine.GameType.Game_Mj_Shishi: sceneName = 'table-shishi'; break;
+			case gameDefine.GameType.Game_MJ_HuaDian:{
+				profileHuaDian.registAllMessage();
+				sceneName = 'table-huadian1';
+			}  break;
+			case gameDefine.GameType.Game_Mj_CC:{
+				profileChangChun.registAllMessage();
+				sceneName = 'table-changchun';
+			}  break;
+			case gameDefine.GameType.Game_Mj_Heb:{
+				profileHeb.registAllMessage();
+				sceneName = 'table-heb';
+			}  break;
+			case gameDefine.GameType.Game_Mj_HZ: sceneName = 'mahjong'; break;
+            case gameDefine.GameType.Game_niu_niu: sceneName = 'table-niuNiu'; break;
+            case gameDefine.GameType.Game_Niu_Niu_10: sceneName = 'table-tenNiuNiu'; break;
+            case gameDefine.GameType.Game_Niu_Hundred: sceneName = 'hundredNiuNiu'; break;
+			case gameDefine.GameType.Game_Poker_DDZ: sceneName = 'table-DDZ'; break;
+			case gameDefine.GameType.Game_Poker_TianjinDDZ: sceneName = 'table-TJDDZ'; break;
+			case gameDefine.GameType.Game_TDK: sceneName = 'table-TDK'; break;
+			case gameDefine.GameType.Game_Poker_13shui: sceneName = 'teble-shisanshui'; break;
+			case gameDefine.GameType.Game_Poker_paodekuai: sceneName = 'table-PDK'; break;
+			case gameDefine.GameType.Game_Poker_ZJH: sceneName = 'table-ZJH'; break;
+            case gameDefine.GameType.Game_Poker_HHDZ: {
+                hhdz_data.registMessage_hhdz();
+            	sceneName = 'table-hhdz';
+            } break;
+			default: return;
+		}
+		if(sceneName == undefined){
+			return;
+		}
+		GameData.roomClose = false;
+		if(sceneName != cc.director.getScene().name) {
+			cc.director.loadScene(sceneName);
+		}
+        closeView('UIMatch');
+		closeView('Loading');
+	});
+
+    GameNet.getInstance().setCallBack('onRoomReadyInfo', function (data) {
+        GameData.game.onRoomReadyInfo.data = data;
+        self.onPrepareInfoSetData(data);
+
+        sendEvent('onRoomReadyInfo', data);
+    });
+
+    GameNet.getInstance().setCallBack('onRoomQuit', function (data) {
+    	sendEvent('onRoomQuit', data);
+    	if (data.uid == GameData.player.uid) {
+    		cc.director.loadScene('home');
+    	}
+	});
+
+	GameNet.getInstance().setCallBack('onRoomClose', function (data) {
+		GameData.roomClose = true;
+		sendEvent('onRoomClose', data);
+	});
+
+	GameNet.getInstance().setCallBack('onRoomDissolve', function (data) {
+		self.onRoomDissolveSetData(data);
+		GameData.game.onRoomDissolve = data;
+
+		sendEvent('onRoomDissolve', data);
+	});
+
+	GameNet.getInstance().setCallBack('onCreatorQuit', function (data) {
+		sendEvent('onCreatorQuit', data);
+	});
+
+	GameNet.getInstance().setCallBack('onJoinerLost', function (data) {
+		sendEvent('onJoinerLost', data);
+	});
+
+	GameNet.getInstance().setCallBack('onJoinerConnect', function (data) {
+		GameData.joinContact = data;
+		sendEvent('onJoinerConnect', data);
+	});
+
+	GameNet.getInstance().setCallBack('onPrepareInfo', function (data) {
+		self.readyCountDown = data.countdown;
+		self.onPrepareInfoSetData(data.readyInfo);
+
+		GameDataTJDDZ.game.onRoomReadyInfo = data.readyInfo;
+		GameDataDDZ.game.onRoomReadyInfo = data.readyInfo;
+		//填大坑
+		tdk_roomData.onRoomReadyInfo = data.readyInfo;
+		tdk_roomData.close = false;
+
+		//扎金花
+		ZJH_roomData.onRoomReadyInfo = data.readyInfo;
+		if (self.readyCountDown > 0) {
+			sendEvent('onReadyCountDown');
+		}
+		sendEvent('onPrepareInfo', data.readyInfo);
+	});
+
+    GameNet.getInstance().setCallBack('onGameCoin', function (data) {
+
+    	self.coinData = data;
+
+        GameData.scores = data;
+        GameData.game.gameStart = false;
+        GameData.player.isXiangGong = false;
+        var temp = data;
+        temp.zhuangUid = GameData.game.zhuangUid;
+        GameData.JushuScore.push(temp);
+
+        switch (GameData.room.opts.gameType) {
+            case gameDefine.GameType.Game_Mj_Tianjin: {
+                sendEvent('onGameScore', data);
+            } break;
+            case gameDefine.GameType.Game_Poker_DDZ: {
+            	sendEvent('coinEndEvent', data);
+            } break;
+            case gameDefine.GameType.Game_Poker_TianjinDDZ: {
+				if (data.coins[GameData.player.uid]) {
+					sendEvent('coinEndEvent', data);
+				} else {
+					sendEvent('onShowSummary');
+				}
+            } break;
+            case gameDefine.GameType.Game_Niu_Hundred: {
+				sendEvent('niuhun-onGameCoin',data);
+            } break;
+            default: return;
+        }
+    });
+
+	GameNet.getInstance().setCallBack('alertLottery', function (data) {
+		if (!data) return;
+	    cc.log('data = '+JSON.stringify(data.detail));
+	    //转盘抽奖客户端提示
+	    if (data) {
+	    	if (GameData.room.opts.gameType == gameDefine.GameType.Game_niu_niu || GameData.room.opts.gameType == gameDefine.GameType.Game_Niu_Niu_10) {
+	    		sendEvent('alertLottery');
+	    	}else {
+    			openView('GetLottery');
+	    	};
+	    }
+   	});
+
+	GameNet.getInstance().setCallBack('dynChat', function(data){
+		sendEvent('dynChat', data);
+	});
+};

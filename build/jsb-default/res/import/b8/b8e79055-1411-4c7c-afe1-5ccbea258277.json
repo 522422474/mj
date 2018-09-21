@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "choumamengban_20000",
+    "texture": "ccNFM06GJNFo8F54tKW/NU",
+    "rect": [
+      0,
+      0,
+      135,
+      131
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      135,
+      131
+    ]
+  }
+}

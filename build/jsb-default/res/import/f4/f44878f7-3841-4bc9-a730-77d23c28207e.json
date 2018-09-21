@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zoumadeng",
+    "texture": "7dQlcXP3xFCrfrewMJN+24",
+    "rect": [
+      0,
+      0,
+      614,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      614,
+      48
+    ]
+  }
+}

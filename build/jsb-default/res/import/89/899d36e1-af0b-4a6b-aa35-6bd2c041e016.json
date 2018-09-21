@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "erbiaotidi",
+    "texture": "09zskhp4NDLZuzfOcJ7p+W",
+    "rect": [
+      0,
+      0,
+      720,
+      50
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      720,
+      50
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sss_result_inning_0",
+    "texture": "fd4TNshZNDyLOxpq487eHG",
+    "rect": [
+      0,
+      0,
+      254,
+      108
+    ],
+    "offset": [
+      -1,
+      74
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ico_jinbi_1",
+    "texture": "den/Az/ZBKQIQKV3T6LQIp",
+    "rect": [
+      6,
+      5,
+      29,
+      30
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      40,
+      40
+    ]
+  }
+}

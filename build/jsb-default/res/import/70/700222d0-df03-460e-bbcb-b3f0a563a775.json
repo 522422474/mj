@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "9zheng",
+    "texture": "a9Dend0zJCba1aVsnzUhRR",
+    "rect": [
+      1,
+      3,
+      32,
+      41
+    ],
+    "offset": [
+      -0.5,
+      -1
+    ],
+    "originalSize": [
+      35,
+      45
+    ]
+  }
+}

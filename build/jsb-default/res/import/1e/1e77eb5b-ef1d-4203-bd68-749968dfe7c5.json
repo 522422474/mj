@@ -1,0 +1,44 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "kuaidian",
+  "_duration": 0.6833333333333333,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "2b5mtcbEVPTZCMCYoTSC0u"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "01bByPAn1CB6j5EWpF0dUV"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "5cGAhsmctOsqQOCR50qCqv"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "22sZ5Yz41K5LUKwsD/mcJS"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "2b5mtcbEVPTZCMCYoTSC0u"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

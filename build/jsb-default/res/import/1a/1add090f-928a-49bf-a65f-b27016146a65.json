@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wanfajieshao",
+    "texture": "22aRqqht1OmKOGDTnVA3X3",
+    "rect": [
+      0,
+      0,
+      228,
+      65
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      228,
+      65
+    ]
+  }
+}

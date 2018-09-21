@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shengli_tex",
+    "texture": "f5eV3Hp91CHrwiS1yySYyY",
+    "rect": [
+      1,
+      1,
+      133,
+      67
+    ],
+    "offset": [
+      -60.5,
+      29.5
+    ],
+    "originalSize": [
+      256,
+      128
+    ]
+  }
+}

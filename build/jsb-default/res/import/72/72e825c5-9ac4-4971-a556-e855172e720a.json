@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kaiju01",
+    "texture": "1bAxbb2gdGBJZeKyJlBgR/",
+    "rect": [
+      0,
+      0,
+      242,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      242,
+      79
+    ]
+  }
+}

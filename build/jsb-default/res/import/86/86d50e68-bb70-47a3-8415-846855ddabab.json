@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fapaiqi",
+    "texture": "ea7DNPqN1JX57ZuI0yWmqz",
+    "rect": [
+      0,
+      0,
+      79,
+      93
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      79,
+      93
+    ]
+  }
+}

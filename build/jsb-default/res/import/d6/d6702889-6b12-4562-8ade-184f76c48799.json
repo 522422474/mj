@@ -1,0 +1,44 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "nanguo",
+  "_duration": 0.85,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "4ffFLkmbhPXJvSLQpOpn3u"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "a4T1p7cZBHsYzpvMtaiCN0"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "21acqUWTdIVahEM487mBLD"
+            }
+          },
+          {
+            "frame": 0.6166666666666667,
+            "value": {
+              "__uuid__": "58ivzUMJtDAKDf/ahOgON+"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "4ffFLkmbhPXJvSLQpOpn3u"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhongdunwenzi",
+    "texture": "fcuFiXHAFGK6ce8K2uEsIh",
+    "rect": [
+      2,
+      0,
+      76,
+      28
+    ],
+    "offset": [
+      1,
+      0.5
+    ],
+    "originalSize": [
+      78,
+      29
+    ]
+  }
+}

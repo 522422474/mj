@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wanfashuoming02",
+    "texture": "7eKeFaqS9Kh76hIf1EUlUt",
+    "rect": [
+      0,
+      0,
+      296,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      296,
+      107
+    ]
+  }
+}

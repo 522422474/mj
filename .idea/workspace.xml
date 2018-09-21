@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list id="56414133-d790-4bde-9227-52aae31ed1c4" name="ignore-on-commit" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/scene/table-changchun.fire" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scene/table-changchun.fire" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/createRoom_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/createRoom_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/debug_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/debug_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/mjHandler_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/mjHandler_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/profile_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/profile_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomDissolve_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomDissolve_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomMain_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomMain_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomPiao_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomPiao_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomResult_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomResult_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomScore_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomScore_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomSummary_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomSummary_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomTable_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomTable_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomWait_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomWait_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/appstore.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/appstore.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/hebei.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/hebei.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/md5.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/md5.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/stateMachine.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/stateMachine.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomMain_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomMain_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomResult_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomResult_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomTable_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomTable_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views.meta" afterDir="false" />
+    </list>
+    <list default="true" readonly="true" id="c4c63e75-cf94-478e-bd31-49715c1df5c4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/project.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/assets/project.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/TDK/font/TDK_winnumber.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/TDK/font/TDK_winnumber.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/TDK/font/tdk_genzhu.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/TDK/font/tdk_genzhu.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/TDK/font/tdk_losenumber.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/TDK/font/tdk_losenumber.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/artword_losenum.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/artword_losenum.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/artword_pingnum.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/artword_pingnum.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/artword_winnum.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/artword_winnum.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/countdown.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/countdown.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/jiaozhu_num.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/jiaozhu_num.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/niuniuscore_pingnum.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/niuniuscore_pingnum.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/niuniuscore_winnum.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/niuniuscore_winnum.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/niunuiscore_losenumber.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/niunuiscore_losenumber.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/sss_result_blue.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/sss_result_blue.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/sss_result_green.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/sss_result_green.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/sss_result_inning.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/sss_result_inning.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/font/sss_result_yellow.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/font/sss_result_yellow.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/hundredNiuNiu/font/rankingNum.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/hundredNiuNiu/font/rankingNum.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/prefab/poker/room/pokerPlayerPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/prefab/poker/room/pokerPlayerPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/shisanshui/common/Number.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/shisanshui/common/Number.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/shisanshui/common/numer.fnt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/shisanshui/common/numer.fnt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scene/home.fire" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scene/home.fire" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-gamedata.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-gamedata.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-handler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-handler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-poker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-poker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-poker.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-poker.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomResult.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomResult.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomSummary.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomSummary.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomtable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PDK/PDK-roomtable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PDK/PDK-roomtable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-handler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-handler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-playerTemplate.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-playerTemplate.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-poker.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-poker.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-pokerCards.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-pokerCards.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomSummary.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomSummary.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomtable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-roomtable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-roomtable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/TDK-setting.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/TDK-setting.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/replayMain-tdk.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/replayMain-tdk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/replayMain-tdk.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/replayMain-tdk.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/tdk-ResultRender.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/tdk-ResultRender.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/tdk-debug.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/tdk-debug.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/tdk-resultFlyScore.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/tdk-resultFlyScore.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TDK/tdkRoomData.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TDK/tdkRoomData.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-gamedata.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-gamedata.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-handler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-handler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-poker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-poker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-poker.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-poker.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomResult.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomResult.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomSummary.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomSummary.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomtable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomtable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/TJDDZ/TJDDZ-roomtable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/pokerBase/pokerRoomBaseView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/pokerBase/pokerRoomBaseView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/pokerBase/pokerRoomBaseView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/pokerBase/pokerRoomBaseView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/pokerBase/pokerRoomPlayer.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/pokerBase/pokerRoomPlayer.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/roomUtil.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/roomUtil.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/table/tableCardControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/table/tableCardControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/table/tableCardControl.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/table/tableCardControl.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/table/tableDirectionControl.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/table/tableDirectionControl.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/table/tableDynAnimation.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/table/tableDynAnimation.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/table/tablePlayersControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/table/tablePlayersControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/table/tablePlayersControl.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/table/tablePlayersControl.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiCardTest.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiCardTest.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiDebug.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiDebug.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomPlayerInfo.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomPlayerInfo.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomResult.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomResult.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomScore.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomScore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomScore.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomScore.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomSummary.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomSummary.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomTable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomTable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiRoomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/base/uiroom/uiTingTip.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/base/uiroom/uiTingTip.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomDissolve_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomDissolve_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomMain_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomMain_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomPiao_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomPiao_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomResult_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomResult_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomScore_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomScore_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomSummary_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomSummary_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomTable_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomTable_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/changchun/roomWait_changchun.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/changchun/roomWait_changchun.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/codeString.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/codeString.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/coin.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/coin.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/configMgr.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/configMgr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/configMgr.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/configMgr.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/dunhua.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/dunhua.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/errorCode.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/errorCode.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/gameDefine.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/gameDefine.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/haerbin.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/haerbin.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/mission.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/mission.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/shopConfig.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/shopConfig.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/test.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/test.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/config/tianjin.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/config/tianjin.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/Popup.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/Popup.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/defines.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/defines.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/es6-promise.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/es6-promise.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/gamedata-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/gamedata-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/gamedata.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/gamedata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/gamedata.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/gamedata.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/gamenet.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/gamenet.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/matchHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/matchHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/missionHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/missionHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/pomelo-creator-client.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/pomelo-creator-client.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/profile-niuniu.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/profile-niuniu.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/roomHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/roomHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/topHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/topHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/util.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/util.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/core/utils.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/core/utils.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-coinEnd.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-coinEnd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-coinEnd.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-coinEnd.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-gamedata.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-gamedata.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-handler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-handler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-home.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-home.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-playerTemplate.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-playerTemplate.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-poker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-poker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-poker.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-poker.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayCardController.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayCardController.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayResultPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-replay/DDZ-ReplayResultPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomSummary.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomSummary.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomtable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomtable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ddz/DDZ-roomtable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu-Data.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu-Data.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu-Protocol.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu-Protocol.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu-Rules.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu-Rules.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/game/TuiDaoHu/TuiDaoHu.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/game/gameConfig.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/game/gameConfig.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/createRoom_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/createRoom_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/debug_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/debug_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/mjHandler_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/mjHandler_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/profile_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/profile_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomDissolve_heb.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomDissolve_heb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomDissolve_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomDissolve_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomMain_heb.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomMain_heb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomMain_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomMain_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomResult_heb.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomResult_heb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomResult_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomResult_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomSummary_heb.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomSummary_heb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomSummary_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomSummary_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomTable_heb.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomTable_heb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomTable_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomTable_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomWait_heb.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomWait_heb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/heb/roomWait_heb.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/heb/roomWait_heb.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_bet.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_bet.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_data.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_data.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_head.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_head.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomHead.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomHead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomHead.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomHead.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomUtil.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_roomUtil.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_runChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_runChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_runChart.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_runChart.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hhdz/hhdz_table.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hhdz/hhdz_table.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hongzhong/createRoom-hz.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hongzhong/createRoom-hz.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hongzhong/gamedata-hz.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hongzhong/gamedata-hz.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hongzhong/hongzhongData.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hongzhong/hongzhongData.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/createRoom_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/createRoom_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/debug_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/debug_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/profile-hua-dian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/profile-hua-dian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomDissolve_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomDissolve_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomDissolve_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomDissolve_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomMain_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomMain_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomPiao_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomPiao_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomPiao_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomPiao_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomResult_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomResult_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomScore_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomScore_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomScore_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomScore_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomSummary_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomSummary_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomSummary_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomSummary_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomTable_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomTable_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomWait_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomWait_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomWait_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomWait_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomZhuang_huadian.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomZhuang_huadian.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/huadian/roomZhuang_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/huadian/roomZhuang_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomBase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomBase.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomBase.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomTable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomTable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiu-roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiuHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/hundredNiuHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_backPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_backPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_dealerPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_dealerPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_fortunePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_fortunePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_pokerPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_pokerPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_rulePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_rulePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_runscorePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_runscorePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_sankePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_sankePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_trendPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/hundredNiu/panelJs/hundred_trendPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/chatHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/chatHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/clubHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/clubHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/loginHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/loginHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mahjong.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mahjong.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mahjong_changchun.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mahjong_changchun.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mahjong_huadian.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mahjong_huadian.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mahjong_hz.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mahjong_hz.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mahjong_shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mahjong_shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mahjong_tianjin.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mahjong_tianjin.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/mjHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/mjHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/poker13.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/poker13.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/replayHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/replayHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/ruleHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/ruleHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/shopHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/shopHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/logic/updateHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/logic/updateHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/manager/LanguagerManager.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/manager/LanguagerManager.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/manager/SoundMngr.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/manager/SoundMngr.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/manager/getLottery.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/manager/getLottery.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/NN-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/NN-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/niuNiuHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/niuNiuHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/niuNiuPlayerInfo.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/niuNiuPlayerInfo.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/niuNiuPoker.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/niuNiuPoker.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/niuniuGmCard.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/niuniuGmCard.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/niuniuMoveMessage.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/niuniuMoveMessage.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/niuniuPokerHandler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/niuniuPokerHandler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/pokerTypeAnimation.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/pokerTypeAnimation.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuProcessResult.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuProcessResult.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuResultRender.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuResultRender.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomPlay.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomPlay.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomResult.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomResult.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuRoomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuSetting.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/niuNiuSetting.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/resultRunScore.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/roomNiuNiu/resultRunScore.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/niu-niu/tenNN-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/niu-niu/tenNN-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/chip_mask.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/chip_mask.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_Mask.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_Mask.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_ZJH_resultItemPrefab.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_ZJH_resultItemPrefab.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_chipPrefab.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_chipPrefab.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_debugPrefab.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_debugPrefab.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_playerStateImgPrefab.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_playerStateImgPrefab.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_settingPrefab.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_settingPrefab.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_summaryPrefab.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_summaryPrefab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_summaryPrefab.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/pokerPerfab/poker_summaryPrefab.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/qrcode/qrcode.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/qrcode/qrcode.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSS-GameData.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSS-GameData.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSS-Handler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSS-Handler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSCard.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSCard.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSChat/SSSChatPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSChat/SSSChatPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSChat/SSSFastVoiceButton.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSChat/SSSFastVoiceButton.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSChat/SSSHideComponent.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSChat/SSSHideComponent.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSCreateRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSCreateRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSDebug.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSDebug.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSHome.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSHome.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSPromptCard.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSPromptCard.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomTable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSRoomTable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/SSSSetting.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/SSSSetting.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/layer-script/roomEndClear.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/layer-script/roomEndClear.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/poker13Define.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/poker13Define.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/SSSPlayerChat.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/SSSPlayerChat.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/SpecialTypeAnimatePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/SpecialTypeAnimatePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/groupType.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/groupType.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/playerRoundDetail.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/playerRoundDetail.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/roundDetail.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shisanshui/prefab-script/roundDetail.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/ReplayMain-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/ReplayMain-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/ReplayResultPanel-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/ReplayResultPanel-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/TingTip-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/TingTip-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/createRoom_shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/createRoom_shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/cardTest-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/cardTest-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomChaShui-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomChaShui-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomChaShui-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomChaShui-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomDissolve-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomDissolve-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomDissolve-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomDissolve-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomMain-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomMain-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomMain-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomMain-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomResult-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomResult-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomResult-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomResult-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomScore-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomScore-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomScore-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomScore-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomSummary-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomSummary-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomSummary-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomSummary-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomWait-shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomWait-shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomWait-shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/room-shishi/roomWait-shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/roomTable_shishi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/roomTable_shishi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/shishi/roomTable_shishi.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/shishi/roomTable_shishi.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/template/cardTemplate.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/template/cardTemplate.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/template/messagebox.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/template/messagebox.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/template/playerInfoTemplate.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/template/playerInfoTemplate.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/template/playerTemplate.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/template/playerTemplate.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/AgreePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/AgreePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/ButtonCD.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/ButtonCD.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/EveryDayShare.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/EveryDayShare.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/MoveMessage.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/MoveMessage.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/NoticePanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/NoticePanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/NoticePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/NoticePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/PlayIntroPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/PlayIntroPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/PosterPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/PosterPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/PreLoader.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/PreLoader.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/RunlampPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/RunlampPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/RunlampPanel1.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/RunlampPanel1.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/SharePanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/SharePanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/TingTip.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/TingTip.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UIClub.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UIClub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UIClub.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UIClub.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UICoinRankingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UICoinRankingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UICoinRankingList.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UICoinRankingList.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UIGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UIGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UIGroup.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UIGroup.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UIPushGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UIPushGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UIPushGame.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UIPushGame.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UISuccour.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UISuccour.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UITask.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UITask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/UITask.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/UITask.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/WebPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/WebPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/agentPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/agentPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/agentPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/agentPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/card/Card.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/card/Card.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/card/CardButton.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/card/CardButton.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/chat/ChatPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/chat/ChatPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/chat/ChatPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/chat/ChatPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/chat/FastVoiceButton.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/chat/FastVoiceButton.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/chat/HideComponent.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/chat/HideComponent.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/clubPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/clubPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/createControl.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/createControl.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/goodsType.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/goodsType.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/home.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/home.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/joinControl.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/joinControl.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/joinclubPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/joinclubPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/login.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/login.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/match/UIMatch.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/match/UIMatch.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/match/UISelectGame.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/match/UISelectGame.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/match/UISelectGameLv.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/match/UISelectGameLv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/match/UISelectGameLv.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/match/UISelectGameLv.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/noticePanel/agentBindLayer.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/noticePanel/agentBindLayer.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/noticePanel/playerInformationLayer.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/noticePanel/playerInformationLayer.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RecordItem.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RecordItem.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RecordPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RecordPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RecordPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RecordPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RecordPlayerInfo.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RecordPlayerInfo.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RoundItem.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RoundItem.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RoundPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RoundPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/record/RoundPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/record/RoundPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/CardRef.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/CardRef.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/DisCard.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/DisCard.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/HandCard.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/HandCard.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/PengCard.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/PengCard.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayCardController.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayCardController.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayCardFace.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayCardFace.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayEffectController.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayEffectController.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayLayout.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayLayout.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/ReplayResultPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/ReplayResultPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replay/replayData.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replay/replayData.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/replayData.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/replayData.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/cardTest.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/cardTest.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/debug.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/debug.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomResult.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomResult.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomScore.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomScore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomScore.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomScore.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomSummary.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomSummary.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomTable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomTable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomZhuang.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomZhuang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/room/roomZhuang.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/room/roomZhuang.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/selectclubPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/selectclubPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/selectclubPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/selectclubPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/setWeixin/SetWeixin.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/setWeixin/SetWeixin.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/settings/AMapPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/settings/AMapPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/settings/SettingsPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/settings/SettingsPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/shoppingPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/shoppingPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/ui/shoppingPanel.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/ui/shoppingPanel.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/common/settingView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/common/settingView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/chatView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/chatView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/dissolveView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/dissolveView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/dissolveView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/dissolveView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/locationView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/locationView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/powerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/powerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/powerView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/powerView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/roomNumView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/roomNumView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/ruleTipsView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/ruleTipsView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/ruleView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/ruleView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/talkView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/talkView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/talkView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/talkView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/timeView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/timeView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/common/wifiView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/common/wifiView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardActionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardActionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardActionView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardActionView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardBtnView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardBtnView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardBtnView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardBtnView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardsView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/cardsView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/debugView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/debugView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/directionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/directionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/directionView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/directionView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/headView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/headView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/headView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/headView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/prepareView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/prepareView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/prepareView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/prepareView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/resultView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/resultView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/summaryView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/summaryView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/tingView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/tingView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/waitView.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/waitView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/waitView.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/waitView.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/room/mahjong/wildCard1View.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/room/mahjong/wildCard1View.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/scene/scene_mahjong.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/scene/scene_mahjong.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/views/scene/scene_mahjong.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/views/scene/scene_mahjong.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-RoomData.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-RoomData.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-createRoom.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-createRoom.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-handler.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-handler.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomDissolve.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomDissolve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomDissolve.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomDissolve.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomWait.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomWait.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomtable.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomtable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomtable.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH-roomtable.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH_roomMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH_roomMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/ZJH_roomMain.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/ZJH_roomMain.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/zjh/pokerAnimationBase.js.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/zjh/pokerAnimationBase.js.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/version.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/assets/version.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/new/roomScore.js" beforeDir="false" afterPath="$PROJECT_DIR$/backup/new/roomScore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/new/roomTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/backup/new/roomTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/new/roomWait.js" beforeDir="false" afterPath="$PROJECT_DIR$/backup/new/roomWait.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/new/roomZhuang.js" beforeDir="false" afterPath="$PROJECT_DIR$/backup/new/roomZhuang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/builder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/project.json" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/assets/script/config/test.js" ignored="false" />
+    <file path="$PROJECT_DIR$/assets/script/huadian/roomResult_huadian.js" ignored="false" />
+    <file path="$PROJECT_DIR$/assets/script/huadian/roomTable_huadian.js" ignored="false" />
+    <file path="$PROJECT_DIR$/assets/script/huadian/roomMain_huadian.js" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="jsconfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jsconfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/script/ui/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/script/core/util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>registEvent</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>require('util').registEvent</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/assets/script/config/test.js" />
+        <option value="$PROJECT_DIR$/jsconfig.json" />
+        <option value="$PROJECT_DIR$/assets/script/core/util.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-78" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mj-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mj-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mj-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mj-client" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mj-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mj-client" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mj-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mj-client" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="script" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="login&#9;FILE&#9;file:///Users/kewei/Documents/mj/mj-client/assets/script/ui/login.js&#10;test&#9;FILE&#9;file:///Users/kewei/Documents/mj/mj-client/assets/script/config/test.js" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="debug" type="JavascriptDebugType" factoryName="JavaScript Debug" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:7456/" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4c63e75-cf94-478e-bd31-49715c1df5c4" name="Default" comment="" />
+      <created>1537493664205</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537493664205</updated>
+      <workItem from="1537493666405" duration="2715000" />
+      <workItem from="1537505894343" duration="830000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3545000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-78" y="23" width="1920" height="970" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14941177" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/assets/script/config/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/ui/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/core/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/config/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/core/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/script/ui/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

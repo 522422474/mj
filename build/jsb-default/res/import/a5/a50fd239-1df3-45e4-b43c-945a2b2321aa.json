@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yuyinkuang",
+    "texture": "08dz7kWUFDS5lcl0GD/fTU",
+    "rect": [
+      0,
+      0,
+      56,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      56,
+      48
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhongjichang",
+    "texture": "640OOYkAlF967MjMyv4TQX",
+    "rect": [
+      0,
+      0,
+      305,
+      441
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      305,
+      443
+    ]
+  }
+}

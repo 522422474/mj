@@ -1,0 +1,187 @@
+var HundredNiuHandler = require('hundredNiuHandler');
+var roomHandler = require('roomHandler'); 
+var gameDefine = require('gameDefine');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        playerHeads: [cc.Node],
+        onePlayerPrefab: cc.Prefab,
+        twoPlayerPrefab: cc.Prefab,
+        dragonBonesNode: cc.Prefab,
+        lastTimeLabel: cc.Label,
+    },
+
+    onLoad: function () {
+        this.headers = new Array();
+        this.handlerMsg();
+        this.initTabelUI();
+        this.showPlayers();
+        //添加互动动画
+        this.addDynAnimation();
+    },
+    handlerMsg: function () {
+        registEvent('dynChat', this, this.dynChatHandler);
+        registEvent('onJoinerLost', this, this.showPlayers);
+        registEvent('onJoinerConnect', this, this.showPlayers);
+        registEvent('onPrepareInfo', this, this.beginCountDown);
+        registEvent('niuhun-onGameStart', this, this.showPlayers);
+    },
+    onDestroy: function () {
+        unregistEvent('dynChat', this, this.dynChatHandler);
+        unregistEvent('onJoinerLost', this, this.showPlayers);
+        unregistEvent('onJoinerConnect', this, this.showPlayers);
+        unregistEvent('onPrepareInfo', this, this.beginCountDown);
+        unregistEvent('niuhun-onGameStart', this, this.showPlayers);
+    },
+
+    initTabelUI: function () {
+        this.lastTimeLabel.node.active = false;
+        this.beginCountDown();
+        this.showPlayers();
+    },
+
+    showPlayers: function () {
+        this.headers = [];
+        this.initPlayerHeads();
+        this.showPlayer();
+    },
+    initPlayerHeads: function () {
+        for (var i = 0; i < this.playerHeads.length; i++) {
+            var playerNode = this.playerHeads[i];
+            var headNode = playerNode.getChildByName('headNode');
+            if (headNode == null) {
+                if (i <= 1) {
+                    headNode = cc.instantiate(this.onePlayerPrefab);
+                }else {
+                    headNode = cc.instantiate(this.twoPlayerPrefab);
+                }
+                headNode.name = 'headNode';
+                playerNode.addChild(headNode);
+            }
+            var playerHeadScp = headNode.getComponent("niuNiuPlayerInfo");
+            playerHeadScp.setName('');
+            playerHeadScp.setCoin('');
+            playerHeadScp.setPlayer({});
+            playerHeadScp.initHeadIcon();
+            playerHeadScp.setIsOnline(true);
+            playerHeadScp.showHeadBg(false);
+            playerHeadScp.HeadBtnIsClick(false);
+
+            if (i == 1 || i == 2 || i == 7) {
+                playerHeadScp.showZhuang(true);
+                playerHeadScp.getZhuangImg(i);
+            }else {
+                playerHeadScp.showZhuang(false);
+            }
+        }
+    },
+    showPlayer: function () {
+        this.showSelfInfo();
+        this.showOtherPlayer();
+    },
+    showSelfInfo: function () {
+        if (GameData.player == null || GameData.player == undefined) return;
+        var selfHeadInfo = GameData.player;
+        this.showHeadInfo(selfHeadInfo, this.playerHeads[0]);
+    },
+    showOtherPlayer: function () {
+        if (HundredNiuHandler.playerInfo == undefined || HundredNiuHandler.playerInfo == null) return;
+        var players = HundredNiuHandler.playerInfo;
+        for (var j = 0; j < players.length; j++) {
+            var player = players[j];
+            if (player != null){
+                this.showHeadInfo(player, this.playerHeads[j+1]);
+            }
+        }
+    },
+    showHeadInfo: function (playerInfo, Pos) {
+        var headNode = Pos.getChildByName("headNode");
+        var playerHeadScp = headNode.getComponent("niuNiuPlayerInfo");
+        playerHeadScp.showHeadBg(true);
+        playerHeadScp.HeadBtnIsClick(true);        
+        // playerHeadScp.setIsOnline(true);
+        playerHeadScp.setPlayer(playerInfo);
+        playerHeadScp.setName(playerInfo.name);
+        playerHeadScp.setGold(playerInfo.coin);
+        playerHeadScp.setHeadIcon(playerInfo.headimgurl);
+        this.headers.push(headNode);
+    },
+
+    beginCountDown: function () {
+        cc.log('beginCountDownbeginCountDownbeginCountDownbeginCountDown');
+        if (roomHandler.readyCountDown > 0 ) {
+            this.lastTimeLabel.string = '';
+            this.lastTimeLabel.node.active = true;
+            this.handleCloseTimer();
+        }else {
+            this.lastTimeLabel.node.active = false;
+            this.unschedule(this.updateLastTime);
+        }
+    },
+    //开始倒计时
+    handleCloseTimer: function () {
+        cc.log('ready start count: roomHandler.readyCountDown = '+roomHandler.readyCountDown);
+        this.updateLastTime();
+        this.schedule(this.updateLastTime, 1);
+    },
+    updateLastTime: function () {
+        roomHandler.readyCountDown --;
+        cc.log('ready run time: roomHandler.readyCountDown = '+roomHandler.readyCountDown);
+        if (roomHandler.readyCountDown <= 0) {
+            this.lastTimeLabel.string = '';    
+        }else {
+            this.lastTimeLabel.string = roomHandler.readyCountDown;    
+        }
+        if (roomHandler.readyCountDown <= 0) {
+            this.lastTimeLabel.node.active = false;
+            this.unschedule(this.updateLastTime);
+        }
+    },
+
+    getHeadPositionOnUid: function(uid){
+        for (var i = 0; i < this.headers.length; i++) {
+            var headerNode = this.headers[i];
+            if(headerNode == undefined){
+                continue;
+            }
+            var template = headerNode.getComponent('niuNiuPlayerInfo');
+            if(template == undefined){
+                continue;
+            }
+            if(template.uid != uid){
+                continue;
+            }
+            return headerNode.parent.position;
+        }
+        return 0;
+    },
+    dynChatHandler: function(data){
+        if(data == undefined || data.detail == undefined){
+            return;
+        }
+
+        var index = data.detail.chatId,
+            fromUid = data.detail.fromUid,
+            toUid = data.detail.toUid;
+
+        var animationNode = this.node.getChildByName('uiAnimationNode');
+        if(animationNode){
+            var template = animationNode.getComponent('tableDynAnimation');
+            if(template){
+                var fromPos = this.getHeadPositionOnUid(fromUid);
+                var toPos = this.getHeadPositionOnUid(toUid);
+
+                template.playAnimation(index, 0.65, fromPos, toPos);
+            }
+        }
+    },
+    addDynAnimation: function(){
+        var animationNode = this.node.getChildByName('uiAnimationNode');
+        if(animationNode == undefined){
+            animationNode = cc.instantiate(this.dragonBonesNode);
+            animationNode.parent = this.node;
+            animationNode.name = 'uiAnimationNode';
+        }
+    }
+});

@@ -1,0 +1,87 @@
+var HundredNiuHandler = require('hundredNiuHandler');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        contentNode: cc.Node,
+        playerInfo: cc.Node,
+    },
+
+    onLoad: function () {
+
+    },
+    showUI: function (data) {
+        this.initUI();
+        if ( !data) return;
+        this.showList(data);
+    },
+    initUI: function () {
+        this.contentNode.removeAllChildren();
+    },
+    showList: function (data) {
+        var guideInfo = HundredNiuHandler.guideInfo;
+        if (guideInfo.player != null) {
+            data.players.splice(0,0,guideInfo);
+        }
+        cc.log('data.players = '+JSON.stringify(data.players));
+        for (var i = 0; i < data.players.length; i++) {
+            var playerData = data.players[i];
+            var player = this.contentNode.getChildByName('player'+i);
+            if(player == undefined){
+                player = cc.instantiate(this.playerInfo);
+                player.y = -65 - i*this.playerInfo.height;
+                this.contentNode.height = (i+1)*this.playerInfo.height;
+                player.parent = this.contentNode;
+                player.name = 'player'+i;
+            }
+
+
+            var signSp = cc.find('bg/sign',player);
+            var headIcon = cc.find('headNode/headIcon', player);
+            var name = cc.find('headNode/name', player);
+            var coin = cc.find('headNode/coin', player);
+            if (playerData.name != undefined) {
+                this.setName(name, playerData.name);    
+            }
+            if (playerData.headimgurl != undefined) {
+                this.setHeadIcon(headIcon, playerData.headimgurl);    
+            }
+            if (playerData.coin != undefined) {
+                coin.getComponent('cc.Label').string = ConversionCoinValue(playerData.coin);    
+            }
+            this.showSign(signSp, i);
+            this.showWinAndChips(player, data.winNums[i]);
+        }
+    },
+    setName: function (nameNode, nameLb) {
+        nameNode.getComponent('cc.Label').string = getShortStr(nameLb,4);
+    },
+    setHeadIcon: function(headNode,headimgurl) {
+        if (headimgurl == undefined || headimgurl == '' || headimgurl.length <= 0) {
+            headNode.getComponent('cc.Sprite').spriteFrame = null;
+            return;
+        }
+        var self = this;
+        cc.loader.load({url: headimgurl, type: 'png'}, function (error, texture) {
+            if (!error && texture) {
+                headNode.getComponent('cc.Sprite').spriteFrame = new cc.SpriteFrame(texture);
+            }
+        });
+    },
+    showSign: function (node, num) {
+        if (num <= 2) {
+            node.active = true;    
+        } else {
+            node.active = false;    
+        }
+    },
+    showWinAndChips: function (playerNode, num) {
+        // var chipsNum = cc.find('xiazhu/xiazhuNum', playerNode);
+        // chipsNum.getComponent('cc.Label').string = '100万';
+        var winNum = cc.find('winNode/winNum', playerNode);
+        winNum.getComponent('cc.Label').string = num+'局';
+    },
+    close: function() {
+        closeView(this.node.name);
+    },
+});

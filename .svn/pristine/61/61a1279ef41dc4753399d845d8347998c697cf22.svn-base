@@ -1,0 +1,3 @@
+cd /d d:\jdk\bin\
+keytool -genkey -alias dongbeimajiang -keyalg RSA -validity 200000 -keystore dongbeimajiang.keystore
+keytool -list -v -keystore dongbeimajiang.keystore

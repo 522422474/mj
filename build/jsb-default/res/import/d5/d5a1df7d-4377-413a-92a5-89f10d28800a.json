@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chouma1",
+    "texture": "9dHrl89LBHr5f6DMPaGPIN",
+    "rect": [
+      0,
+      0,
+      111,
+      85
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      112,
+      86
+    ]
+  }
+}

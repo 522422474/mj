@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiesuandikuang",
+    "texture": "145covBbBAybqUzPPNM3tf",
+    "rect": [
+      0,
+      0,
+      699,
+      736
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      699,
+      736
+    ],
+    "capInsets": [
+      15,
+      14,
+      12,
+      12
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "scbiaoti",
+    "texture": "c7Hhmvh/lJZIfSjb+J996P",
+    "rect": [
+      2,
+      1,
+      635,
+      151
+    ],
+    "offset": [
+      -1,
+      -0.5
+    ],
+    "originalSize": [
+      641,
+      152
+    ]
+  }
+}

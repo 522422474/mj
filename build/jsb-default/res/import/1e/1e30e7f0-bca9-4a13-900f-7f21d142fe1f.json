@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_face_shang_shou_dong",
+    "texture": "bfSdqey0JKPIOmUBYG5hHt",
+    "rect": [
+      2,
+      7,
+      60,
+      68
+    ],
+    "offset": [
+      -0.5,
+      2
+    ],
+    "originalSize": [
+      65,
+      86
+    ]
+  }
+}

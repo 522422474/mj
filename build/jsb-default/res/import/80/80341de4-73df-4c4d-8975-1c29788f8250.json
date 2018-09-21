@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhunbeishou",
+    "texture": "36VVCIIrxC1bMatVDMr7GN",
+    "rect": [
+      0,
+      0,
+      94,
+      124
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      94,
+      124
+    ]
+  }
+}

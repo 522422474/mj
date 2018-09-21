@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jingbao02",
+    "texture": "13xf4zpQxGXLOs2JtYHUcg",
+    "rect": [
+      0,
+      0,
+      172,
+      186
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      172,
+      186
+    ]
+  }
+}

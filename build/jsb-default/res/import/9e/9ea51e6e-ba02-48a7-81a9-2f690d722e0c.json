@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bisaichang02",
+    "texture": "238ACeRllET7keWTmFMQAZ",
+    "rect": [
+      0,
+      0,
+      277,
+      287
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      277,
+      287
+    ]
+  }
+}

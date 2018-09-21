@@ -1,0 +1,99 @@
+var roomUtil = require('roomUtil');
+var roomHandler = require('roomHandler');
+var RuleHandler = require('ruleHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        voiceBtnNode: cc.Node,
+        yuyinNode: cc.Node,
+        yuyinShortNode: cc.Node
+    },
+
+    onLoad: function () {
+        registEvent('yunwaUploaded', this, this.handleVoice);
+        registEvent('shortRecord', this, this.YVShortRecordCallback);
+    },
+
+    onDestroy: function () {
+        unregistEvent('yunwaUploaded', this, this.handleVoice);
+        unregistEvent('shortRecord', this, this.YVShortRecordCallback);
+    },
+
+    onEnable: function () {
+        cc.log('..tableBtnView onEnable.');
+        this.setVoiceBtn();
+    },
+
+    setVoiceBtn: function() {
+        var self = this;
+        this.voiceBtnNode.on(cc.Node.EventType.TOUCH_START, function (event) {
+            if (inCD(1000)) return;
+            yunwaStartTalk();
+            self.yuyinNode.active = true;
+            GameData.isPlayVioce = true;
+            self.yuyinNode.getComponent(cc.Animation).play("yuyin");
+            cc.audioEngine.pauseAll();
+        });
+        this.voiceBtnNode.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
+            var movePos = event.touch.getLocation();
+            var talkBtnWorldPos = this.convertToWorldSpace(this.getPosition());
+            var RelativeCoordinatePos = {};
+            RelativeCoordinatePos.x = talkBtnWorldPos.x - this.getPosition().x + 170;
+            RelativeCoordinatePos.y = talkBtnWorldPos.y - this.getPosition().y + 50;
+            var distance = cc.pDistance(movePos, RelativeCoordinatePos);
+            if (distance > this.width) {
+                self.yuyinNode.getComponent(cc.Animation).play("CancelSend");
+                GameData.isPlayVioce = false;
+            }
+        });
+        this.voiceBtnNode.on(cc.Node.EventType.TOUCH_END, function () {
+            yunwaStopTalk();
+            self.yuyinNode.active = false;
+            cc.audioEngine.resumeAll();
+        });
+        this.voiceBtnNode.on(cc.Node.EventType.TOUCH_CANCEL, function () {
+            yunwaStopTalk();
+            GameData.isPlayVioce = false;
+            self.yuyinNode.active = false;
+            cc.audioEngine.resumeAll();
+        });
+    },
+
+    handleVoice: function (data) {
+        var soundurl = data.detail;
+        WriteLog('soundurl ：' + soundurl);
+        ChatHandler.getInstance().sendRecord(soundurl);
+    },
+    YVShortRecordCallback: function () {
+        WriteLog('YVShortRecordCallback : ');
+        this.yuyinShortNode.getComponent(cc.Animation).play("ShortRecoed");
+        this.show(1);
+    },
+
+    show: function(delay) {
+        this.yuyinShortNode.active = true;
+        this.unschedule(this.goToHide);
+        this.scheduleOnce(this.goToHide,delay);
+    },
+    goToHide: function() {
+        this.yuyinShortNode.active = false;
+    },
+
+    onSettingClicked: function(evt) {
+        //sendEvent("runlamp");
+        openView('SettingsPanel');
+    },
+
+    onRuleClicked: function(evt) {
+        if (inCD(3000)) return;
+        sendEvent('ShowRuleTipsView', 'RuleTipsView');
+    },
+
+    onChatClicked: function(evt) {
+        if (inCD(3000)) return;
+        //openView('ChatPanel');
+        sendEvent('ShowChatView', 'ChatView');
+    }
+});

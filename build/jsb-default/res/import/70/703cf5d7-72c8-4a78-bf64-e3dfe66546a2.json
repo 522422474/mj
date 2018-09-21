@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tingpaitishidi",
+    "texture": "48n/xikNpEuo/FgZVbyswv",
+    "rect": [
+      0,
+      0,
+      358,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      358,
+      190
+    ],
+    "capInsets": [
+      66,
+      53,
+      72,
+      67
+    ]
+  }
+}

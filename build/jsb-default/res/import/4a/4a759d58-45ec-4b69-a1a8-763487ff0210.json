@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paijudi",
+    "texture": "46LVdl1QBDQLSsTcpUM91S",
+    "rect": [
+      2,
+      1,
+      58,
+      60
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      62,
+      62
+    ]
+  }
+}

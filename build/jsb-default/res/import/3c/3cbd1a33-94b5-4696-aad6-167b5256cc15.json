@@ -1,0 +1,568 @@
+[
+  {
+    "__type__": "cc.SceneAsset",
+    "_name": "mahjong",
+    "scene": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Scene",
+    "_name": "New Node",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "autoReleaseAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Canvas",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 11
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Canvas",
+        "node": {
+          "__id__": 2
+        },
+        "_designResolution": {
+          "__type__": "cc.Size",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      {
+        "__type__": "6abf0PKGPJPs5yvfYIhkQU/",
+        "node": {
+          "__id__": 2
+        },
+        "debugBtn": {
+          "__id__": 10
+        },
+        "talkViewNode": {
+          "__id__": 8
+        },
+        "timeViewNode": {
+          "__id__": 12
+        },
+        "wifiViewNode": {
+          "__id__": 13
+        },
+        "powerViewNode": {
+          "__id__": 14
+        },
+        "roomNumViewNode": {
+          "__id__": 15
+        },
+        "wildCard1ViewNode": {
+          "__id__": 16
+        }
+      }
+    ],
+    "_id": "bfca1RsjudC85a19scX0hqQ",
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 1280,
+      "height": 720
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 640,
+      "y": 360
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "bg",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 3
+        },
+        "_spriteFrame": {
+          "__uuid__": "deLQ3Gmm5ADLebmrkTo+mB"
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 1280,
+      "height": 720
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "rightBtn",
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
+      },
+      {
+        "__id__": 7
+      },
+      {
+        "__id__": 8
+      },
+      {
+        "__id__": 9
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "btnSetting",
+    "_parent": {
+      "__id__": 4
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 5
+        },
+        "_spriteFrame": {
+          "__uuid__": "2eSMavEd9B5raAJZsOzR/9"
+        },
+        "_type": 1
+      },
+      {
+        "__type__": "cc.Button",
+        "node": {
+          "__id__": 5
+        },
+        "transition": 2,
+        "pressedColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "clickEvents": [
+          {
+            "__type__": "cc.ClickEvent",
+            "target": {
+              "__id__": 2
+            },
+            "component": "scene_mahjong",
+            "handler": "onSettingClicked"
+          }
+        ],
+        "_N$normalColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_N$disabledColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_N$normalSprite": {
+          "__uuid__": "2eSMavEd9B5raAJZsOzR/9"
+        },
+        "_N$pressedSprite": {
+          "__uuid__": "2cOBZjtCxPbIOF6VLSUmUE"
+        },
+        "pressedSprite": {
+          "__uuid__": "2cOBZjtCxPbIOF6VLSUmUE"
+        },
+        "_N$hoverSprite": {
+          "__uuid__": "2cOBZjtCxPbIOF6VLSUmUE"
+        },
+        "hoverSprite": {
+          "__uuid__": "2cOBZjtCxPbIOF6VLSUmUE"
+        },
+        "_N$disabledSprite": {
+          "__uuid__": "2eSMavEd9B5raAJZsOzR/9"
+        },
+        "_N$target": {
+          "__id__": 5
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 70,
+      "height": 70
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 585,
+      "y": 292
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "btnRule",
+    "_parent": {
+      "__id__": 4
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 6
+        },
+        "_spriteFrame": {
+          "__uuid__": "c69wr+BLpDDKuN3jKpXpSw"
+        },
+        "_type": 1
+      },
+      {
+        "__type__": "cc.Button",
+        "node": {
+          "__id__": 6
+        },
+        "transition": 2,
+        "pressedColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "clickEvents": [
+          {
+            "__type__": "cc.ClickEvent",
+            "target": {
+              "__id__": 2
+            },
+            "component": "scene_mahjong",
+            "handler": "onRuleClicked"
+          }
+        ],
+        "_N$normalColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_N$disabledColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_N$normalSprite": {
+          "__uuid__": "c69wr+BLpDDKuN3jKpXpSw"
+        },
+        "_N$pressedSprite": {
+          "__uuid__": "e7vc7q9dVNfLAa1mKthz6O"
+        },
+        "pressedSprite": {
+          "__uuid__": "e7vc7q9dVNfLAa1mKthz6O"
+        },
+        "_N$hoverSprite": {
+          "__uuid__": "e7vc7q9dVNfLAa1mKthz6O"
+        },
+        "hoverSprite": {
+          "__uuid__": "e7vc7q9dVNfLAa1mKthz6O"
+        },
+        "_N$disabledSprite": {
+          "__uuid__": "c69wr+BLpDDKuN3jKpXpSw"
+        },
+        "_N$target": {
+          "__id__": 6
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 70,
+      "height": 70
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 585,
+      "y": 192
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "btnChat",
+    "_parent": {
+      "__id__": 4
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 7
+        },
+        "_spriteFrame": {
+          "__uuid__": "e9wVIbL8VEkbSvhK78Stmo"
+        },
+        "_type": 1
+      },
+      {
+        "__type__": "cc.Button",
+        "node": {
+          "__id__": 7
+        },
+        "transition": 2,
+        "pressedColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "clickEvents": [
+          {
+            "__type__": "cc.ClickEvent",
+            "target": {
+              "__id__": 2
+            },
+            "component": "scene_mahjong",
+            "handler": "onChatClicked"
+          }
+        ],
+        "_N$normalColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_N$disabledColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_N$normalSprite": {
+          "__uuid__": "e9wVIbL8VEkbSvhK78Stmo"
+        },
+        "_N$pressedSprite": {
+          "__uuid__": "ceNGVSETJOd6IL30uEphck"
+        },
+        "pressedSprite": {
+          "__uuid__": "ceNGVSETJOd6IL30uEphck"
+        },
+        "_N$hoverSprite": {
+          "__uuid__": "ceNGVSETJOd6IL30uEphck"
+        },
+        "hoverSprite": {
+          "__uuid__": "ceNGVSETJOd6IL30uEphck"
+        },
+        "_N$disabledSprite": {
+          "__uuid__": "e9wVIbL8VEkbSvhK78Stmo"
+        },
+        "_N$target": {
+          "__id__": 7
+        }
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 70,
+      "height": 70
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 585,
+      "y": -80
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "btnVoice",
+    "_parent": {
+      "__id__": 4
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 70,
+      "height": 70
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 585,
+      "y": -180
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "btnDebug",
+    "_parent": {
+      "__id__": 4
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 9
+        },
+        "_spriteFrame": {
+          "__uuid__": "be+zq6AkZAO6XafMY3Xgv5"
+        },
+        "_type": 1
+      },
+      {
+        "__id__": 10
+      }
+    ],
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 78,
+      "height": 76
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 166,
+      "y": 82
+    }
+  },
+  {
+    "__type__": "cc.Button",
+    "node": {
+      "__id__": 9
+    },
+    "transition": 2,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "clickEvents": [
+      {
+        "__type__": "cc.ClickEvent",
+        "target": {
+          "__id__": 2
+        },
+        "component": "scene_mahjong",
+        "handler": "onDebugClicked"
+      }
+    ],
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$normalSprite": {
+      "__uuid__": "be+zq6AkZAO6XafMY3Xgv5"
+    },
+    "_N$target": {
+      "__id__": 9
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "infoNode",
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [
+      {
+        "__id__": 12
+      },
+      {
+        "__id__": 13
+      },
+      {
+        "__id__": 14
+      },
+      {
+        "__id__": 15
+      },
+      {
+        "__id__": 16
+      }
+    ]
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "timeNode",
+    "_parent": {
+      "__id__": 11
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -560,
+      "y": 335
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "wifiNode",
+    "_parent": {
+      "__id__": 11
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -635,
+      "y": 340
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "powerNode",
+    "_parent": {
+      "__id__": 11
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -605,
+      "y": 355
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "roomIdNode",
+    "_parent": {
+      "__id__": 11
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -635,
+      "y": 335
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "wildCard1Node",
+    "_parent": {
+      "__id__": 11
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -580,
+      "y": 250
+    }
+  }
+]

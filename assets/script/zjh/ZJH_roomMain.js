@@ -1,0 +1,277 @@
+var soundMngr = require('SoundMngr');
+var gameDefine = require('gameDefine');
+var configMgr = require('configMgr');
+var RuleHandler = require('ruleHandler');
+var RoomHandler = require('roomHandler');
+var ZJH_RoomData = require('ZJH-RoomData');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        waitLayer:      cc.Node,
+        tableLayer:     cc.Node,
+        resultLayer:    cc.Node,
+        dissolveLayer:  cc.Node,
+        summaryLayer:   cc.Node,
+        debugLayer:     cc.Node,
+
+        resultPrefab:   cc.Prefab,
+        summaryPrefab:  cc.Prefab,
+        dissolvePrefab: cc.Prefab,
+        debugPrefab:    cc.Prefab
+    },
+
+    onLoad: function () {
+        scheduleLamp(this);
+
+        //初始化数据
+        this.initUIData();
+        //初始化界面显示
+        this.initUIShow();
+        //添加小结算
+        this.addUIResult();
+        //添加总结算
+        this.addUISummary();
+        //添加解散
+        this.addUIDissolve();
+        //添加调牌
+        this.addUIDebug();
+        this.setLayerShow();
+        this.registAllEvent();
+        if (GameData.game.onRoomDissolve && Object.keys(GameData.game.onRoomDissolve).length != 0) {
+            cc.log('GameData.game.onRoomDissolve = '+JSON.stringify(GameData.game.onRoomDissolve));
+            sendEvent('onRoomDissolve', GameData.game.onRoomDissolve);
+        }
+    },
+    onDestroy: function () {
+        unrequire('util').registEvent('onRoomInfo', this, this.RoomInfoHandler);
+        unrequire('util').registEvent('onRoomQuit', this, this.onRoomQuit);
+        unrequire('util').registEvent('zhaJinHua-onGameStart', this, this.GameStartHandler);
+        unrequire('util').registEvent('onGameScore', this, this.GameScoreHandler);
+        unrequire('util').registEvent('onRoomDissolve', this, this.showDissolve);
+        unrequire('util').registEvent('shortRecord', this, this.YVShortRecordCallback);
+        unrequire('util').registEvent('onZhaJinHuaRoomEnd', this, this.showSummaryLayer);
+    },
+    registAllEvent: function () {
+        require('util').registEvent('onRoomInfo', this, this.RoomInfoHandler);
+        require('util').registEvent('onRoomQuit', this, this.onRoomQuit);
+        require('util').registEvent('zhaJinHua-onGameStart', this, this.GameStartHandler);
+        require('util').registEvent('onGameScore', this, this.GameScoreHandler);
+        require('util').registEvent('onRoomDissolve', this, this.showDissolve);
+        require('util').registEvent('shortRecord', this, this.YVShortRecordCallback);
+        require('util').registEvent('onZhaJinHuaRoomEnd', this, this.showSummaryLayer);
+    },
+
+    initUIData: function() {
+        cc.log("...room main init data.");
+
+        RuleHandler.instance.setGameType(GameData.client.gameType);
+
+        this._curGameData = undefined;
+
+        this.setCurGameData();
+    },
+    initUIShow: function(){
+
+        this.resultLayer.active = false;
+        this.summaryLayer.active = false;
+        this.dissolveLayer.active = false;
+        this.setLayerShow();
+    },
+
+    setCurGameData: function(){
+        var roomData = RoomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+    },
+    setLayerShow: function(){
+        if (GameData.room.status > gameDefine.RoomState.WAIT) {
+            this.showTableLayer();
+        }else{
+            this.showWaitLayer();
+        }
+    },
+
+    RoomInfoHandler: function(data){
+        if(data == undefined){
+            return;
+        }
+        RoomHandler.onRoomInfoSetData(data.detail);
+        this.setCurGameData();
+        this.setLayerShow();
+        this.addUISummary();
+    },
+    GameStartHandler: function(){
+        this.setLayerShow();
+    },
+    GameScoreHandler: function(data){
+        if(data == undefined || this._curGameData == undefined){
+            return;
+        }
+        this._curGameData.onGameScoreSetData(data.detail);
+
+        this.showResultLayer();
+    },
+
+    addUIResult: function(){
+        var uiResultNode = this.resultLayer.getChildByName('uiResult');
+        if(uiResultNode == undefined){
+            uiResultNode = cc.instantiate(this.resultPrefab);
+            uiResultNode.parent = this.resultLayer;
+            uiResultNode.name = 'uiResult';
+        }
+    },
+    addUISummary: function(){
+        var uiSummaryNode = this.summaryLayer.getChildByName('uiSummary');
+        if(uiSummaryNode == undefined){
+            uiSummaryNode = cc.instantiate(this.summaryPrefab);
+            uiSummaryNode.parent = this.summaryLayer;
+            uiSummaryNode.name = 'uiSummary';
+        }
+    },
+    addUIDissolve: function(){
+        var uiDissolveNode = this.dissolveLayer.getChildByName('uiDissolve');
+        if(uiDissolveNode == undefined){
+            uiDissolveNode = cc.instantiate(this.dissolvePrefab);
+            uiDissolveNode.parent = this.dissolveLayer;
+            uiDissolveNode.name = 'uiDissolve';
+            uiDissolveNode.active = true;
+        }
+    },
+
+    addUIDebug: function(){
+        var uiDebug = this.debugLayer.getChildByName('uiDebug');
+        if(uiDebug == undefined){
+            uiDebug = cc.instantiate(this.debugPrefab);
+            uiDebug.parent = this.debugLayer;
+            uiDebug.name = 'uiDebug';
+            uiDebug.active = false;
+        }
+    },
+
+    showWaitLayer: function () {
+        if (RoomHandler.room.opts.currencyType != gameDefine.currencyType.Currency_Coin) {
+            this.waitLayer.active = true;
+        }else{
+            this.waitLayer.active = false;
+        }
+        this.showTableUI(false);
+        this.resultLayer.active = false;
+        soundMngr.instance.playMusic('zjh/sound/game_bgm');
+    },
+
+    showTableLayer: function () {
+        this.showTableUI(true);
+        this.waitLayer.active = false;
+        this.resultLayer.active = false;
+        soundMngr.instance.playMusic('zjh/sound/game_bgm');
+    },
+
+    showTableUI: function (show) {
+        cc.log("...showTableUI:"+show);
+        this.tableLayer.active = show;
+    },
+
+    showResultLayer: function () {
+        var self = this;
+        this.scheduleOnce(function () {
+            self.showResultDirectly();
+        }, 2);
+    },
+    showResultDirectly: function () {
+    },
+
+    showSettingLayer: function (evt) {
+        sendEvent("runlamp");
+        openView('SettingsPanel');
+    },
+
+    showSummaryLayer: function () {
+        var self = this;
+        var roomData = RoomHandler.getRoomData();
+        if (GameData.room.status == gameDefine.RoomState.WAIT) {
+            GameData.player.roomid = undefined;
+            GameData.joiners = [];
+            GameData.game.onRoomDissolve = null;
+            cc.director.loadScene('home');
+            return
+        }
+        if(roomData == undefined){
+            return;
+        }
+
+        if (GameData.room.status == gameDefine.RoomState.READY) {
+            this.summaryLayer.active = true;
+        }
+        else if (ZJH_RoomData.isCompare) {
+            this.scheduleOnce(function(){
+                self.summaryLayer.active = true;
+            },5);
+        }
+        else if (GameData.room.roundNum == GameData.room.opts.roundMax){
+            this.scheduleOnce(function(){
+                self.summaryLayer.active = true;
+            },3);
+        }else{
+            this.summaryLayer.active = true;
+        }
+        if (GameData.player.uid == roomData.creator) {
+            cc.sys.localStorage.setItem("creatorIsCheckIp", false);
+        } else {
+            cc.sys.localStorage.setItem("isCheckIp", false);
+        }
+    },
+
+    showDissolve: function () {
+        //if (!RoomHandler.isPlayGameByUid(GameData.player.uid)) {
+        //    return
+        //}
+        this.showdissolveLayer(1,1);
+    },
+
+    showdissolveLayer: function (evt, data) {
+        if (data == 1) {
+            this.dissolveLayer.active = true;
+            this.dissolveLayer.on(cc.Node.EventType.TOUCH_START, function (evt) {
+                evt.stopPropagation();
+            });
+        } else {
+            this.dissolveLayer.active = false;
+        }
+    },
+    showScoreLayer: function () {
+    },
+    showDebugLayer: function () {
+        var uiDebug = this.debugLayer.getChildByName('uiDebug');
+        if(uiDebug){
+            uiDebug.active = true;
+        }
+    },
+
+    showChat: function () {
+        if (inCD(3000)) return;
+        openView('ChatPanel');
+    },
+    showJoinerLost: function (data) {
+        var uid = data.detail.uid;
+        var nameStr = GameData.getPlayerByUid(uid).name;
+        createMoveMessage('玩家[' + nameStr + ']掉线啦!');
+    },
+    showJoinerConnect: function (data) {
+        var uid = data.detail.uid;
+        var nameStr = GameData.getPlayerByUid(uid).name;
+        createMoveMessage('玩家[' + nameStr + ']重新连接!');
+    },
+
+    YVShortRecordCallback: function () {
+        WriteLog('YVShortRecordCallback : ');
+        this.yuyinShortNode.getComponent(cc.Animation).play("ShortRecoed");
+        this.yuyinShortNode.getComponent('HideComponent').show(1);
+    },
+
+    onRoomQuit: function () {
+        ZJH_RoomData.initData();
+    }
+});

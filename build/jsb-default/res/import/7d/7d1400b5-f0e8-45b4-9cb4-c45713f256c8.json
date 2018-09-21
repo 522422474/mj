@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "WiFi-4",
+    "texture": "e3t6h4bztMt7q/aZigP1nD",
+    "rect": [
+      0,
+      0,
+      26,
+      19
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      26,
+      19
+    ]
+  }
+}

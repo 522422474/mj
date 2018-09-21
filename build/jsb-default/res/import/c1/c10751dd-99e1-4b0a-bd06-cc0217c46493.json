@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_sanpai",
+    "texture": "bc1dn2qSZAfJSC6hPrD2x+",
+    "rect": [
+      5,
+      0,
+      285,
+      80
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      295,
+      80
+    ]
+  }
+}

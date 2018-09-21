@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "anniutuan",
+    "texture": "15UFvk5nFMdbl4h79L0txm",
+    "rect": [
+      0,
+      0,
+      262,
+      146
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      262,
+      146
+    ]
+  }
+}

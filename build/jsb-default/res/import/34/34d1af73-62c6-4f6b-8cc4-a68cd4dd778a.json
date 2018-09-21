@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "haibaodaxiao",
+    "texture": "9aWOfpjDNDk6yn2OsaUWrK",
+    "rect": [
+      0,
+      0,
+      998,
+      482
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      998,
+      482
+    ]
+  }
+}

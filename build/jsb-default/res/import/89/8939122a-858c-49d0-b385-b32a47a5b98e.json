@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "shopPlist.plist",
+  "_spriteFrames": {
+    "jinbi": {
+      "__uuid__": "42AM5TKK1Mn4OhRB2tb8jM"
+    },
+    "jinbi2": {
+      "__uuid__": "4drdBN+kJHepAylKPKm7gp"
+    },
+    "jinbi3": {
+      "__uuid__": "94I7De/oZKjYEXRHI0Yz32"
+    },
+    "jinbi4": {
+      "__uuid__": "808/5e3npBPLUyu1wxlbNR"
+    },
+    "shoptemp": {
+      "__uuid__": "fdvivKnRhPdbYRRalab5fY"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "nan1",
+    "texture": "2dpyG/R7FAO6Qpy/85Nr33",
+    "rect": [
+      0,
+      0,
+      100,
+      35
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      100,
+      35
+    ]
+  }
+}

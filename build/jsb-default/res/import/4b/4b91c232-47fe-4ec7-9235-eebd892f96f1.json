@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_Reset_N",
+    "texture": "c6YKS9HBpHj40W6u1y+uP0",
+    "rect": [
+      1,
+      0,
+      259,
+      80
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      261,
+      81
+    ]
+  }
+}

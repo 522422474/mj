@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dikuangzhong",
+    "texture": "62nLV4tkhAHZUL84ru9nTT",
+    "rect": [
+      0,
+      0,
+      6,
+      236
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      6,
+      236
+    ]
+  }
+}

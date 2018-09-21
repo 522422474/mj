@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "daikaifangjian02",
+    "texture": "a2Nh9J3GZLLpFB0/vWJImL",
+    "rect": [
+      0,
+      0,
+      250,
+      81
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      250,
+      82
+    ]
+  }
+}

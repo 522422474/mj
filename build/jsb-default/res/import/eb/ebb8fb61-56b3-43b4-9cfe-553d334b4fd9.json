@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shanyiye01",
+    "texture": "42h53TL8lPCJPP9nVmwJ3m",
+    "rect": [
+      1,
+      1,
+      236,
+      98
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      238,
+      100
+    ]
+  }
+}

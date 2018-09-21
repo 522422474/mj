@@ -1,0 +1,27 @@
+{
+  "appKey": "9B9172FD-2D1C-A195-0260-411DFCAA117A",
+  "appSecret": "894cb1df9b5bd20103838b10d4d2ebe8",
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "inlineSpriteFrames": false,
+  "inlineSpriteFrames_native": false,
+  "mergeStartScene": false,
+  "oauthLoginServer": "127.0.0.1",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "com.mahjong.dunhua",
+  "privateKey": "8D179A66D7C0F360024104B6CD80F1CA",
+  "renderMode": "1",
+  "startScene": "e0738707-a004-4383-9089-6fde36b2830d",
+  "title": "tianjin_mahjong",
+  "webOrientation": "landscape",
+  "includeSDKBox": false
+}

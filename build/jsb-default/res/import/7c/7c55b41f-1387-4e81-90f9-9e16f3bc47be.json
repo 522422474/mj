@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lodingdibufanguang",
+    "texture": "7dekXOJSRGa56/YJVI9Hyp",
+    "rect": [
+      0,
+      0,
+      1068,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1068,
+      100
+    ]
+  }
+}

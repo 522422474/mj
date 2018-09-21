@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liaitianbg",
+    "texture": "dcvbSY1tRGOIPl7en0zvyb",
+    "rect": [
+      0,
+      0,
+      1040,
+      526
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1040,
+      526
+    ]
+  }
+}

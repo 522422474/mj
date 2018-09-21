@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_face_xia_peng_113",
+    "texture": "80woaP+RJAr5JEYLC91qXT",
+    "rect": [
+      0,
+      0,
+      93,
+      111
+    ],
+    "offset": [
+      0,
+      2.5
+    ],
+    "originalSize": [
+      93,
+      116
+    ]
+  }
+}

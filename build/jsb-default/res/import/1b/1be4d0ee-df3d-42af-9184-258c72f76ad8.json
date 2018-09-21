@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiaohu",
+    "texture": "15HhNNj7NJ1Yywtz+o5x/b",
+    "rect": [
+      4,
+      3,
+      86,
+      119
+    ],
+    "offset": [
+      2,
+      -1.5
+    ],
+    "originalSize": [
+      90,
+      122
+    ]
+  }
+}

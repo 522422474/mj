@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "qinqin7",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      2,
+      386,
+      124,
+      124
+    ],
+    "offset": [
+      -2,
+      0
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

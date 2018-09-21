@@ -1,0 +1,74 @@
+var gameDefine = require('gameDefine');
+var RoomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        handNode: cc.Node,
+        readyNode: cc.Node
+    },
+
+    onLoad: function () {
+        registEvent('onRoomInfo', this, this.onRoomInfoHandler);
+        registEvent('onPrepareInfo', this, this.onRoomReadyInfoHandler);
+    },
+    onDestroy: function () {
+        unregistEvent('onRoomInfo', this, this.onRoomInfoHandler);
+        unregistEvent('onPrepareInfo', this, this.onRoomReadyInfoHandler);
+    },
+    onEnable: function () {
+        cc.log('..prepareView onEnable.');
+        //设置状态
+        this.updatePlayerReady();
+    },
+
+    onRoomInfoHandler: function() {
+        this.updatePlayerReady();
+    },
+    onRoomReadyInfoHandler: function() {
+        this.updatePlayerReady();
+    },
+
+    updatePlayerReady: function(){
+        var roomData = RoomHandler.getRoomData();
+        var readyData = RoomHandler.getRoomReadyData();
+        if(roomData == undefined || readyData == undefined){
+            return;
+        }
+        //将无玩家的位置标志隐藏
+        var posList = ['left', 'right', 'up', 'down'];
+        for(var i = 0;i < posList.length;i++){
+            var pos = posList[i];
+            var Player = GameData.getPlayerByPos(pos);
+            if(!Player){
+                this.showReadyIcon(pos, false, false);
+            }
+        }
+
+        for(var key in readyData){
+            var ready1 = false,
+                ready2 = false;
+            if(roomData.roomState >= 0 && roomData.roomState < gameDefine.RoomState.GAMEING){
+                if(readyData[key] == true){
+                    ready2 = true;
+                } else {
+                    ready1 = true;
+                }
+            }
+            var direction = GameData.getPlayerPosByUid(key);
+            this.showReadyIcon(direction, ready2, ready1);
+            cc.log("...ready:"+direction, ready2, ready1);
+        }
+    },
+    showReadyIcon: function (direction, showHand, showReading) {
+        var readyHand = cc.find(direction, this.handNode);
+        if(readyHand){
+            readyHand.active = showHand;
+        }
+        var readying = cc.find(direction, this.readyNode);
+        if(readying){
+            readying.active = showReading;
+        }
+    }
+});

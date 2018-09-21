@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gr_wenzikuang",
+    "texture": "d7QkwYPatFxJUjC3A0orCj",
+    "rect": [
+      0,
+      0,
+      511,
+      53
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      511,
+      53
+    ]
+  }
+}

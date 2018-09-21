@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liaotiandiban",
+    "texture": "72MfWeiVNHJ6ebXevqJDoN",
+    "rect": [
+      0,
+      0,
+      674,
+      686
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      674,
+      686
+    ],
+    "capInsets": [
+      92,
+      95,
+      100,
+      106
+    ]
+  }
+}

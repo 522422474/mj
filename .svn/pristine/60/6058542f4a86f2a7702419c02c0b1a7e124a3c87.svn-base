@@ -1,0 +1,216 @@
+var roomHandler = require('roomHandler');
+var niuniuPokerHandler = require('niuniuPokerHandler');
+var hundredNiuHandler = {
+    status: 0,
+	gameTimes: 0,		  //倒计时时间
+	isStartAnimationPlayed: false,
+	readyLabelActive: false,
+	
+	zhuangUid: 0,
+	zhuangInfo: {},
+	lianzhuangNum: 0,
+	chipsList: [],
+	playerInfo: [],
+	guideId: 0,
+	guideInfo: {},
+
+	pokerCards: [],      //扑克数据
+	pokerCards3: [],
+	pokerType: [],		//扑克牌型
+	pokerResult: [],
+	betPosPlayer: [],
+
+	gameStart: false,
+	roundCoin: [],
+	gameCoins: [],
+
+	zhuangPlayers: {
+        "uid": 1,
+        "name": "系统庄",
+        "sex": 2,
+        "headimgurl": "http://47.104.25.227/bots_head/24.png",
+    },
+};
+
+module.exports = hundredNiuHandler;
+
+hundredNiuHandler.getPlayerPosByUid = function (userid) {
+	if (userid == GameData.player.uid && userid != this.zhuangUid) {
+    	return 0;
+    }else {
+		var isOnDesk = hundredNiuHandler.containsArray(this.playerInfo,userid);
+		if (isOnDesk) {
+			for (var i = 0; i < this.playerInfo.length; i++) {
+				var player = this.playerInfo[i];
+				if (player && player.uid == userid) {
+					return i+1;
+				}
+			}
+		}else {
+			return -1;
+		}
+    }
+};
+
+hundredNiuHandler.containsArray = function(arr, obj) {
+    var i = arr.length;
+    while (i--) {
+        if (arr[i] && arr[i].uid == obj) {
+            return true;
+        }
+    }
+    return false;
+};
+
+hundredNiuHandler.getRoundCoinByUid = function (userid) {
+	if (this.roundCoin.length <= 0) return null;
+	var sign = hundredNiuHandler.containsArray(this.roundCoin, userid);
+	if (sign) {
+		for (var i = 0; i < this.roundCoin.length; i++) {
+			var player = this.roundCoin[i];
+			if (player && player.uid == userid) {
+				return player.score;
+			}
+		}
+	}else {
+		return null;
+	}
+};
+/*---------------------------++++++++++++++++++++----------------------------------*/
+/*--------------------------- Request And Regist ----------------------------------*/
+/*---------------------------++++++++++++++++++++----------------------------------*/
+
+//下注
+hundredNiuHandler.requestSetChips = function (chipNum, chipsLocal) {
+	var self = this;
+	var chips = {num: chipNum, idx: chipsLocal};
+    GameNet.getInstance().request('room.niuHundredHandler.setChips',chips , function(rtn) {
+    	var niuniuErrorType = niuniuPokerHandler.ERRORTYPE;
+		if (!rtn || rtn.result == undefined) {
+			return;
+		};
+		if (rtn.result != niuniuErrorType.SUCCESSE) {
+			var errorLb = '';
+			switch(rtn.result){
+				case niuniuErrorType.Niu100_Chips_Zhuang: errorLb = '庄家无法下注'; break;
+				case niuniuErrorType.Niu100_Chips_State: errorLb = '等候下一局下注'; break;
+				case niuniuErrorType.Niu100_Chips_Continue: errorLb = '上一局无下注记录'; break;
+				case niuniuErrorType.Niu100_Chips_PlayerMax: errorLb = '已超过自身下注上限'; break;
+				case niuniuErrorType.Niu100_Chips_ZhuangMax: errorLb = '已经超过闲位下注上限'; break;
+			};
+			niuniuCreateMoveMessage(errorLb);
+		}
+    });
+};
+//续压
+hundredNiuHandler.requestContinueChips = function () {
+	GameNet.getInstance().request('room.niuHundredHandler.continueChips', {}, function(rtn) {
+		var niuniuErrorType = niuniuPokerHandler.ERRORTYPE;
+		if (!rtn || rtn.result == undefined) {
+			return;
+		};
+		if (rtn.result != niuniuErrorType.SUCCESSE) {
+			var errorLb = '';
+			switch(rtn.result){
+				case niuniuErrorType.Niu100_Chips_Zhuang: errorLb = '庄家无法下注'; break;
+				case niuniuErrorType.Niu100_Chips_State: errorLb = '等候下一局下注'; break;
+				case niuniuErrorType.Niu100_Chips_Continue: errorLb = '上一局无下注记录'; break;
+				case niuniuErrorType.Niu100_Chips_PlayerMax: errorLb = '已超过自身下注上限'; break;
+				case niuniuErrorType.Niu100_Chips_ZhuangMax: errorLb = '已经超过闲位下注上限'; break;
+			};
+			niuniuCreateMoveMessage(errorLb);
+		}
+	});
+};
+//无限续
+hundredNiuHandler.requestAlwaysChips = function (isClick) {
+	GameNet.getInstance().request('room.niuHundredHandler.alwaysChips',function(rtn) {});
+};
+hundredNiuHandler.registMessage = function() {
+	var self = this;
+    GameNet.getInstance().setCallBack('niuhun-onGameStart', function (data) {
+		self.gameStart = true;
+		self.playerInfo = [];
+		if (data.zhuang != null) {
+			if (data.zhuang.player != null) {
+				self.playerInfo.push(data.zhuang.player);
+				self.zhuangUid = data.zhuang.player.uid;
+				self.zhuangInfo = data.zhuang.player;
+				self.lianzhuangNum = data.zhuang.count;
+			}else {
+				self.playerInfo.push(self.zhuangPlayers);
+				self.zhuangInfo = self.zhuangPlayers;
+				self.zhuangUid = self.zhuangPlayers.uid;
+			}
+			
+		}
+		if (data.players) {
+			for (var i = 0; i < data.players.length; i++) {
+				self.playerInfo.push(data.players[i]);
+			}
+		}
+		if (data.guide) {
+			if (data.guide.player != null) {
+				self.guideId = data.guide.player.uid;
+				self.guideInfo = data.guide;
+			}
+			self.playerInfo.push(data.guide.player);
+		}
+		cc.log('this.playerInfo = '+JSON.stringify(self.playerInfo));
+		sendEvent('niuhun-onGameStart',data);
+	});
+	GameNet.getInstance().setCallBack('onBaoZhuang', function (data) {
+		sendEvent('niuhun-onBaoZhuang');
+	});
+	GameNet.getInstance().setCallBack('niuhun-onGameEnd', function (data) {
+		self.gameStart = false;
+		sendEvent('niuhun-onGameEnd',data);
+	});
+	GameNet.getInstance().setCallBack('niuhun-onGameInfo', function (data) {
+
+		self.status = data.status;
+		self.gameTimes = data.timer;
+		self.chipsList = data.chips;
+
+		cc.log('niuhun-onGameInfo:'+JSON.stringify(data));
+		sendEvent('niuhun-onGameInfo', data);
+	});
+	GameNet.getInstance().setCallBack('niuhun-onCardInfo', function (data) {
+
+		self.pokerType = [];
+		self.pokerCards = [];
+		self.pokerCards3 = [];
+		self.pokerResult = [];
+		self.betPosPlayer = [];
+		
+		self.pokerType.push(data.zhuang.type);
+		self.pokerCards.push(data.zhuang.cards);
+		self.pokerCards3.push(data.zhuang.card3);
+
+		for (var i = 0; i < data.xian.length; i++) {
+			self.pokerType.push(data.xian[i].type);
+			self.pokerCards.push(data.xian[i].cards);
+			self.pokerCards3.push(data.xian[i].card3);
+		}
+
+		self.pokerResult = data.result; 
+		self.betPosPlayer = data.xianChips;
+
+		sendEvent('niuhun-onCardInfo', data);
+	});
+	GameNet.getInstance().setCallBack('niuhun-onGameChips', function (data) {
+		sendEvent('niuhun-onGameChips', data);
+	});
+	GameNet.getInstance().setCallBack('niuhun-onChipsInfo', function (data) {
+		
+	});
+	GameNet.getInstance().setCallBack('onGameCoin', function (data) {
+		if (data.coin) {
+			self.roundCoin = data.coin;
+		} 
+		if (data.coins) {
+			self.gameCoins = data.coins;
+		}
+		sendEvent('niuhun-onGameCoin',data);
+	});
+};

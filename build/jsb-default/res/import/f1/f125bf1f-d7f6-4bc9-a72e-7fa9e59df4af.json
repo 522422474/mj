@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fanghaowenzi",
+    "texture": "bfKrrMc6VBwbl+pZbi9pHs",
+    "rect": [
+      0,
+      1,
+      87,
+      26
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      87,
+      28
+    ]
+  }
+}

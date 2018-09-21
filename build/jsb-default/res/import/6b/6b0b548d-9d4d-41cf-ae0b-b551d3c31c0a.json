@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shaoxiang2",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      2,
+      2,
+      100,
+      126
+    ],
+    "offset": [
+      -2,
+      1
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

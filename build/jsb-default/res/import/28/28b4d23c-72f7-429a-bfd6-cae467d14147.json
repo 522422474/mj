@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiesanfangjianbt",
+    "texture": "36Bao7qa1EtYSBM9lSIT//",
+    "rect": [
+      17,
+      11,
+      280,
+      62
+    ],
+    "offset": [
+      -0.5,
+      -1
+    ],
+    "originalSize": [
+      315,
+      82
+    ]
+  }
+}

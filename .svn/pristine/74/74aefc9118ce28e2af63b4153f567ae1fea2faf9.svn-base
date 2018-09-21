@@ -1,0 +1,192 @@
+var soundMngr = require('SoundMngr');
+var RoomHandler = require('roomHandler');
+var matchHandler = require('matchHandler');
+var gameDefine = require('gameDefine');
+var configMgr = require('configMgr');
+var errorCode = require('errorCode');
+var missionConfig = require('mission');
+var missionHandler = require('missionHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        getPanel: cc.Node,
+
+        scrollView: cc.ScrollView,
+        item: cc.Node
+    },
+
+    onLoad: function () {
+        registEvent('playerMissionData', this, this.onPlayerMissionHandler);
+        registEvent('taskGetReward', this, this.onTaskGetRewardHandler);
+    },
+    onDestroy: function () {
+        unregistEvent('playerMissionData', this, this.onPlayerMissionHandler);
+        unregistEvent('taskGetReward', this, this.onTaskGetRewardHandler);
+    },
+    onEnable: function () {
+        this.initUIPanel();
+    },
+
+    onPlayerMissionHandler: function(){
+        this.initUIPanel();
+    },
+
+    onTaskGetRewardHandler: function(data){
+        if(data == undefined || data.detail == undefined){
+            return;
+        }
+        this.onShowGetPanel(data.detail);
+    },
+
+    onShowGetPanel: function(id){
+        this.getPanel.active = true;
+        this.initUIGetReward(id);
+    },
+
+    initUIPanel: function(){
+        //隐藏所有任务节点
+        var content = this.scrollView.content;
+        for(var i = 0;i < content.getChildrenCount();i++){
+            var child = content.getChildren()[i];
+            if(child){
+                child.active = false;
+            }
+        }
+        //判断任务数据
+        var taskData = GameData.player.mission;
+        if( taskData == undefined || Object.keys(taskData).length <= 0) {
+            return;
+        }
+        //设置滑动容器高度
+        var length = Object.keys(taskData);
+
+        var height = length * this.item.height;
+        height < 400 ? height = 400 : null;
+
+        content.height = height;
+
+        //添加任务节点
+        var index = 0;
+        for(var key in taskData){
+            var data = taskData[key];
+            if(data == undefined){
+                continue;
+            }
+            if(data.isGet != 0){
+                continue;
+            }
+            var missionData = missionConfig.getMissionData(key);
+            if(missionData == null){
+                continue;
+            }
+            var itemNode = content.getChildren()[index];
+            if(itemNode == undefined){
+                itemNode = cc.instantiate(this.item);
+                itemNode.parent = content;
+            }
+            itemNode.active = true;
+
+            itemNode.x = this.item.x;
+            itemNode.y = this.item.y - this.item.height*index;
+
+            index++;
+
+            this.updateTaskItem(missionData, data, itemNode);
+        }
+    },
+
+    updateTaskItem: function(missionData, data, node){
+        if(missionData == undefined || data == undefined || node == undefined){
+            return;
+        }
+        var icon = cc.find('icon', node);
+        var name = cc.find('name', node);
+        var reward = cc.find('reward', node);
+        var count = cc.find('count', node);
+        var doItBtn = cc.find('doIt', node);
+        var toGetBtn = cc.find('toGet', node);
+
+        name.getComponent(cc.Label).string = missionData.desc;
+        count.getComponent(cc.Label).string = data.count + '/' + missionData.count;
+        reward.getComponent(cc.Label).string = missionConfig.getMissionRewardStr(missionData.reward);
+
+        var achieve = false;
+        if(parseInt(data.count) >= parseInt(missionData.count) && parseInt(data.isGet) == 0){
+            achieve = true;
+        }
+        doItBtn.active = !achieve;
+        toGetBtn.active = achieve;
+
+        doItBtn.tag = missionData.id;
+        toGetBtn.tag = missionData.id;
+
+        this.loadIconImg(icon, missionData.icon);
+    },
+
+    loadIconImg: function(node, imgurl){
+        if(node == undefined || imgurl == undefined || imgurl.length <= 0){
+            cc.log('..loadIconImg..return');
+            return;
+        }
+        var texture = cc.textureCache.addImage(cc.url.raw(imgurl));
+        if(texture){
+            node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture);
+        }
+    },
+
+    initUIGetReward: function(missionId){
+        if(missionId == undefined){
+            return;
+        }
+        var data = missionConfig.getMissionData(missionId);
+        if(data == null){
+            return;
+        }
+        var rewardData = missionConfig.getMissionRewardData(missionId);
+        if(rewardData == null){
+            return;
+        }
+        var icon = cc.find('icon', this.getPanel);
+        var count = cc.find('count', this.getPanel);
+
+        count.getComponent('cc.Label').string = rewardData.count;
+        this.loadIconImg(icon, data.icon);
+    },
+
+    onToGetBtnClick: function(event){
+        soundMngr.instance.playAudioOther('button');
+
+        var tag = event.target.tag;
+        missionHandler.getReward(tag);
+    },
+    onDoItBtnClick: function(event){
+        soundMngr.instance.playAudioOther('button');
+
+        var tag = event.target.tag;
+        switch (parseInt(tag)){
+            case 0:{
+                openView('SharePanel');
+                //missionHandler.onShareSucess();
+            }break;
+            default: return;
+        }
+    },
+
+    onCloseGetPanel: function(event){
+        soundMngr.instance.playAudioOther('button');
+        this.getPanel.active = false;
+
+        var self = this;
+        setTimeout(function(){
+            if(missionHandler.checkAllComplete(GameData.player.mission)){
+                closeView(self.node.name);
+            }
+        },1000);
+    },
+    onClose: function(event){
+        soundMngr.instance.playAudioOther('button');
+        closeView(this.node.name);
+    }
+});

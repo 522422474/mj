@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jibenpaixing01",
+    "texture": "f9ya3y6k1B+4Jm5HakDz2S",
+    "rect": [
+      0,
+      0,
+      249,
+      106
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      249,
+      107
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "diban-gengduo",
+    "texture": "46YM5a2zREC6BLHL6pGzHP",
+    "rect": [
+      2,
+      1,
+      466,
+      156
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      470,
+      159
+    ],
+    "capInsets": [
+      78,
+      38,
+      58,
+      68
+    ]
+  }
+}

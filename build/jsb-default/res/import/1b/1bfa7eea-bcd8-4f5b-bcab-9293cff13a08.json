@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "cuanjumajiang",
+    "texture": "0a8hewefdMDYRpUcX9nB/J",
+    "rect": [
+      0,
+      0,
+      848,
+      452
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      848,
+      452
+    ]
+  }
+}

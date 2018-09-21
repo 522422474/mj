@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "holdsmall_bg",
+    "texture": "5c0K9hEO5FvYH6u+qQoR/m",
+    "rect": [
+      3,
+      0,
+      650,
+      295
+    ],
+    "offset": [
+      -2,
+      0.5
+    ],
+    "originalSize": [
+      660,
+      296
+    ]
+  }
+}

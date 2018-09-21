@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tdk_losenumber_0",
+    "texture": "86F+agQcVE5bq8zCQrWPuT",
+    "rect": [
+      1,
+      0,
+      236,
+      71
+    ],
+    "offset": [
+      -9,
+      92.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

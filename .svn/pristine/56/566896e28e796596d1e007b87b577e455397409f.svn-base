@@ -1,0 +1,70 @@
+var roomUtil = require('roomUtil');
+var hhdz_roomUtil = require('hhdz_roomUtil');
+var hhdz_data = require('hhdz_data');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        HeadLayer: cc.Node,
+
+        UIHead: cc.Prefab,
+
+        _headArray: []
+    },
+
+    onLoad: function () {
+        registEvent('rbw-tableInfo', this, this.onTableInfoHandler);
+    },
+
+    onDestroy: function () {
+        unregistEvent('rbw-tableInfo', this, this.onTableInfoHandler);
+    },
+
+    onEnable: function () {
+        this._headArray = [];
+        this.updatePlayerHead();
+    },
+
+    onTableInfoHandler: function(){
+        this.updatePlayerHead();
+    },
+
+    updatePlayerHead: function(){
+        this._headArray = [];
+        var tableInfoData = hhdz_data.getTableInfoData();
+        if(tableInfoData == undefined){
+            return;
+        }
+        var tablePlayer = tableInfoData.tablePlayer;
+        if(tablePlayer == undefined || tablePlayer.length <= 0){
+            return;
+        }
+
+        var show = false;
+        for(var i = 0;i < tablePlayer.length;i++){
+            var parent = cc.find('headNode_'+i, this.HeadLayer);
+            if(parent == undefined){
+                continue;
+            }
+            show = false;
+            var playerData = tablePlayer[i];
+            if(playerData){
+                var headNode = parent.getChildByName('uiHead');
+                if(headNode == undefined){
+                    headNode = cc.instantiate(this.UIHead);
+                    headNode.parent = parent;
+                    headNode.name = 'uiHead';
+                }
+                var template = headNode.getComponent('hhdz_head');
+                if(template){
+                    template.setPlayerData(playerData);
+                }
+                show = true;
+
+                this._headArray.push(headNode);
+            }
+            parent.active = show;
+        }
+    },
+});

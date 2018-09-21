@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jinbi",
+    "texture": "d12wl/puVFuKx72puNu13J",
+    "rect": [
+      6,
+      6,
+      65,
+      65
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      77,
+      78
+    ]
+  }
+}

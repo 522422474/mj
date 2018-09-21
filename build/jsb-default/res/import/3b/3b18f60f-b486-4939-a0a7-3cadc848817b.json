@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "xiaojiesuandaguang_tex",
+  "_atlasJson": "{\"imagePath\":\"xiaojiesuandaguang_tex.png\",\"name\":\"xiaojiesuandaguang\",\"SubTexture\":[{\"frameY\":-107,\"y\":1,\"frameWidth\":720,\"frameX\":0,\"frameHeight\":1280,\"width\":471,\"height\":769,\"name\":\"dengguang2\",\"x\":1},{\"frameY\":-127,\"y\":1,\"frameWidth\":720,\"frameX\":-235,\"frameHeight\":1280,\"width\":485,\"height\":733,\"name\":\"dengguang1\",\"x\":474}]}",
+  "texture": {
+    "__uuid__": "df/uRy7M5Ce6WwCG7fHv2x"
+  }
+}

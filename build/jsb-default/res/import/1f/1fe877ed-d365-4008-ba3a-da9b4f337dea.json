@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_choumadiban",
+    "texture": "6dotlcbDVDvInLkBs4uSz/",
+    "rect": [
+      0,
+      3,
+      752,
+      149
+    ],
+    "offset": [
+      0,
+      -1
+    ],
+    "originalSize": [
+      752,
+      153
+    ]
+  }
+}

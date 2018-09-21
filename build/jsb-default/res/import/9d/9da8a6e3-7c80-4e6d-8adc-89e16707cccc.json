@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liuguang_tex",
+    "texture": "3d2qpFo0ZBu4aRgrgamD/V",
+    "rect": [
+      1,
+      1,
+      156,
+      146
+    ],
+    "offset": [
+      -49,
+      54
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

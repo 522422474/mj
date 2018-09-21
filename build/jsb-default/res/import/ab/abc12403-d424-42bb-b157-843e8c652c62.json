@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_disRoom_P",
+    "texture": "b8isBi9hNMQJGTy4rxaUNc",
+    "rect": [
+      1,
+      1,
+      246,
+      103
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      248,
+      105
+    ]
+  }
+}

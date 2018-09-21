@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paodekuaianniu01",
+    "texture": "e7Z9m2g89CcJPbzQKJ34ce",
+    "rect": [
+      0,
+      11,
+      281,
+      434
+    ],
+    "offset": [
+      0,
+      -5.5
+    ],
+    "originalSize": [
+      281,
+      445
+    ]
+  }
+}

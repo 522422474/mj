@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zuixinhuodongan",
+    "texture": "e5liZqyLJAn6YFTLX2Ef4C",
+    "rect": [
+      0,
+      0,
+      250,
+      81
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      250,
+      81
+    ]
+  }
+}

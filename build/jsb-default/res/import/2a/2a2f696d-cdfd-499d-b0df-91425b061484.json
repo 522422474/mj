@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_face_zuo_chu_13",
+    "texture": "387P2zIU5Ndb+LfZJQELv8",
+    "rect": [
+      7,
+      1,
+      87,
+      59
+    ],
+    "offset": [
+      3.5,
+      -0.5
+    ],
+    "originalSize": [
+      94,
+      60
+    ]
+  }
+}

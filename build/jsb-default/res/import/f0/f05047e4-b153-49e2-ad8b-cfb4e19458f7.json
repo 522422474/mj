@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "houdunwenzi",
+    "texture": "c1fRuc61RF/YBYIXpQrivg",
+    "rect": [
+      0,
+      0,
+      78,
+      28
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      78,
+      29
+    ]
+  }
+}

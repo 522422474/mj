@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jieshu2",
+    "texture": "12xtxytSJE444PXotO3JAL",
+    "rect": [
+      0,
+      0,
+      112,
+      121
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      112,
+      121
+    ]
+  }
+}

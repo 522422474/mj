@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-shiming2",
+    "texture": "8b7oUASFVMZZNxt7QbqMfs",
+    "rect": [
+      0,
+      0,
+      107,
+      108
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      107,
+      108
+    ]
+  }
+}

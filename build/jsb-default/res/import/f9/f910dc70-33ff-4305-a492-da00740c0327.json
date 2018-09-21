@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shuruhuifangma",
+    "texture": "7e5jdHZjpM15cbBtyjXBia",
+    "rect": [
+      0,
+      0,
+      228,
+      54
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      228,
+      54
+    ]
+  }
+}

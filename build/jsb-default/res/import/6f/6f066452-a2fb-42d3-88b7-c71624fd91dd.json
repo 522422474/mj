@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shensuanzi",
+    "texture": "706xAs0fFAO6ywMdk4obkN",
+    "rect": [
+      0,
+      0,
+      136,
+      80
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      136,
+      80
+    ]
+  }
+}

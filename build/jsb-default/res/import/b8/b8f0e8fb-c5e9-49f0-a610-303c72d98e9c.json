@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sss_result_yellow_0",
+    "texture": "87D7ZU+gxIybHyZ5m9k5cF",
+    "rect": [
+      2,
+      3,
+      246,
+      86
+    ],
+    "offset": [
+      -3,
+      82
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

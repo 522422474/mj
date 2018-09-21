@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ting",
+    "texture": "09J2hyffxNjJgFIAtrS0W8",
+    "rect": [
+      0,
+      0,
+      147,
+      144
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      147,
+      144
+    ]
+  }
+}

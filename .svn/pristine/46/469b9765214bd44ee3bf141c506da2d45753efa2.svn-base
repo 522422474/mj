@@ -1,0 +1,243 @@
+var RoomHandler = require('roomHandler');
+var matchHandler = require('matchHandler');
+var gameDefine = require('gameDefine');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        coinEndLayer: {
+            default: null,
+            type: cc.Node
+        },
+        resultIcon: {
+            default: null,
+            type: cc.Node
+        },
+        Player: {
+            default: null,
+            type: cc.Node
+        },
+        buttonNode: {
+            default: null,
+            type: cc.Node
+        }
+    },
+
+    onLoad: function () {
+        this.coinEndLayer.on(cc.Node.EventType.TOUCH_START, function(){});
+    },
+
+    onDestroy: function() {
+        this.coinEndLayer.off(cc.Node.EventType.TOUCH_START, function(){});
+    },
+
+    onShow: function() {
+        this.coinEndLayer.active = true;
+
+        if (GameData.room.opts.joinermax) {
+            this.hideNodeChild(this.resultIcon);
+            for (var i = 0; i < GameData.room.opts.joinermax; i++) {
+                this.showPlayer(i);
+                this.showMultiple(i);
+                this.showScore(i);
+                this.showDouble(i);
+            }
+        }
+        this.showButtonNode();
+    },
+
+    setName: function (name) {
+        if (isChinese(name)) {
+            return getShortStr(name, 5);
+        } else {
+            return getShortStr(name, 10);
+        }
+    },
+
+    setHeadImg: function(imgurl, node){
+        if(imgurl == undefined || imgurl.length <= 0 || node == undefined){
+            return;
+        }
+        cc.loader.load({url: imgurl, type: 'png'}, function(error, texture) {
+            if (!error && texture) {
+                node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture);
+            }
+        });
+    },
+
+    showPlayer: function(index) {
+        var player = GameData.joiners[index];
+        var playerNode = cc.find('player_' + (index + 1), this.Player);
+        var nameNode = cc.find('name', playerNode);
+        var headpicNode = cc.find('head', playerNode);
+        var identityNode = cc.find('identityIcon', playerNode);
+
+        //显示地主标致
+        if (player.uid == GameDataDDZ.game.dizhuUid) {
+            identityNode.active = true;
+        } else if (player.uid != GameData.game.dizhuUid) {
+            identityNode.active = false;
+        }
+        //昵称字体颜色
+        if (GameData.player.uid == player.uid) {
+            nameNode.color = new cc.Color(255, 229, 124);
+        } else {
+            nameNode.color = new cc.Color(123, 253, 255);
+        }
+        nameNode.getComponent(cc.Label).string = this.setName(player.name);
+
+        this.setHeadImg(player.headimgurl, headpicNode);
+    },
+
+    showMultiple: function(index)
+    {
+        var player = GameData.joiners[index];
+        var playerNode = cc.find('player_' + (index + 1), this.Player);
+        var multipleNode = cc.find('multiple', playerNode);
+        multipleNode.getComponent(cc.Label).string = GameDataDDZ.resultData.boomNum;
+    },
+
+    showDouble: function(index) {
+        var uid = GameData.joiners[index].uid;
+        var playerNode = cc.find('player_' + (index + 1), this.Player);
+        if (GameDataDDZ.isEmptyObject(GameDataDDZ.kicking)) {
+            return;
+        }
+        for (var key in GameDataDDZ.kicking.kicking)
+        {
+            if (key == uid && uid != GameDataDDZ.kicking.dizhu)
+            {
+                var doubleNode = cc.find('doubleIcon', playerNode);
+                if (GameDataDDZ.kicking.kicking[key] == 1) {
+                   doubleNode.active = true;     
+                } else {
+                    doubleNode.active = false;
+                }
+            }
+            else if (key == uid && uid == GameDataDDZ.kicking.dizhu)
+            {
+                var doubleNode = cc.find('doubleIcon', playerNode);
+                if (GameDataDDZ.kicking.kicking[key] == 1) {
+                   doubleNode.active = true;     
+                } else {
+                    doubleNode.active = false;
+                }
+            }
+        }
+    },
+
+    showScore: function(index) {
+        var uid = GameData.joiners[index].uid;
+        var playerNode = cc.find('player_' + (index + 1), this.Player);
+        var scoreNode = cc.find('score', playerNode);
+        var score = 0;
+        //判断金币场
+        if(gameDefine.currencyType.Currency_Coin == GameData.room.opts.currencyType) {
+            var coinData = RoomHandler.getCoinData();
+            if(coinData && coinData.coins && coinData.coins[uid]){
+                score = coinData.coins[uid];
+            }
+        } else {
+            score = GameDataDDZ.resultData.score[uid];
+        }
+        
+        if (score > 0) {
+            scoreNode.color = new cc.Color(255, 229, 124);
+            scoreNode.getComponent(cc.Label).string = '+' + score;
+            if (uid == GameData.player.uid) {
+                var winIcon = cc.find('winIcon', this.resultIcon);
+                winIcon.active = true;
+            }
+        } else if (score < 0) {
+            scoreNode.color = new cc.Color(123, 253, 255);
+            scoreNode.getComponent(cc.Label).string = score;
+            if (uid == GameData.player.uid) {
+                var loseIcon = cc.find('loseIcon', this.resultIcon);
+                loseIcon.active = true;
+            }
+        } else {
+            scoreNode.color = new cc.Color(132, 255, 123);
+            scoreNode.getComponent(cc.Label).string = score;
+            if (uid == GameData.player.uid) {
+                var dogfallIcon = cc.find('dogfallIcon', this.resultIcon);
+                dogfallIcon.active = true;
+            }
+        }
+    },
+
+    showButtonNode: function() 
+    {
+        if(gameDefine.currencyType.Currency_Coin == GameData.room.opts.currencyType) {
+            cc.find('continBtn2', this.buttonNode).active = false;
+            cc.find('continBtn', this.buttonNode).active = true;
+            cc.find('backBtn', this.buttonNode).active = true;
+        } else {
+            cc.find('continBtn2', this.buttonNode).active = true;
+            cc.find('continBtn', this.buttonNode).active = false;
+            cc.find('backBtn', this.buttonNode).active = false;
+        }
+    },
+
+    showTimer: function() {
+        var continBtn = cc.find('continBtn', this.buttonNode);
+        var timeNode = cc.find('time', continBtn);
+        var count = 6;
+        var that = this;
+        var timerCallback = function() {
+            count--;
+            timeNode.getComponent(cc.Label).string = '（' + count + '）';
+            if (count <= 0)
+            {
+                that.unschedule(timerCallback);
+                that.btnBackOnClicked();
+            }
+        };
+        this.schedule(timerCallback, 1);
+    },
+
+    hideNodeChild: function(parent) {
+        for (var key in parent.children) {
+            parent.children[key].active = false;
+        }
+    },
+
+    onSelectGameClick: function(event, customEventData){
+        if (inCD(1000)) {
+            return;
+        }
+        if (customEventData == 2)
+        {
+            if (!GameData.room.close) {
+                DDZHandler.getInstance().requestReady(function (res) {});
+                this.coinEndLayer.active = false;
+                GameDataDDZ.game.dizhuUid = 0;
+                sendEvent('DDZ-onGameStart');
+                sendEvent('initTableNode');
+            } else {
+                this.coinEndLayer.active = false;
+                this.node.getComponent('DDZ-roomMain').showSummaryLayer();
+            }
+            GameDataDDZ.clearObject(GameDataDDZ.kicking);
+        } else {
+            this.coinEndLayer.active = false;
+
+            matchHandler.selectGameType = customEventData;
+            matchHandler.selectGameLv = GameData.room.opts.scorelv;
+
+            GameData.player.roomid = undefined;
+            cc.director.loadScene('home', function(){
+                matchHandler.signup();
+            });
+        }
+    },
+
+    btnBackOnClicked: function (evt) {
+        GameData.player.roomid = undefined;
+        cc.director.loadScene('home');
+    },
+
+    // called every frame, uncomment this function to activate update callback
+    // update: function (dt) {
+
+    // },
+});

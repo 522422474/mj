@@ -1,0 +1,65 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yuyinduihua",
+  "_duration": 1.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "78HQN5sNVCIrCbAWJFhR3L"
+            }
+          },
+          {
+            "frame": 0.21666666666666667,
+            "value": {
+              "__uuid__": "2fNtqmltlAf7hWoggvGfHI"
+            }
+          },
+          {
+            "frame": 0.43333333333333335,
+            "value": {
+              "__uuid__": "e52Bqde7xFcojt5rlW01Dp"
+            }
+          },
+          {
+            "frame": 0.6166666666666667,
+            "value": {
+              "__uuid__": "e52Bqde7xFcojt5rlW01Dp"
+            }
+          },
+          {
+            "frame": 0.65,
+            "value": {
+              "__uuid__": "2fNtqmltlAf7hWoggvGfHI"
+            }
+          },
+          {
+            "frame": 0.8666666666666667,
+            "value": {
+              "__uuid__": "78HQN5sNVCIrCbAWJFhR3L"
+            }
+          },
+          {
+            "frame": 0.9,
+            "value": {
+              "__uuid__": "78HQN5sNVCIrCbAWJFhR3L"
+            }
+          },
+          {
+            "frame": 1.0833333333333333,
+            "value": {
+              "__uuid__": "78HQN5sNVCIrCbAWJFhR3L"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "rotation": []
+    }
+  }
+}

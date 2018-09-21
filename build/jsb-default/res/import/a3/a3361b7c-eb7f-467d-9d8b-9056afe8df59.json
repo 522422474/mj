@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fuhaobang",
+    "texture": "d7YgLO+R9OjokA/bwkEXHt",
+    "rect": [
+      0,
+      0,
+      212,
+      72
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      212,
+      72
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "6819f1a8-c644-4351-9729-542ba23e6856",
+  "atlasJson": "{\"SubTexture\":[{\"width\":257,\"y\":1,\"height\":105,\"name\":\"zhuangpaomadeng\",\"x\":1},{\"width\":257,\"y\":108,\"height\":105,\"name\":\"zhuangpaomadeng2\",\"x\":1}],\"name\":\"paomadeng\",\"imagePath\":\"paomadeng_tex.png\"}",
+  "texture": "a42ab333-b683-4077-b5fe-2e5af2878d4e",
+  "subMetas": {}
+}

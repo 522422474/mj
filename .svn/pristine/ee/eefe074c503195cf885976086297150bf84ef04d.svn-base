@@ -1,0 +1,113 @@
+var NiuNiuPokerHandler = require('niuniuPokerHandler');
+var HundredNiuHandler = require('hundredNiuHandler');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        contentNode: cc.Node,
+        playerInfo: cc.Node,
+        lineUpNum: cc.Label,
+        upZhuangCdtion: cc.Label,
+    },
+
+    onLoad: function () {
+        
+    },
+    showUI: function (data) {
+        this.initUI();
+        if ( !data) return;
+        this.setLineUpNum(data);
+        this.setUpCondition();
+        this.showHeadInfo(data);
+    },
+    initUI: function () {
+        this.lineUpNum.string = '';
+        this.upZhuangCdtion.string = '';
+        this.contentNode.removeAllChildren();
+    },
+    showHeadInfo: function (data) {
+        
+        for (var i = 0; i < data.length; i++) {
+            var player = this.contentNode.getChildByName('player'+i);
+            if(player == undefined){
+                player = cc.instantiate(this.playerInfo);
+                player.y = -51 - i*this.playerInfo.height;
+                this.contentNode.height = (i+1)*this.playerInfo.height;
+                player.parent = this.contentNode;
+                player.name = 'player'+i;
+            }
+            var numNode = cc.find('num', player);
+            var coinNode = cc.find('coin', player);
+            var nameNode = cc.find('name', player);
+            var headNode = cc.find('headMask/headIcon', player);
+            if (data[i].name != undefined) {
+                this.setName(nameNode, data[i].name);    
+            }
+            if (data[i].headimgurl != undefined) {
+                this.setHeadIcon(headNode, data[i].headimgurl);    
+            }
+            if (data[i].coin != undefined) {
+                coinNode.getComponent('cc.Label').string = ConversionCoinValue(data[i].coin);    
+            }
+            this.showSign(numNode, i);
+        }
+    },
+
+    setName: function (nameNode, nameLb) {
+        nameNode.getComponent('cc.Label').string = getShortStr(nameLb,4);
+    },
+    setHeadIcon: function(headNode,headimgurl) {
+        if (headimgurl == undefined || headimgurl == '' || headimgurl.length <= 0) {
+            headNode.getComponent('cc.Sprite').spriteFrame = null;
+            return;
+        }
+        var self = this;
+        cc.loader.load({url: headimgurl, type: 'png'}, function (error, texture) {
+            if (!error && texture) {
+                headNode.getComponent('cc.Sprite').spriteFrame = new cc.SpriteFrame(texture);
+            }
+        });
+    },
+    showSign: function (node, num) {
+        if (num <= 2) {
+            var url = cc.textureCache.addImage(cc.url.raw('resources/hundredNiuNiu/uiResources/panelUI/shangzhuang/jp_'+num+'.png'));
+            node.getComponent('cc.Sprite').spriteFrame = new cc.SpriteFrame(url);
+            node.active = true;    
+        } else {
+            node.active = false;    
+        }
+    },
+    //当前上庄排队人数
+    setLineUpNum: function (data) {
+        this.lineUpNum.string = '当前排队'+data.length+'人';
+    },
+
+    //上庄条件
+    setUpCondition: function () {
+        this.upZhuangCdtion.string = '上庄条件：100万';
+    },
+    clickUpZhuang: function () {
+        var self = this;
+        GameNet.getInstance().request('room.niuHundredHandler.upZhuang', {}, function(rtn) {
+            switch (rtn.result){
+                case 0:
+                    self.showUI(rtn.zhuanglist);
+                    cc.log('is upZhuangCdtion');
+                break;
+                case NiuNiuPokerHandler.ERRORTYPE.Niu100_Zhuang_Coin:
+                    NiuNiuMessageBox('上庄金币不足', function () {
+                        openView('shoppingPanel',undefined, function (target) {
+                            target.getComponent('shoppingPanel').showPanel(2);
+                        });
+                    });
+                break;
+                default:
+                    cc.log('error');
+                break;
+            }
+        });
+    },
+    close: function () {
+        closeView(this.node.name);
+    },
+});

@@ -1,0 +1,43 @@
+var gameDefine = require('gameDefine');
+var roomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        uiContents: Object,
+    },
+
+    // use this for initialization
+    onLoad: function () {
+        this.uiContents = {};
+        
+        var self = this;
+        var gameType = roomHandler.room.opts.gameType;
+        switch (gameType) {
+            case gameDefine.GameType.Game_Mj_HZ:
+            case gameDefine.GameType.Game_Mj_Tianjin: {
+                // createUIPrefab('room/roomBaseView', null, null, function(uiNode) {
+                //     self.uiContents['roomBaseView'] = uiNode;
+                // });
+                // createUIPrefab('tableUI/UIPlayers', null, null, function(uiNode) {
+                //     self.uiContents['roomPlayers'] = uiNode;
+                // });
+                // createUIPrefab('tableUI/UIMain', null, null, function(uiNode) {
+                //     self.uiContents['UIMain'] = uiNode;
+                // });
+            } break;
+            case gameDefine.GameType.Game_Poker_ZJH: {
+                // createUIPrefab('poker/room/pokerRoomBaseView', null, null, function(uiNode) {
+                //     self.uiContents['roomBaseView'] = uiNode;
+                // });
+            } break;
+            default: break;
+        }
+    },
+
+    // called every frame, uncomment this function to activate update callback
+    // update: function (dt) {
+
+    // },
+});

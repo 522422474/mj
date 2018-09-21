@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "eebd0c89-2fc8-463e-a2f2-0b898bc987cd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "tabbtn-gengduo1": {
+      "ver": "1.0.3",
+      "uuid": "86a65c1f-7c0b-4024-b021-19ba5c4d560e",
+      "rawTextureUuid": "eebd0c89-2fc8-463e-a2f2-0b898bc987cd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 191,
+      "height": 133,
+      "rawWidth": 191,
+      "rawHeight": 133,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

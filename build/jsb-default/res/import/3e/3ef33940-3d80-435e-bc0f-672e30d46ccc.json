@@ -1,0 +1,44 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yiwen",
+  "_duration": 0.6833333333333333,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "39a9VuCV9HfbQhQ2BoYFth"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "15wJgSiYNECbXGzfVB9vHR"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "c6qNzmvPxPEYq4h/aNNM3T"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "8bjAMEGGFNl7OXh9JI1TOv"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "39a9VuCV9HfbQhQ2BoYFth"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

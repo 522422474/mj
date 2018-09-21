@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dengluanniuxianguang",
+    "texture": "9auU+R9SBMF7DFK3BP+vz0",
+    "rect": [
+      0,
+      0,
+      1047,
+      18
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1047,
+      18
+    ]
+  }
+}

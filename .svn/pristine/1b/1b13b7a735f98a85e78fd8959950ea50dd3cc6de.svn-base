@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "fd2f3b10-8816-4bb7-82ff-f5d851c67868",
+  "atlasJson": "{\"imagePath\":\"huodefaguang_tex.png\",\"name\":\"huodefaguang\",\"SubTexture\":[{\"frameY\":-25,\"y\":1,\"frameWidth\":737,\"frameX\":-34,\"frameHeight\":720,\"width\":647,\"height\":647,\"name\":\"1\",\"x\":1},{\"frameY\":-37,\"y\":1,\"frameWidth\":737,\"frameX\":-46,\"frameHeight\":720,\"width\":599,\"height\":599,\"name\":\"2\",\"x\":650}]}",
+  "texture": "f2ddafd5-ec57-4fac-b545-86c43c97bd9b",
+  "subMetas": {}
+}

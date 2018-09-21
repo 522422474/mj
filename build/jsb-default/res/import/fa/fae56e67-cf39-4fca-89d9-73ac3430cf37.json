@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gonggaoanniu",
+    "texture": "25Lo/EtLJFy6+hBaEQupiG",
+    "rect": [
+      0,
+      0,
+      199,
+      83
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      199,
+      83
+    ]
+  }
+}

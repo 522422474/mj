@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paomadeng2",
+    "texture": "8eDP8BHsBMlIXsYonJu+wA",
+    "rect": [
+      0,
+      0,
+      720,
+      145
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      720,
+      148
+    ]
+  }
+}

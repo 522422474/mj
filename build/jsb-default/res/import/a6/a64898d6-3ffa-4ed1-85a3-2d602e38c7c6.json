@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fenshutongjishujudikang",
+    "texture": "17NnM1bf5Je78MMQv6FBNv",
+    "rect": [
+      0,
+      0,
+      1201,
+      486
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1201,
+      486
+    ]
+  }
+}

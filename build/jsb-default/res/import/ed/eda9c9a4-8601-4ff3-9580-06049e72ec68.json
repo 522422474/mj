@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dikangtouying",
+    "texture": "b6aVDY0IlNMZQ+i5QIyMuX",
+    "rect": [
+      0,
+      0,
+      291,
+      41
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      291,
+      41
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tiandaken01",
+    "texture": "6cm3e8fz1Lk4Io2LUIQOcn",
+    "rect": [
+      0,
+      9,
+      281,
+      436
+    ],
+    "offset": [
+      0,
+      -4.5
+    ],
+    "originalSize": [
+      281,
+      445
+    ]
+  }
+}

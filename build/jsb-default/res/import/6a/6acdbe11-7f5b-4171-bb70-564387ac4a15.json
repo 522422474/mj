@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liangdui02",
+    "texture": "60d2d3nhpM7oVw4miraFi3",
+    "rect": [
+      1,
+      1,
+      167,
+      97
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      169,
+      99
+    ]
+  }
+}

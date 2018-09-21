@@ -1,0 +1,120 @@
+var game = require('gameConfig');
+var gameDefine = require('gameDefine');
+var roomHandler = require('roomHandler');
+var stateMachine = require('stateMachine');
+
+cc.Class({
+    extends: stateMachine,
+
+    properties: {
+        talkViewNode: cc.Node,
+        timeViewNode: cc.Node,
+        wifiViewNode: cc.Node,
+        powerViewNode: cc.Node,
+        roomNumViewNode: cc.Node,
+        wildCard1ViewNode: cc.Node,
+    },
+
+    onLoad: function () {
+        this.loadViews('base');
+        this.showStateViews();
+
+    	registEvent('onRoomInfo', this, this.showStateViews);
+        registEvent('onRoomDissolve', this, this.onShowDissolve);
+        registEvent('onShowView', this, this.onShowView);
+    },
+
+    onDestroy: function () {
+    	unregistEvent('onRoomInfo', this, this.showStateViews);
+        unregistEvent('onRoomDissolve', this, this.onShowDissolve);
+        unregistEvent('onShowView', this, this.onShowView);
+    },
+
+    onEnable: function () {
+    	
+    },
+
+    loadViews: function (name) {
+        var self = this;
+        var parent = cc.director.getScene().getChildByName('Canvas');
+        var layer = parent.getChildByTag(name);
+        if (layer != null) {
+            layer.active = true;
+        } else {
+            var prefabs = [], views = game.getViews(name);
+            layer = new cc.Node();
+            layer.setTag(name);
+            parent.addChild(layer);
+
+            for (var i = 0, len = views.length; i < len; ++i) {
+                var prefab = game.getView(views[i]);
+                prefabs.push(prefab);
+            }
+
+            cc.loader.loadResArray(prefabs, function(err, res) {
+                for (var i = 0, len = res.length; i < len; ++i) {
+                    var prefab = res[i];
+                    if (prefab != null) {
+                        var node = cc.instantiate(prefab);
+                        node.setTag(views[i]);
+
+                        var baseNode = self[views[i]+'Node'];
+                        if (baseNode) baseNode.addChild(node);
+                        else layer.addChild(node);
+                        cc.log('loadView: '+views[i]);
+                    }
+                }
+            });
+        }
+    },
+
+    closeViews: function (name) {
+        var parent = cc.director.getScene().getChildByName('Canvas');
+        var layer = parent.getChildByTag(name);
+        if (layer != null) layer.active = false;
+    },
+
+    onShowView: function (data) {
+        var tag = data.detail;
+        var parent = cc.director.getScene().getChildByName('Canvas');
+        var layer = parent.getChildByTag(tag);
+        if (layer == null) {
+            var prefab = game.getView(tag);
+            openPrefabView(tag, prefab);
+        } else {
+            layer.active = true;
+        }
+    },
+
+    showStateViews: function () {
+    	var state = roomHandler.room.status;
+    	switch (state) {
+    		case gameDefine.RoomState.WAIT:
+    		case gameDefine.RoomState.READY:
+                this.closeViews('game');
+    			this.loadViews('ready');
+    			break;
+    		case gameDefine.RoomState.GAMEING:
+                this.closeViews('ready');
+    			this.loadViews('game');
+    			break;
+    		default: break;
+    	}
+    },
+
+    onShowDissolve: function(data) {
+        sendEvent('onShowView', 'dissolveView');
+    },
+
+    onSettingClicked: function(evt) {
+        openView('SettingsPanel');
+    },
+
+    onRuleClicked: function(evt) {
+        sendEvent('onShowView', 'ruleTipsView');
+    },
+
+    onChatClicked: function(evt) {
+        sendEvent('onShowView', 'chatView');
+    },
+});

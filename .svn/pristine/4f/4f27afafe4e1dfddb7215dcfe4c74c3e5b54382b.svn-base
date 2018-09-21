@@ -1,0 +1,15 @@
+别名: dunhuamajiang
+创建日期: 2018-1-25
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=wang, OU=ry, O=ry, L=xz, ST=xz, C=cn
+发布者: CN=wang, OU=ry, O=ry, L=xz, ST=xz, C=cn
+序列号: 6caf0577
+有效期开始日期: Thu Jan 25 11:59:35 CST 2018, 截止日期: Sun Aug 25 11:59:35 CST 2565
+证书指纹:
+         MD5: E4:C6:43:B8:28:06:53:96:F1:4B:53:9B:72:85:5C:C5
+         SHA1: 20:CE:1F:DE:F6:A8:76:FA:25:A7:0C:51:91:15:2C:57:49:B2:1D:AE
+         SHA256: A4:7F:CD:C0:4F:44:6A:30:A9:72:E1:64:AE:88:BA:F3:AA:86:FB:E7:C6:0C:01:6F:DE:65:5D:72:DA:5C:28:53
+         签名算法名称: SHA256withRSA
+         版本: 3

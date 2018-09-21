@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_shule",
+    "texture": "c467K+q1hJG7515ayQiq8c",
+    "rect": [
+      0,
+      0,
+      210,
+      136
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      210,
+      136
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lingdui",
+    "texture": "4an9XJ5GJFX6de8KCPvQwm",
+    "rect": [
+      0,
+      0,
+      102,
+      42
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      102,
+      42
+    ]
+  }
+}

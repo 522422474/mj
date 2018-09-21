@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kuaidian3",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      752,
+      120,
+      104,
+      116
+    ],
+    "offset": [
+      2,
+      -1
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

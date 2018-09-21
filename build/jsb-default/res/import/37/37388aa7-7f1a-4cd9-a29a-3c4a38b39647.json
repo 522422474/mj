@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tonghua1",
+    "texture": "2eIhQhL8dFsZwQj9UDpIAY",
+    "rect": [
+      0,
+      0,
+      278,
+      70
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      278,
+      70
+    ]
+  }
+}

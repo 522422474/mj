@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5e7fa8df-6c58-4208-8467-f2388955c50b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "k_neibujinshu": {
+      "ver": "1.0.3",
+      "uuid": "c08944e3-e624-4bc7-a7a6-37ae4e643d7f",
+      "rawTextureUuid": "5e7fa8df-6c58-4208-8467-f2388955c50b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 551,
+      "height": 88,
+      "rawWidth": 551,
+      "rawHeight": 88,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

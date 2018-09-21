@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_jinhua",
+    "texture": "54QCqi/kROK76CAonSfCNZ",
+    "rect": [
+      1,
+      0,
+      293,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      295,
+      79
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_tishi_N",
+    "texture": "ebf0RH4nZHqbk6Vfzk/waU",
+    "rect": [
+      1,
+      1,
+      223,
+      93
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      225,
+      95
+    ]
+  }
+}

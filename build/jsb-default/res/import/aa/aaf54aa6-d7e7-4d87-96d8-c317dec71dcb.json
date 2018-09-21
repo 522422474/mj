@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jingtiwenzi",
+    "texture": "d13uq78dpIgKZggm3sHnrg",
+    "rect": [
+      2,
+      2,
+      412,
+      46
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      416,
+      49
+    ]
+  }
+}

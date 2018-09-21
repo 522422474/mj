@@ -1,0 +1,270 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "WifiView",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "WifiView",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "0265fkoOVlIFZee3V5b4LW5",
+        "node": {
+          "__id__": 1
+        },
+        "wifiNode": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "37d94vnv/5KGKAPmME12v7d"
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "wifiNode",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
+      },
+      {
+        "__id__": 7
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "349f1YgcoVBF7xsskuddy4I"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "y": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "WiFi-di",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 3
+        },
+        "_spriteFrame": {
+          "__uuid__": "ec3MeL+VlGIbmTLr3UAnps"
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "484204Hn2xNBJTFrK738wiJ"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 26,
+      "height": 19
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "WiFi-4",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 4
+        },
+        "_spriteFrame": {
+          "__uuid__": "7dFAC18OhFtJy0xFcT8lbI"
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "c72d4o+LvVAY6wE6Htuf3nP"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 26,
+      "height": 19
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "WiFi-3",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 5
+        },
+        "_spriteFrame": {
+          "__uuid__": "0aW0uuPZlDirAvd6b8oyag"
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "ccdffaBb5xIeLkapBIbcCcs"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 20,
+      "height": 13
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 3
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "WiFi-2",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 6
+        },
+        "_spriteFrame": {
+          "__uuid__": "febaAinH1DOof9NwdJStvi"
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "bb2eb7eXElG3LjF/I+aiWVs"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 12,
+      "height": 8
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 7
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "WiFi-1",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 7
+        },
+        "_spriteFrame": {
+          "__uuid__": "f1VTM9mYBF0YpLreV52+UT"
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "02CvtN5btLPKspYtCcAhqw"
+      },
+      "fileId": "7522b0hfT5ND7eQtAFJc/vy"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 4,
+      "height": 3
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 10
+    }
+  }
+]

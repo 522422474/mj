@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "moyuwenzi",
+    "texture": "daXEfMOChEtbDs7R9oBVby",
+    "rect": [
+      0,
+      0,
+      91,
+      38
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      91,
+      38
+    ]
+  }
+}

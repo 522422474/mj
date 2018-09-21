@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ziyiyou2",
+    "texture": "e8SzzpLDdGq7n6n8Az38lj",
+    "rect": [
+      0,
+      0,
+      50,
+      28
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      50,
+      28
+    ]
+  }
+}

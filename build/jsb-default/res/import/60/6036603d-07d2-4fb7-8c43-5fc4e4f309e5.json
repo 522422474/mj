@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tingpaizhong",
+    "texture": "5bDtZkcaJG2LXZUzWQExSv",
+    "rect": [
+      4,
+      5,
+      125,
+      51
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      134,
+      61
+    ]
+  }
+}

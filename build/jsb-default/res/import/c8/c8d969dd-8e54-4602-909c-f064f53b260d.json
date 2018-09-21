@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wxSharebg",
+    "texture": "3ckOGMxHJBvYfDWyVEl8tV",
+    "rect": [
+      0,
+      0,
+      1600,
+      900
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1600,
+      900
+    ]
+  }
+}

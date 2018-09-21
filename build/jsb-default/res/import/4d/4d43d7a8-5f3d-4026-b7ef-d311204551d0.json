@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_buchongjinbi",
+    "texture": "17IwI863ZBLoWmEj2XhpVI",
+    "rect": [
+      0,
+      0,
+      227,
+      71
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      227,
+      71
+    ]
+  }
+}

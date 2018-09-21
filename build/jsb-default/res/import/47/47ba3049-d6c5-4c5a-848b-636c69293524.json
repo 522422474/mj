@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shangchenganniu02",
+    "texture": "9dWxKwd+pL6I2jbe1j/5IM",
+    "rect": [
+      0,
+      0,
+      107,
+      108
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      107,
+      108
+    ]
+  }
+}

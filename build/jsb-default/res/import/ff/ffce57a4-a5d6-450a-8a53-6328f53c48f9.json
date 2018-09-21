@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lazhuanghui02",
+    "texture": "7ePfFbH2BHM6UR8MWVRvmV",
+    "rect": [
+      0,
+      1,
+      296,
+      115
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      296,
+      116
+    ]
+  }
+}

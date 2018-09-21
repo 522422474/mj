@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "yingjialiangpai_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"width\":1279,\"y\":1,\"height\":322,\"name\":\"piaofubeijing\",\"x\":1},{\"width\":573,\"y\":325,\"height\":162,\"name\":\"yingjialiangpai\",\"x\":1}],\"name\":\"yingjialiangpai\",\"imagePath\":\"yingjialiangpai_tex.png\"}",
+  "texture": {
+    "__uuid__": "6cwsW0v7BEuaj0NrugSzBG"
+  }
+}

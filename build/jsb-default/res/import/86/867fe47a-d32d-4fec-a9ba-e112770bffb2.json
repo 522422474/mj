@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "teshupaixingwenzi",
+    "texture": "ce4f3lUzpHR45PPkHVwjeM",
+    "rect": [
+      0,
+      2,
+      246,
+      145
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      247,
+      149
+    ]
+  }
+}

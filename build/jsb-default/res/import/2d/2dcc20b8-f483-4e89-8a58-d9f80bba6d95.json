@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yitiaolong_tex",
+    "texture": "55lrkeXWVEb4KXmK/7jFrq",
+    "rect": [
+      1,
+      2,
+      921,
+      525
+    ],
+    "offset": [
+      -50.5,
+      247.5
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

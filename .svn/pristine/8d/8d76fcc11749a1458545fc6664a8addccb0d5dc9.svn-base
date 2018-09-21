@@ -1,0 +1,65 @@
+var soundMngr = require('SoundMngr');
+var stateMachine = require('stateMachine');
+var HundredNiuHandler = require('hundredNiuHandler');
+var niuniuPokerHandler = require('niuniuPokerHandler');
+cc.Class({
+    extends: stateMachine,
+
+    properties: {
+    },
+
+    onLoad: function () {
+    	stateMachine.prototype.onLoad.call(this);
+    	this.handlerMsg();
+        this.getGameRoundInfo();
+        soundMngr.instance.playMusic('shisanshui/sound/sss_table_bg1');
+    },
+    handlerMsg: function () {
+        registEvent('niuhun-onGameInfo', this, this.getGameRoundInfo);
+        this.registState(niuniuPokerHandler.HUNDREDNIUSTATUS.CHIPS, this, this.startChipsFunction, this.onChipsFunction, this.endChipsFunction);
+        this.registState(niuniuPokerHandler.HUNDREDNIUSTATUS.SETTLE, this, this.startSettleFunction, this.onSettleFunction, this.endSettleFunction);
+    },
+    onDestroy: function () {
+        unregistEvent('niuhun-onGameInfo', this, this.getGameRoundInfo);
+        this.unregistState(niuniuPokerHandler.HUNDREDNIUSTATUS.CHIPS, this, this.startChipsFunction, this.onChipsFunction, this.endChipsFunction);
+        this.unregistState(niuniuPokerHandler.HUNDREDNIUSTATUS.SETTLE, this, this.startSettleFunction, this.onSettleFunction, this.endSettleFunction);
+        GameData.initGameData();
+        HundredNiuHandler.initHundredData();
+    },
+    //获取游戏中状态
+    getGameRoundInfo: function () {
+        cc.log('roommain getGameRoundInfo');
+        this.setState(HundredNiuHandler.status);
+    },
+    //阶段判断
+    startChipsFunction: function (callback) {
+        console.log('stateMachine startChipsAnimation');
+        this.node.getComponent('hundredNiu-roomTable').initUI();
+        if (HundredNiuHandler.gameTimes < 20) {
+            callback();
+        } else {
+            this.node.getComponent('hundredNiu-roomTable').startAnimation(callback);
+        }
+    },
+    onChipsFunction: function (callback) {
+        console.log('stateMachine onChipsAnimation');
+        this.node.getComponent('hundredNiu-roomTable').gambleCountTime(callback);
+    },
+    endChipsFunction: function (callback) {
+        console.log('stateMachine endChipsAnimation');
+        this.node.getComponent('hundredNiu-roomTable').chipsStopAnimation(callback);
+    },
+
+    startSettleFunction: function (callback) {
+        cc.log('stateMachine startSettleFunction');
+        callback();
+    },
+    onSettleFunction: function (callback) {
+        cc.log('stateMachine onSettleFunction');
+        callback();
+    },
+    endSettleFunction: function (callback) {
+        cc.log('stateMachine endSettleFunction');
+        callback();
+    },
+});

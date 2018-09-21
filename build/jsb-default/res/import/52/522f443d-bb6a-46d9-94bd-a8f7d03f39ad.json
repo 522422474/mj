@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "diaoxian2",
+    "texture": "dcBauMESxFG7EnhL0iHUes",
+    "rect": [
+      0,
+      0,
+      140,
+      41
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      140,
+      41
+    ]
+  }
+}

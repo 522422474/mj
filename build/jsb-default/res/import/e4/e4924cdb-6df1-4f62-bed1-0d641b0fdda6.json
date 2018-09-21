@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gr_bq_jidan",
+    "texture": "f703NSkUJEGrt0hv1nZOIy",
+    "rect": [
+      1,
+      2,
+      75,
+      82
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      77,
+      86
+    ]
+  }
+}

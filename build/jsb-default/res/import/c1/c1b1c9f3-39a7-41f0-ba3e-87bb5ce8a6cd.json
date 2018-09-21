@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paimingwenzi",
+    "texture": "3a3WIgJytGPqLYH38DST5q",
+    "rect": [
+      1,
+      0,
+      57,
+      28
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      58,
+      29
+    ]
+  }
+}

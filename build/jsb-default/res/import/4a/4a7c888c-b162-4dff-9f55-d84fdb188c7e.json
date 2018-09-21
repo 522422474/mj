@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chahao",
+    "texture": "50xtueXZBP/qLQ9hcfAETq",
+    "rect": [
+      0,
+      0,
+      66,
+      64
+    ],
+    "offset": [
+      0,
+      2
+    ],
+    "originalSize": [
+      66,
+      68
+    ]
+  }
+}

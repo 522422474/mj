@@ -1,0 +1,30 @@
+var roomUtil = require('roomUtil');
+var gameDefine = require('gameDefine');
+var roomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        roomRule: cc.Label,
+    },
+
+    onLoad: function () {
+    },
+
+    onDestroy: function () {
+    },
+
+    onEnable: function () {
+        cc.log('..ruleView onEnable.');
+        this.showRoomRule();
+    },
+
+    showRoomRule: function() {
+        var roomData = roomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+        this.roomRule.string = roomUtil.getRoomRuleStrOnType(roomData);
+    }
+});

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xuanzejulebu",
+    "texture": "b8k1U/tElNC62Qh0NC0YP2",
+    "rect": [
+      0,
+      0,
+      259,
+      63
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      259,
+      63
+    ]
+  }
+}

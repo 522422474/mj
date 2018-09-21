@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "daojishinaozhong",
+    "texture": "0fQtZV6mdMQJdONjon8hlI",
+    "rect": [
+      0,
+      0,
+      131,
+      117
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      131,
+      117
+    ]
+  }
+}

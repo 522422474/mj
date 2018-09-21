@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "toukuang2",
+    "texture": "f1bjmh9KRMfpkf4efs0Rhl",
+    "rect": [
+      0,
+      0,
+      126,
+      154
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      126,
+      155
+    ]
+  }
+}

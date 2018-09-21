@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "renshutubiao",
+    "texture": "c5mBO7gptBeqMPAhibh+Ux",
+    "rect": [
+      0,
+      0,
+      52,
+      43
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      52,
+      43
+    ]
+  }
+}

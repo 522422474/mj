@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "huodefaguang_tex",
+  "_atlasJson": "{\"imagePath\":\"huodefaguang_tex.png\",\"name\":\"huodefaguang\",\"SubTexture\":[{\"frameY\":-25,\"y\":1,\"frameWidth\":737,\"frameX\":-34,\"frameHeight\":720,\"width\":647,\"height\":647,\"name\":\"1\",\"x\":1},{\"frameY\":-37,\"y\":1,\"frameWidth\":737,\"frameX\":-46,\"frameHeight\":720,\"width\":599,\"height\":599,\"name\":\"2\",\"x\":650}]}",
+  "texture": {
+    "__uuid__": "f23a/V7FdPrLVFhsQ8l72b"
+  }
+}

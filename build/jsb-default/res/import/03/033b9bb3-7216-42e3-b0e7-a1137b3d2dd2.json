@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wutonghui",
+    "texture": "f7nJmzbspIfINpLF3yHeAY",
+    "rect": [
+      0,
+      0,
+      154,
+      90
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      154,
+      90
+    ]
+  }
+}

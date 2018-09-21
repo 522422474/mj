@@ -1,0 +1,56 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "koubi",
+  "_duration": 1.0166666666666666,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "7fOGoWhjZArI7ovjeqlg1O"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "896Gzqf6xFeb/c0RA8DwD+"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "7fOGoWhjZArI7ovjeqlg1O"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "896Gzqf6xFeb/c0RA8DwD+"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "7fOGoWhjZArI7ovjeqlg1O"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "896Gzqf6xFeb/c0RA8DwD+"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "7fOGoWhjZArI7ovjeqlg1O"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

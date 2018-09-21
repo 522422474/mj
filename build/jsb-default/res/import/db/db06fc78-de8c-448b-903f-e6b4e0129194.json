@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yuanxingpaomadeng_tex",
+    "texture": "dfNAqPsB9O5oXLUQ3+3zq/",
+    "rect": [
+      1,
+      1,
+      282,
+      140
+    ],
+    "offset": [
+      -114,
+      57
+    ],
+    "originalSize": [
+      512,
+      256
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_zaiwanyihui",
+    "texture": "6fZ7w7QYVK9JPQsB8C35pe",
+    "rect": [
+      0,
+      0,
+      678,
+      408
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      678,
+      408
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn-home-xiangzuo",
+    "texture": "497uZGMn9OC7NBmY5EDo7f",
+    "rect": [
+      0,
+      0,
+      90,
+      133
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      90,
+      133
+    ]
+  }
+}

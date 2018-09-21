@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "erShuiBtnClick",
+    "texture": "643qR27SNPY6XAZst81e3K",
+    "rect": [
+      0,
+      1,
+      296,
+      113
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      296,
+      116
+    ]
+  }
+}

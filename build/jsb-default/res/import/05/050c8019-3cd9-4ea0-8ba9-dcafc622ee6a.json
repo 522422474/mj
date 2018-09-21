@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "quanleida_tex",
+    "texture": "7crMnwDplCaJfdY2/TVGzn",
+    "rect": [
+      1,
+      1,
+      777,
+      1005
+    ],
+    "offset": [
+      -122.5,
+      8.5
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

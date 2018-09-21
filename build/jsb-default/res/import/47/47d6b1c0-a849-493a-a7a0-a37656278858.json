@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "majiangzi",
+    "texture": "a4Rh3J+pdNF6XaaXXZMHCH",
+    "rect": [
+      1,
+      1,
+      83,
+      47
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      84,
+      49
+    ]
+  }
+}

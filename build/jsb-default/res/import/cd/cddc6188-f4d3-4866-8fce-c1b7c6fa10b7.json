@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fuzhifangjianhao02",
+    "texture": "de//IvFmxE7a89fzpQ3LUB",
+    "rect": [
+      1,
+      0,
+      309,
+      92
+    ],
+    "offset": [
+      -0.5,
+      3
+    ],
+    "originalSize": [
+      312,
+      98
+    ]
+  }
+}

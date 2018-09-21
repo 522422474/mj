@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "feichunyin_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"width\":159,\"y\":1,\"height\":104,\"name\":\"chunyin\",\"x\":1}],\"name\":\"feichunyin\",\"imagePath\":\"feichunyin_tex.png\"}",
+  "texture": {
+    "__uuid__": "eaTrV5OYhOJpvbJFyKUM+1"
+  }
+}

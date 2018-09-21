@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "poster_1",
+    "texture": "93o6xKCn1L1ZipM/DU3E+7",
+    "rect": [
+      1,
+      1,
+      1090,
+      606
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1092,
+      608
+    ]
+  }
+}

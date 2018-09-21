@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "3ca0b0ba-a3f2-4bb8-8a8b-9d5c1d2bb1b4",
+  "atlasJson": "{\"imagePath\":\"yuanxingpaomadeng_tex.png\",\"SubTexture\":[{\"width\":140,\"y\":1,\"height\":140,\"name\":\"01\",\"x\":143},{\"width\":140,\"y\":1,\"height\":140,\"name\":\"02\",\"x\":1}],\"name\":\"yuanxingpaomadeng\"}",
+  "texture": "df340a8f-b01f-4ee6-85cb-510dfedf3abf",
+  "subMetas": {}
+}

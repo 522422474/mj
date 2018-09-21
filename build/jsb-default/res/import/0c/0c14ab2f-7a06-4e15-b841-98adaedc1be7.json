@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biaotou",
+    "texture": "b0xRhfR0tEk4F41ft5WIzg",
+    "rect": [
+      0,
+      0,
+      1280,
+      150
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1280,
+      150
+    ]
+  }
+}

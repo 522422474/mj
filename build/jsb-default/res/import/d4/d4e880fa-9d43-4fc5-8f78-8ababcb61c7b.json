@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_qipai",
+    "texture": "19aEuz52NF6p+FTnzqplii",
+    "rect": [
+      0,
+      0,
+      210,
+      136
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      210,
+      136
+    ]
+  }
+}

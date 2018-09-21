@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "duihao",
+    "texture": "9fwRSkVNlBK5vp5rbSk6rg",
+    "rect": [
+      2,
+      2,
+      74,
+      73
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      78,
+      80
+    ]
+  }
+}

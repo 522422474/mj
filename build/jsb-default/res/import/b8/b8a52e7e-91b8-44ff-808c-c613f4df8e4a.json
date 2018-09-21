@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pipeizhong",
+    "texture": "aehVovN0lDWq4By8AiRsdT",
+    "rect": [
+      0,
+      0,
+      832,
+      167
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      832,
+      167
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-gengduo2",
+    "texture": "18TBoMGB9Ncov9x7U3hqja",
+    "rect": [
+      0,
+      0,
+      210,
+      146
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      210,
+      146
+    ]
+  }
+}

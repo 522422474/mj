@@ -1,0 +1,19 @@
+密钥库密码 huadianmajiang2017
+密钥库别名 huadianmajiang
+密钥库别名密码 mengfanqi
+
+别名: huadianmajiang
+创建日期: 2017-12-21
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=wang, OU="ry\\", O="ry\\", L=xz, ST=xz, C=cn
+发布者: CN=wang, OU="ry\\", O="ry\\", L=xz, ST=xz, C=cn
+序列号: 676a42df
+有效期开始日期: Thu Dec 21 14:57:40 CST 2017, 截止日期: Fri Sep 23 14:57:40 CST 2072
+证书指纹:
+MD5: 02:09:53:2D:7B:2E:7B:D3:57:CA:F4:C7:97:99:33:16
+SHA1: 51:57:16:1F:FC:8D:A3:62:F2:8C:F4:42:20:DC:9C:61:27:24:F5:56
+SHA256: B9:27:F4:B2:4A:12:2E:85:82:F7:0D:C0:6D:F9:65:A9:79:FE:5B:A4:DF:80:7E:03:F9:AB:57:2E:53:B7:06:2E
+签名算法名称: SHA256withRSA
+版本: 3

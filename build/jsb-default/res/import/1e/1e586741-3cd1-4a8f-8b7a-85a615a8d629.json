@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhuomian_touxiangmengban",
+    "texture": "b81NnrssNCK5f+Ulz0CDhw",
+    "rect": [
+      0,
+      4,
+      1280,
+      115
+    ],
+    "offset": [
+      0,
+      -2
+    ],
+    "originalSize": [
+      1280,
+      119
+    ]
+  }
+}

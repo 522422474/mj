@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "teshupaixing",
+    "texture": "46QRZB+4hIlZhNUs0JB0uh",
+    "rect": [
+      0,
+      1,
+      111,
+      104
+    ],
+    "offset": [
+      -0.5,
+      -0.5
+    ],
+    "originalSize": [
+      112,
+      105
+    ]
+  }
+}

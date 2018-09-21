@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_lijilingquanniu02",
+    "texture": "443en549VAXLPmh9NIguAM",
+    "rect": [
+      0,
+      0,
+      253,
+      88
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      253,
+      88
+    ]
+  }
+}

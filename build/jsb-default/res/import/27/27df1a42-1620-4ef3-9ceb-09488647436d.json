@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "woshule_tex",
+    "texture": "af6/0hcYNO4Y8wNQ48pe5h",
+    "rect": [
+      1,
+      1,
+      665,
+      832
+    ],
+    "offset": [
+      -178.5,
+      95
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

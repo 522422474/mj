@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huangguantubiao",
+    "texture": "4f01XQT/JDIqO4IEOZtIPf",
+    "rect": [
+      1,
+      0,
+      123,
+      128
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      124,
+      128
+    ]
+  }
+}

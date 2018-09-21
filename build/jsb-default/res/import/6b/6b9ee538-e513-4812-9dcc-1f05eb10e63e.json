@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xiaojiesuandaguang_tex",
+    "texture": "5bi51KcWtLOKqoxsKhPXUd",
+    "rect": [
+      1,
+      11,
+      959,
+      749
+    ],
+    "offset": [
+      -31.5,
+      126.5
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_shandian",
+    "texture": "c2xQKt+8pJrZaiefi05Bjd",
+    "rect": [
+      0,
+      0,
+      214,
+      341
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      214,
+      341
+    ]
+  }
+}

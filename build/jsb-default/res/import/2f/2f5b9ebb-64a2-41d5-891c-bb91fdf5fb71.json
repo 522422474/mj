@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-renwu2",
+    "texture": "4cW1pepdVNUrLHlA9xEtSW",
+    "rect": [
+      5,
+      5,
+      138,
+      144
+    ],
+    "offset": [
+      -1,
+      -2
+    ],
+    "originalSize": [
+      150,
+      150
+    ]
+  }
+}

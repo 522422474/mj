@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "daxiao3",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      376,
+      880,
+      90,
+      122
+    ],
+    "offset": [
+      1,
+      -1
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

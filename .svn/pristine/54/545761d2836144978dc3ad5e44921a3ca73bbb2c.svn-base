@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f3334d97-bf27-430a-aa1a-048228a9abc8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Btn_GameTable_bujiabei_N": {
+      "ver": "1.0.3",
+      "uuid": "1a6d49d5-72ae-47fe-a8ed-ba55cd5c85d7",
+      "rawTextureUuid": "f3334d97-bf27-430a-aa1a-048228a9abc8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 225,
+      "height": 95,
+      "rawWidth": 225,
+      "rawHeight": 95,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

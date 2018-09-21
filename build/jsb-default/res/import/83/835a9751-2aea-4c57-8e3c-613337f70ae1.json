@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lodingjindutiao",
+    "texture": "beU3cBQQtNiqk4zxq/+kC2",
+    "rect": [
+      0,
+      0,
+      884,
+      17
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      884,
+      17
+    ]
+  }
+}

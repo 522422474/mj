@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fanhui01",
+    "texture": "1ehSqfaL9HUZ4PKVhx4PoX",
+    "rect": [
+      1,
+      1,
+      364,
+      109
+    ],
+    "offset": [
+      0,
+      2.5
+    ],
+    "originalSize": [
+      366,
+      116
+    ]
+  }
+}

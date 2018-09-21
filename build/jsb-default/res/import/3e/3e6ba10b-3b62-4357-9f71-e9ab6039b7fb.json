@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chongzhi",
+    "texture": "6eFWJFS+BHLr37ciqOs11F",
+    "rect": [
+      1,
+      1,
+      60,
+      61
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      62,
+      64
+    ]
+  }
+}

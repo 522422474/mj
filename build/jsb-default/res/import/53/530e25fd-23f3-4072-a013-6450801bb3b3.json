@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wenhao02",
+    "texture": "1eB72MRGNLx67HSB6vxyLj",
+    "rect": [
+      0,
+      0,
+      58,
+      59
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      58,
+      59
+    ]
+  }
+}

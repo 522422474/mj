@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kaishixiazhu_tex",
+    "texture": "7aKh2ggLBPb4AbDmEhhKPB",
+    "rect": [
+      1,
+      1,
+      1843,
+      392
+    ],
+    "offset": [
+      -101.5,
+      59
+    ],
+    "originalSize": [
+      2048,
+      512
+    ]
+  }
+}

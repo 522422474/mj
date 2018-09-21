@@ -1,0 +1,52 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "hundred_poker",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "hundred_poker",
+    "_components": [
+      {
+        "__id__": 2
+      },
+      {
+        "__type__": "c29e7cP8TxBuLyZZu8eoWnH",
+        "node": {
+          "__id__": 1
+        },
+        "chipSp": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "264Ia+IQ1PGJB7k+wWuXBg"
+      },
+      "fileId": "4030eVJuPZD6rirSmoATeNy"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 120,
+      "height": 92
+    }
+  },
+  {
+    "__type__": "cc.Sprite",
+    "node": {
+      "__id__": 1
+    },
+    "_spriteFrame": {
+      "__uuid__": "cfdMX8H9NJ3YxFg/pIBGDA"
+    }
+  }
+]

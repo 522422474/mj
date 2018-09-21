@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tongyi2",
+    "texture": "bfMBHaJwxDu52uvfb8YzvD",
+    "rect": [
+      0,
+      0,
+      194,
+      63
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      194,
+      63
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shareBase1",
+    "texture": "bfI9bFbDtMCLW9m+V2luaA",
+    "rect": [
+      0,
+      0,
+      290,
+      188
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      290,
+      188
+    ]
+  }
+}

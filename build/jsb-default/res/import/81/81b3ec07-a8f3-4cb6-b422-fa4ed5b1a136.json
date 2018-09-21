@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "loupaizhong",
+    "texture": "a6v+1XrcxNMKrFGly34kkN",
+    "rect": [
+      1,
+      1,
+      132,
+      58
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      134,
+      61
+    ]
+  }
+}

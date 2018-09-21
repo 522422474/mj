@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bujiabei",
+    "texture": "e9pn58W9lDH7gTKHU0bBtb",
+    "rect": [
+      0,
+      0,
+      188,
+      70
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      188,
+      70
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "buIcon",
+    "texture": "06gvROkkxM1qus5GF7ONE+",
+    "rect": [
+      0,
+      0,
+      44,
+      55
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      44,
+      55
+    ]
+  }
+}

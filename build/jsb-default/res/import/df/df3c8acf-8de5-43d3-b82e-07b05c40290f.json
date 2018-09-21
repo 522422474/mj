@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg_wanjialiebiao",
+    "texture": "12iHqkEwBB2qZjNQpMsbos",
+    "rect": [
+      0,
+      0,
+      690,
+      655
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      690,
+      655
+    ]
+  }
+}

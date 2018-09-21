@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huakuai",
+    "texture": "37nHt3Z1VHqq68jBm/5okC",
+    "rect": [
+      0,
+      1,
+      82,
+      80
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      82,
+      81
+    ]
+  }
+}

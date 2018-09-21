@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "buchuai02",
+    "texture": "e7HT1CNR5GbJBKbZ3Jj5z+",
+    "rect": [
+      0,
+      0,
+      248,
+      105
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      248,
+      105
+    ]
+  }
+}

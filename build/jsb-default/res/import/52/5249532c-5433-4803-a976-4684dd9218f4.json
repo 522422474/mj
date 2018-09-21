@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "renshu",
+    "texture": "5eNFFrwd1CDb4u4/S7LzcY",
+    "rect": [
+      0,
+      0,
+      94,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      94,
+      37
+    ]
+  }
+}

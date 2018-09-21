@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dijuwenzi",
+    "texture": "13KTgGf7lJ0Lm7KX6l1SAv",
+    "rect": [
+      0,
+      0,
+      131,
+      30
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      131,
+      31
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+var gameDefine = require('gameDefine');
+var RoomHandler = require('roomHandler');
+var HundredNiuHandler = require('hundredNiuHandler');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+    	batteryNode: cc.Node,
+    },
+
+    onLoad: function () {
+    	require('util').registEvent('nativePower', this, this.onNativePowerHandler);
+    	this.electricQuantity();
+    },
+    onDestroy: function () {
+		unrequire('util').registEvent('nativePower', this, this.onNativePowerHandler);
+    },
+
+    electricQuantity: function () {
+        try {
+            if (cc.sys.OS_ANDROID == cc.sys.os) {
+                jsb.reflection.callStaticMethod("org.cocos2dx.javascript.AppActivity", "electricQuantity", "()V");
+            } else if (cc.sys.OS_IOS == cc.sys.os) {
+                jsb.reflection.callStaticMethod("AppController", "electricQuantity");
+            }
+            this.schedule(this.electricQuantity, 60);
+        } catch (e) {
+            jsclient.native.HelloOC("electricQuantity throw: " + JSON.stringify(e));
+        }
+    },
+
+    onNativePowerHandler: function (percent) {
+        var node = this.dianchiNode.getChildByName("dianchi2");
+        node.scaleX = percent.detail / 100;
+    },
+
+
+    /*---------------------------click event------------------------------------*/
+    /*---------------------------click event------------------------------------*/
+    //返回
+    backBtnClick: function () {
+        var selfChipsNum = HundredNiuHandler.getselfChipsSum();
+        if (GameData.player.uid == HundredNiuHandler.zhuangUid) {
+            openView('hundred_backPanel', gameDefine.GameType.Game_Niu_Hundred,
+                function (target) {
+                    target.getComponent('hundred_backPanel').showBackUI('zhuang');
+                }
+            );
+        } else {
+            if (selfChipsNum > 0) {
+                openView('hundred_backPanel', gameDefine.GameType.Game_Niu_Hundred,
+                    function (target) {
+                        target.getComponent('hundred_backPanel').showBackUI('xian');
+                    }
+                );
+            } else {
+                RoomHandler.quitRoom(RoomHandler.room.id);    
+            }
+        }
+    },
+    //上庄列表
+    clickGetDealerList: function () {
+        GameNet.getInstance().request("room.niuHundredHandler.zhuanglist", {}, function (rtn) {
+            if (rtn.result == 0) {
+                openView('hundred_shangzhuangPanel',gameDefine.GameType.Game_Niu_Hundred,
+                    function (target) {
+                        target.getComponent('hundred_dealerPanel').showUI(rtn.zhuanglist);
+                    }
+                );
+            }else {
+                cc.log('request zhuanglist error');
+            }
+        });
+    },
+    //闲家列表
+    clickGetPlayerList: function () {
+        GameNet.getInstance().request('room.niuHundredHandler.playerlist', {}, function(rtn) {
+            if (rtn.result == 0) {
+                openView('hundred_sankePanel', gameDefine.GameType.Game_Niu_Hundred, function (target) {
+                        target.getComponent('hundred_sankePanel').showUI(rtn.data);
+                    });
+            }else {
+                cc.log('request playerlist error');
+            }
+        });
+    },
+    //走势图
+    clickGetTrendPanel: function () {
+        GameNet.getInstance().request('room.niuHundredHandler.trendlist', {}, function(rtn) {
+             if (rtn.result == 0) {
+                openView('hundred_trendPanel',gameDefine.GameType.Game_Niu_Hundred,
+                    function (target) {
+                        target.getComponent('hundred_trendPanel').showUI(rtn.trendlist);
+                    }
+                );
+            }else {
+                cc.log('request trendlist error');
+            }
+        });
+    },
+    //跳转商城
+    goToShop: function () {
+        openView('shoppingPanel',undefined, function (target) {
+            target.getComponent('shoppingPanel').showPanel(2);
+        });
+    },
+    showSettingLayer: function(evt, data) {
+        openView('niuniu_settingPrefab', gameDefine.GameType.Game_niu_niu);
+    },
+    showRulePanel: function () {
+        openView('hundred_rulePanel', gameDefine.GameType.Game_Niu_Hundred);
+    },
+});

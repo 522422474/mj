@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "TDK_winnumber_0",
+    "texture": "64QwfmhEZOSoNt11p59054",
+    "rect": [
+      1,
+      0,
+      236,
+      71
+    ],
+    "offset": [
+      -9,
+      92.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

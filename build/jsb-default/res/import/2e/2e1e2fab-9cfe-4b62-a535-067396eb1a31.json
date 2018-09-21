@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "quanda_tex",
+    "texture": "19No8+LPNOvqmrfKtLZ3+4",
+    "rect": [
+      1,
+      1,
+      928,
+      589
+    ],
+    "offset": [
+      -47,
+      216.5
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

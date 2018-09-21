@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "tonghuashun_tex",
+  "_atlasJson": "{\"SubTexture\":[{\"frameX\":0,\"frameHeight\":168,\"y\":1,\"frameY\":-3,\"frameWidth\":308,\"width\":308,\"height\":165,\"name\":\"faguang1\",\"x\":1},{\"frameX\":0,\"frameHeight\":64,\"y\":168,\"frameY\":0,\"frameWidth\":176,\"width\":174,\"height\":64,\"name\":\"tonghuashun2\",\"x\":1}],\"name\":\"tonghuashun\",\"imagePath\":\"tonghuashun_tex.png\"}",
+  "texture": {
+    "__uuid__": "c4Kw7moQNIspFpH4lmrenH"
+  }
+}

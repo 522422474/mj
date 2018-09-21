@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chip_10000",
+    "texture": "89bMGHPp5Bpa15CeXEK+Ek",
+    "rect": [
+      4,
+      5,
+      120,
+      119
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

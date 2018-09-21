@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wanjiawenzi",
+    "texture": "dfs/DPd2dMb6TKO8nVYQnN",
+    "rect": [
+      1,
+      0,
+      59,
+      28
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      61,
+      29
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_1fen",
+    "texture": "48oVqwyOZPQ5NipsHQiB5A",
+    "rect": [
+      13,
+      2,
+      83,
+      52
+    ],
+    "offset": [
+      1.5,
+      -0.5
+    ],
+    "originalSize": [
+      106,
+      55
+    ]
+  }
+}

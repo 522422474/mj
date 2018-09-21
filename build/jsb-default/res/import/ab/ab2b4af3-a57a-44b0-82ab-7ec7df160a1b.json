@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sanbeianniu01",
+    "texture": "0bYtlmPmlDIqsIoWNDJXtn",
+    "rect": [
+      0,
+      0,
+      131,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      131,
+      79
+    ]
+  }
+}

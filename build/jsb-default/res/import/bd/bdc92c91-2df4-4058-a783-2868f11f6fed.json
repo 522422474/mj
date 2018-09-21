@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gr_bq_chunyin",
+    "texture": "c53lbhFmxGlp1M2nEjYlqq",
+    "rect": [
+      0,
+      0,
+      87,
+      61
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      87,
+      61
+    ]
+  }
+}

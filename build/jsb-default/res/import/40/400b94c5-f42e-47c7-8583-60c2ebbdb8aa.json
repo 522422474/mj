@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "penyouquan",
+    "texture": "6fMW3GpXFByre2V9ZrdRK/",
+    "rect": [
+      0,
+      1,
+      164,
+      172
+    ],
+    "offset": [
+      -0.5,
+      -0.5
+    ],
+    "originalSize": [
+      165,
+      173
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-bisai2",
+    "texture": "09O29b3tZFurIxlbgEGXPW",
+    "rect": [
+      8,
+      0,
+      233,
+      128
+    ],
+    "offset": [
+      4,
+      0
+    ],
+    "originalSize": [
+      241,
+      128
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+var roomUtil = require('roomUtil');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        timeLabel: cc.Label
+    },
+
+    onLoad: function () {},
+
+    onDestroy: function () {},
+
+    onEnable: function () {
+        cc.log('..timeView onEnable.');
+        this.showTime();
+        this.schedule(this.showTime, 1);
+    },
+
+    showTime: function () {
+        this.timeLabel.string = roomUtil.getTimeString();
+    }
+});

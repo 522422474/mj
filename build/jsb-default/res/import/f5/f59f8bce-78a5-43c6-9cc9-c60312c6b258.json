@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ruoyudunhua",
+    "texture": "24/xiTxFFFj61a8c+NV3eO",
+    "rect": [
+      0,
+      0,
+      947,
+      449
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      947,
+      449
+    ]
+  }
+}

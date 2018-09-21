@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fenshuwenzi",
+    "texture": "0fbgkHhEpBdKQU24kMmXcO",
+    "rect": [
+      0,
+      0,
+      61,
+      28
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      61,
+      29
+    ]
+  }
+}

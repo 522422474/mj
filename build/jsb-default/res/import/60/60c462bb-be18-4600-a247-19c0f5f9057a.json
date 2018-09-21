@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kaipai",
+    "texture": "56uojuUA5J7oIPxjoQCVN+",
+    "rect": [
+      0,
+      0,
+      110,
+      75
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      110,
+      75
+    ]
+  }
+}

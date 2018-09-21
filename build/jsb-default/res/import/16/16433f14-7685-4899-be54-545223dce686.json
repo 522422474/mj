@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_Spring",
+    "texture": "44SCL279VEHrOdXAD0AdPg",
+    "rect": [
+      22,
+      4,
+      483,
+      288
+    ],
+    "offset": [
+      5,
+      4
+    ],
+    "originalSize": [
+      517,
+      304
+    ]
+  }
+}

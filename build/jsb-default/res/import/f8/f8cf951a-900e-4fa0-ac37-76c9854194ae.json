@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xia",
+    "texture": "6aSgl2YhxGF586+DBEhGYU",
+    "rect": [
+      0,
+      0,
+      53,
+      62
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      53,
+      62
+    ]
+  }
+}

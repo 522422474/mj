@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chuaida",
+    "texture": "63rnhG0E9JboZGeg25T6xK",
+    "rect": [
+      0,
+      0,
+      66,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      66,
+      69
+    ]
+  }
+}

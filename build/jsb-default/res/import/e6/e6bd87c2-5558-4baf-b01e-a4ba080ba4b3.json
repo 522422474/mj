@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_winnum_0",
+    "texture": "3arNBwOPhB/6VoDyLb9GlJ",
+    "rect": [
+      1,
+      0,
+      213,
+      135
+    ],
+    "offset": [
+      -20.5,
+      60.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "1e2fc88b-19fb-4248-a85c-3f03d7cb778f",
+  "atlasJson": "{\"name\":\"ying\",\"imagePath\":\"ying_tex.png\",\"SubTexture\":[{\"width\":138,\"y\":1,\"height\":132,\"name\":\"ying02\",\"x\":1},{\"width\":205,\"y\":135,\"height\":57,\"name\":\"ying01\",\"x\":1},{\"width\":89,\"y\":1,\"height\":88,\"name\":\"ying03\",\"x\":141}]}",
+  "texture": "10df90e7-4d42-40e1-8754-b6489dbba6b1",
+  "subMetas": {}
+}

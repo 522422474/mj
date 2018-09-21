@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bupiao",
+    "texture": "b1Uk4kWFVMT69Ua9mjAtjX",
+    "rect": [
+      1,
+      1,
+      89,
+      52
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      91,
+      54
+    ]
+  }
+}

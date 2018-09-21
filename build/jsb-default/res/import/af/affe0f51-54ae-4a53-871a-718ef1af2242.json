@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yuyinjingtan",
+    "texture": "c6MwQwXJVL55OdW2G1xJWb",
+    "rect": [
+      0,
+      0,
+      298,
+      301
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      298,
+      301
+    ]
+  }
+}

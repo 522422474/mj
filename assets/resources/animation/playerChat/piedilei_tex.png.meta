@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "94b0941c-d84f-4a1b-8f27-57accf3ece8a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "piedilei_tex": {
+      "ver": "1.0.3",
+      "uuid": "f36d646f-4054-4077-bc15-85a018ffdda3",
+      "rawTextureUuid": "94b0941c-d84f-4a1b-8f27-57accf3ece8a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -16.5,
+      "offsetY": 12,
+      "trimX": 1,
+      "trimY": 1,
+      "width": 477,
+      "height": 486,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gang",
+    "texture": "84wx8ld55B2JK/dLwQJ/I5",
+    "rect": [
+      3,
+      2,
+      950,
+      924
+    ],
+    "offset": [
+      -34,
+      48
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

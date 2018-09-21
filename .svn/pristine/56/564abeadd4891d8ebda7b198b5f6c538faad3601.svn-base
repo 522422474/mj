@@ -1,0 +1,28 @@
+var gameDefine = require('gameDefine');
+
+var mahjongConfig = {
+
+    prefabs: {
+        'WifiView': 'prefab/tableUI/WifiView',
+        'PowerView': 'prefab/tableUI/PowerView',
+        'TimeView': 'prefab/tableUI/TimeView',
+        'RoomNumView': 'prefab/tableUI/RoomNumView',
+        'RuleView': 'prefab/tableUI/RuleView',
+        'RuleTipsView': 'prefab/tableUI/RuleTipsView',
+        'TableBtnView': 'prefab/tableUI/TableBtnView',
+        'ChatView': 'prefab/tableUI/ChatView',
+        'HeadView': 'prefab/tableUI/HeadView',
+        'PrepareView': 'prefab/tableUI/PrepareView',
+        'LostView': 'prefab/tableUI/LostView',
+        'WaitView': 'prefab/tableUI/WaitView',
+    },
+
+    table:{
+        base: ['WifiView', 'PowerView', 'TimeView', 'RoomNumView', 'TableBtnView', 'HeadView', 'PrepareView', 'LostView', 'RuleView'],
+        ready: ['WaitView'],
+        fight: []
+    }
+
+};
+
+module.exports = mahjongConfig;

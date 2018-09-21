@@ -1,0 +1,46 @@
+var gameDefine = require('gameDefine');
+var soundMngr = require('SoundMngr');
+var RoomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+    },
+
+    onLoad: function () {
+        registEvent('onRoomInfo', this, this.onRoomInfoHandler);
+    },
+    onDestroy: function () {
+        unregistEvent('onRoomInfo', this, this.onRoomInfoHandler);
+    },
+    onEnable: function () {
+        cc.log('..lostView onEnable.');
+        //设置相关状态
+        this.updatePlayerOnLine();
+    },
+
+    onRoomInfoHandler: function(){
+        this.updatePlayerOnLine();
+    },
+
+    updatePlayerOnLine: function(){
+        var posList = ['left', 'right', 'up', 'down'];
+        for(var i = 0;i < posList.length;i++){
+            var pos = posList[i];
+            var Player = GameData.getPlayerByPos(pos);
+            if(Player){
+                var onLine = RoomHandler.isPlayerOnline(Player.uid);
+                this.showLostIcon(pos, onLine);
+            } else {
+                this.showLostIcon(pos, true);
+            }
+        }
+    },
+    showLostIcon: function(direction, online){
+        var lostNode = cc.find(direction, this.node);
+        if(lostNode){
+            lostNode.active = !online;
+        }
+    }
+});

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "daojishitiaofag",
+    "texture": "b1f2AiN6lMNLhdcaRYlHgF",
+    "rect": [
+      1,
+      0,
+      80,
+      22
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      82,
+      22
+    ]
+  }
+}

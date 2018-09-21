@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yezibiaotiditu",
+    "texture": "dc90TRft5A5oy6qwnaFEku",
+    "rect": [
+      6,
+      0,
+      412,
+      70
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      424,
+      72
+    ],
+    "capInsets": [
+      163,
+      0,
+      149,
+      0
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tabbtn-bgshang",
+    "texture": "b8SYL8C9BMNrPUv5h66qc6",
+    "rect": [
+      0,
+      0,
+      1280,
+      92
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      1280,
+      93
+    ]
+  }
+}

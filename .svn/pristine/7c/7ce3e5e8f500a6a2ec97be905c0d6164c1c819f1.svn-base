@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a4a5188b-f847-409a-a506-3d0e261758fc",
+  "atlasJson": "{\"imagePath\":\"yingjialiangpai_tex.png\",\"name\":\"yingjialiangpai\",\"SubTexture\":[{\"width\":1279,\"y\":1,\"height\":322,\"name\":\"piaofubeijing\",\"x\":1},{\"width\":573,\"y\":325,\"height\":162,\"name\":\"yingjialiangpai\",\"x\":1}]}",
+  "texture": "6cc2c5b4-bfb0-44b9-a8f4-36bba04b3046",
+  "subMetas": {}
+}

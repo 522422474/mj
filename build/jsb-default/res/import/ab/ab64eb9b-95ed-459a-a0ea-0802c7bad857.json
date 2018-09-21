@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zhihuichouma",
+    "texture": "4fdM2kjM5DiLKvE2m5j3Bp",
+    "rect": [
+      4,
+      5,
+      120,
+      119
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

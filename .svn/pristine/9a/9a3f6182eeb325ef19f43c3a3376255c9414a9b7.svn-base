@@ -1,0 +1,153 @@
+var soundMngr = require('SoundMngr');
+var RoomHandler = require('roomHandler');
+var matchHandler = require('matchHandler');
+var gameDefine = require('gameDefine');
+var configMgr = require('configMgr');
+var errorCode = require('errorCode');
+var missionConfig = require('mission');
+var missionHandler = require('missionHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        getPanel: cc.Node,
+
+        scrollView: cc.ScrollView,
+        item: cc.Node
+    },
+
+    onLoad: function () {
+        registEvent('playerMissionData', this, this.onPlayerMissionHandler);
+    },
+    onDestroy: function () {
+        unregistEvent('playerMissionData', this, this.onPlayerMissionHandler);
+    },
+    onEnable: function () {
+        this.initUIPanel();
+    },
+
+    onPlayerMissionHandler: function(){
+        this.initUIPanel();
+    },
+
+    onShowGetPanel: function(){
+        this.getPanel.active = true;
+    },
+
+    initUIPanel: function(){
+        //隐藏所有任务节点
+        var content = this.scrollView.content;
+        for(var i = 0;i < content.getChildrenCount();i++){
+            var child = content.getChildren()[i];
+            if(child){
+                child.active = false;
+            }
+        }
+        //判断任务数据
+        var taskData = GameData.player.mission;
+        if( taskData == undefined || Object.keys(taskData).length <= 0) {
+            cc.log('..return');
+            return;
+        }
+        //设置滑动容器高度
+        var length = Object.keys(taskData);
+
+        var height = length * this.item.height;
+        height < 400 ? height = 400 : null;
+
+        content.height = height;
+
+        //添加任务节点
+        var index = 0;
+        for(var key in taskData){
+            var data = taskData[key];
+            if(data == undefined){
+                continue;
+            }
+            if(data.isGet != 0){
+                continue;
+            }
+            var missionData = this.getMissionData(key);
+            if(missionData == null){
+                continue;
+            }
+            var itemNode = content.getChildren()[index];
+            if(itemNode == undefined){
+                itemNode = cc.instantiate(this.item);
+                itemNode.parent = content;
+            }
+            itemNode.active = true;
+
+            itemNode.x = this.item.x;
+            itemNode.y = this.item.y - this.item.height*index;
+
+            index++;
+
+            this.updateTaskItem(missionData, data, itemNode);
+        }
+    },
+
+    updateTaskItem: function(missionData, data, node){
+        if(missionData == undefined || data == undefined || node == undefined){
+            return;
+        }
+        var name = cc.find('name', node);
+        var reward = cc.find('reward', node);
+        var count = cc.find('count', node);
+        var doItBtn = cc.find('doIt', node);
+        var toGetBtn = cc.find('toGet', node);
+
+        name.getComponent(cc.Label).string = missionData.desc;
+        reward.getComponent(cc.Label).string = missionData.reward;
+        count.getComponent(cc.Label).string = data.count + '/' + missionData.count;
+
+        var achieve = false;
+        if(parseInt(data.count) >= parseInt(missionData.count) && parseInt(data.isGet) == 0){
+            achieve = true;
+        }
+        doItBtn.active = !achieve;
+        toGetBtn.active = achieve;
+
+        doItBtn.tag = missionData.id;
+        toGetBtn.tag = missionData.id;
+    },
+
+    getMissionData: function(key){
+        if(missionConfig == undefined){
+            return null;
+        }
+        for(var i = 0;i < missionConfig.length;i++){
+            var data = missionConfig[i];
+            if(data == undefined){
+                continue;
+            }
+            if(key == data.id){
+                return data;
+            }
+        }
+        return null;
+    },
+
+    onToGetBtnClick: function(event){
+        soundMngr.instance.playAudioOther('button');
+
+        var tag = event.target.tag;
+        missionHandler.getReward(tag);
+    },
+    onDoItBtnClick: function(event){
+        soundMngr.instance.playAudioOther('button');
+
+        var tag = event.target.tag;
+        missionHandler.onShareSucess();
+    },
+
+    onCloseGetPanel: function(event){
+        soundMngr.instance.playAudioOther('button');
+        this.getPanel.active = false;
+    },
+    onClose: function(event){
+        soundMngr.instance.playAudioOther('button');
+        closeView(this.node.name);
+    }
+});

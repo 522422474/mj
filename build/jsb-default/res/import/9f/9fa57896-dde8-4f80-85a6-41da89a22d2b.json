@@ -1,0 +1,46 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "chip_mask",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "chipMask",
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 1
+        },
+        "_spriteFrame": {
+          "__uuid__": "b11euI/8tE65ZV3v+8izo3"
+        }
+      },
+      {
+        "__type__": "2be068+XwtFbLQnaVtEeypg",
+        "node": {
+          "__id__": 1
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "9fpXiW3ehPgIWmQdqJoi0r"
+      },
+      "fileId": "001304JV0pD6r4quicFdGC8"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 109,
+      "height": 83
+    }
+  }
+]

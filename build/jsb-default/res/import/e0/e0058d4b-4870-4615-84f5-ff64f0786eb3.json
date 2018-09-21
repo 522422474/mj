@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "quedinganniu01",
+    "texture": "eay+w5ArBEhb41mntkjDTP",
+    "rect": [
+      2,
+      0,
+      229,
+      81
+    ],
+    "offset": [
+      1,
+      0
+    ],
+    "originalSize": [
+      231,
+      81
+    ]
+  }
+}

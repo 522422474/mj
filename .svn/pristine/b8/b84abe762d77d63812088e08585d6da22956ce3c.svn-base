@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "8641c159-1e68-4154-a5a6-b9d4952fd4c9",
+  "atlasJson": "{\"imagePath\":\"paibanzhuan_tex.png\",\"SubTexture\":[{\"width\":136,\"y\":130,\"height\":145,\"name\":\"banzhuan\",\"x\":1},{\"width\":159,\"y\":1,\"height\":127,\"name\":\"bengxingxing\",\"x\":1},{\"width\":105,\"y\":130,\"height\":152,\"name\":\"banzhuan2\",\"x\":139},{\"width\":105,\"y\":277,\"height\":135,\"name\":\"banzhuan1\",\"x\":1}],\"name\":\"paibanzhuan\"}",
+  "texture": "cea8d682-984d-4755-9df0-06f9a6420a3e",
+  "subMetas": {}
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tishianniu",
+    "texture": "f9Is+u6mFP04cwW9JxZ7SI",
+    "rect": [
+      0,
+      0,
+      218,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      218,
+      79
+    ]
+  }
+}

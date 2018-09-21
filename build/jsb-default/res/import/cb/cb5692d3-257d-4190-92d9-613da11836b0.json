@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sss_result_blue_0",
+    "texture": "demSh/znFIJY2xG3rYwDuW",
+    "rect": [
+      2,
+      3,
+      240,
+      86
+    ],
+    "offset": [
+      -6,
+      82
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

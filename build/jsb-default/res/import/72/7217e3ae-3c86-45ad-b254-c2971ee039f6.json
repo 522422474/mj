@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fasong1",
+    "texture": "87AKijNJpE3aDRNTXLHHEC",
+    "rect": [
+      0,
+      0,
+      124,
+      50
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      124,
+      50
+    ]
+  }
+}

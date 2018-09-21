@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "jiesuandeng_tex",
+  "_atlasJson": "{\"imagePath\":\"jiesuandeng_tex.png\",\"SubTexture\":[{\"width\":105,\"y\":1,\"height\":97,\"name\":\"guangxiao\",\"x\":1}],\"name\":\"jiesuandeng\"}",
+  "texture": {
+    "__uuid__": "494qRsqRNJ8bsfjZCdOsyi"
+  }
+}

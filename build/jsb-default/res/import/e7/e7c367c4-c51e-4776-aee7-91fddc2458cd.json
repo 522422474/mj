@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "genzhu",
+    "texture": "0ajVNfvzVKB6BRwp9xmqYu",
+    "rect": [
+      0,
+      0,
+      113,
+      75
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      113,
+      75
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jindutiao1",
+    "texture": "fbb6iVEvVDx7HTUdbogw7r",
+    "rect": [
+      0,
+      3,
+      122,
+      12
+    ],
+    "offset": [
+      0,
+      -1.5
+    ],
+    "originalSize": [
+      122,
+      15
+    ]
+  }
+}

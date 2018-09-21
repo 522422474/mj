@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kai01",
+    "texture": "83hV6KFGdOErHu+b1PKdb3",
+    "rect": [
+      0,
+      0,
+      82,
+      81
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      83,
+      81
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shopPlist",
+    "texture": "3bCPQRNZxBYbCEhRKNmGCL",
+    "rect": [
+      7,
+      0,
+      312,
+      64
+    ],
+    "offset": [
+      3,
+      0
+    ],
+    "originalSize": [
+      320,
+      64
+    ]
+  }
+}

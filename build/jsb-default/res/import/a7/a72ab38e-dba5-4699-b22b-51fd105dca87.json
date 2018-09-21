@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dangqianzongfent1",
+    "texture": "9elHQVrFJD9Jk8znh6/kCW",
+    "rect": [
+      0,
+      0,
+      6,
+      91
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      6,
+      91
+    ],
+    "capInsets": [
+      0,
+      13,
+      0,
+      18
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lan2",
+    "texture": "07sFq/OqZHqqY+kZLXOZ32",
+    "rect": [
+      1,
+      1,
+      54,
+      47
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      57,
+      49
+    ]
+  }
+}

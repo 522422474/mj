@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "2jiao",
+    "texture": "f0CtPbHPlNZbeluu1KBXFp",
+    "rect": [
+      0,
+      0,
+      64,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      64,
+      48
+    ]
+  }
+}

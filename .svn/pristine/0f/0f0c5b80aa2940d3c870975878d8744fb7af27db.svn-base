@@ -1,0 +1,177 @@
+var RoomHandler = require('roomHandler');
+
+var soundMngr = require('SoundMngr');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        uid: 0,
+        headBg: cc.Node,
+        headBtn: cc.Button,
+        headIcon: cc.Sprite,
+        zhuangIcon: cc.Sprite,
+        nameLabel: cc.Label,
+        _player : null,
+    },
+
+    onLoad: function () {
+        this.position = this.nameLabel.node.getPosition();
+    },
+
+    setPlayer : function(data)
+    {
+        this._player = data;
+        if (this._player.uid) {
+            this.uid = this._player.uid;    
+        }
+    },
+
+    setName: function(name) {
+        this.nameLabel.string = getShortStr(name,4);
+    },
+
+    setHeadIcon: function(headimgurl) {
+        if (headimgurl == undefined || headimgurl == '') {
+            this.headIcon.spriteFrame = null;
+            return;
+        }
+
+        var self = this;
+        cc.loader.load({url: headimgurl, type: 'png'}, function (error, texture) {
+            if (!error && texture) {
+                self.headIcon.spriteFrame = new cc.SpriteFrame(texture);
+            }  
+        });
+    },
+    initHeadIcon: function () {
+        var texture = cc.textureCache.addImage(cc.url.raw('resources/niuNiuTable/playerHead/touxiangkong.png'));
+        this.headIcon.spriteFrame = new cc.SpriteFrame(texture);
+    },
+    showHeadBg: function (show) {
+        this.headBg.active = show;
+    },
+    showZhuang: function(show) {
+        this.zhuangIcon.node.active = show;
+    },
+    getZhuangImg: function (index) {
+        var url = '';
+        switch (index){
+            case 1:
+                url = cc.url.raw('resources/hundredNiuNiu/uiResources/table/icon_zhuang.png');
+            break;
+            case 2:
+                url = cc.url.raw('resources/hundredNiuNiu/uiResources/table/dafuhao.png');
+            break;
+            case 7:
+                url = cc.url.raw('resources/hundredNiuNiu/uiResources/table/shensuanzi.png');
+            break;
+        }
+        var texture = cc.textureCache.addImage(url);
+        this.zhuangIcon.spriteFrame = new cc.SpriteFrame(texture);
+    },
+    enableHeadBtn: function(flag) {
+        this.headBtn.node.active = flag;
+    },
+    HeadBtnIsClick: function (flag) {
+        this.headBtn.interactable = flag;
+    },
+    onHeadBtnClicked: function(evt) {
+        soundMngr.instance.playAudioOther('button');
+        var sceneName = cc.director.getScene().name;
+        cc.log("..sceneName:", sceneName);
+        if (sceneName == 'home'){
+            createPlayerInfoPanel(this._player);
+        } else {
+            var self = this;
+            var fun = function(panel){
+                if(panel){
+                    var template = panel.getComponent('uiRoomPlayerInfo');
+                    if(template){
+                        template.onShow(self._player);
+                    }
+                }
+            };
+            var roomData = RoomHandler.getRoomData();
+            if(roomData && roomData.opts && roomData.opts.gameType){
+                cc.log('..gameType:'+roomData.opts.gameType);
+                openPlayerInfoView(roomData.opts.gameType, fun);
+            }
+        }
+    },
+
+    setIsOnline : function (isOnline) {
+        var disConncetNode = cc.find('/Disconnect', this.node);
+        disConncetNode.active = !isOnline;
+    },
+    getLiuGuang : function(isPlay){
+        var liuguang = cc.find('liuguang',this.node);
+        liuguang.active = isPlay;
+    },
+    //房卡
+    setCoin : function(value,type)
+    {
+        var coinNode = cc.find('coin',this.node);
+        var showStr = '';
+        var ScoreBase;
+        if (type == 1) {
+            ScoreBase = GameData.room.opts.scoreBase;
+        }
+        else if (type == 2) {
+            ScoreBase = ReplayRoomData.opts.scoreBase;
+        }
+
+        if(ScoreBase > 0){
+            showStr = value;
+            coinNode.color =  new cc.Color(255, 204, 0);
+        }else{
+            if(value > 0)
+            {
+                showStr = '+' + value;
+                coinNode.color =  new cc.Color(255, 204, 0);
+            }
+            else if(value < 0)
+            {
+                showStr = value;
+                coinNode.color =  new cc.Color(0, 255, 246);
+            }
+            else
+            {
+                showStr = value;
+                coinNode.color =  new cc.Color(0, 255, 36);
+            }
+        }
+        coinNode.getComponent(cc.Label).string = showStr;
+    },
+    //金币
+    setGold : function(value)
+    {
+        var coinNode = cc.find('coin',this.node);
+        var showStr = '';
+        value != undefined ? showStr = value : null;
+        var newValue = 0;
+        if (showStr != null) {
+            newValue = ConversionCoinValue(showStr);
+        }else {
+            newValue = null;
+        }
+        coinNode.getComponent(cc.Label).string = newValue;
+        coinNode.color =  new cc.Color(255, 204, 0);
+    },
+
+    setCoinShow: function(show){
+        var nameNode = this.nameLabel.node;
+        var coinNode = cc.find('coin',this.node);
+        if (show) {
+            nameNode.active = show;
+            coinNode.active = show;
+            // nameNode.setPosition(this.position); 
+        } else {
+            nameNode.active = !show;
+            coinNode.active = show;
+            // nameNode.setPosition(coinNode.getPosition()); 
+        }
+    },
+    // update: function (dt) {
+
+    // },
+});

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ziyoujin",
+    "texture": "f7M2m7L2ZAIZbAzgAaIeRo",
+    "rect": [
+      0,
+      0,
+      93,
+      39
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      93,
+      39
+    ]
+  }
+}

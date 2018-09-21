@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fanti",
+    "texture": "20zC7eLCVHObKfABZ5qA6U",
+    "rect": [
+      0,
+      0,
+      107,
+      77
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      107,
+      77
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ninyitongyiwenzi",
+    "texture": "64DTPAxkFP6Jl8N898Euvd",
+    "rect": [
+      7,
+      0,
+      419,
+      40
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      433,
+      43
+    ]
+  }
+}

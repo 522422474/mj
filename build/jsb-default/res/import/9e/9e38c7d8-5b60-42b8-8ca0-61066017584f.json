@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "niunuiscore_losenumber_0",
+    "texture": "2bwqzTt6ZEloamLyPCcqZS",
+    "rect": [
+      2,
+      3,
+      239,
+      86
+    ],
+    "offset": [
+      -6.5,
+      82
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

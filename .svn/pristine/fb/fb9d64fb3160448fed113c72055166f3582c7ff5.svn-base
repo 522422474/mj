@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "37a022db-8db1-4c71-91ff-cc23126bae28",
+  "atlasJson": "{\"imagePath\":\"heguan_tex.png\",\"SubTexture\":[{\"frameWidth\":147,\"y\":1,\"frameX\":-6,\"frameHeight\":174,\"frameY\":-61,\"width\":137,\"height\":113,\"name\":\"011\",\"x\":1},{\"frameWidth\":147,\"y\":1,\"frameX\":-14,\"frameHeight\":174,\"frameY\":0,\"width\":92,\"height\":102,\"name\":\"012\",\"x\":140},{\"frameWidth\":141,\"y\":1,\"frameX\":-45,\"frameHeight\":176,\"frameY\":-31,\"width\":20,\"height\":17,\"name\":\"02\",\"x\":234},{\"frameWidth\":52,\"y\":105,\"frameX\":-1,\"frameHeight\":115,\"frameY\":-3,\"width\":51,\"height\":110,\"name\":\"03\",\"x\":140}],\"name\":\"heguan\"}",
+  "texture": "fe1a1388-0947-4728-9270-7867446e0678",
+  "subMetas": {}
+}

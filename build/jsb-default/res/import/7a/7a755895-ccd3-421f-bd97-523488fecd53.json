@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zongfen",
+    "texture": "c9UuR6srZHepZuvSaXxI/E",
+    "rect": [
+      0,
+      0,
+      115,
+      68
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      115,
+      68
+    ]
+  }
+}

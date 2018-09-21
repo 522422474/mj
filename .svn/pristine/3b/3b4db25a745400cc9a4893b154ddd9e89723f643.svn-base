@@ -1,0 +1,562 @@
+var soundMngr = require('SoundMngr');
+var RoomHandler = require('roomHandler');
+var ZJH_roomData = require('ZJH-RoomData');
+var gameDefine = require('gameDefine');
+var configMgr = require('configMgr');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        readyNode:          cc.Node,
+        deleteRoomBtn:      cc.Node,
+        quitRoomBtn:        cc.Node,
+        playersNode: {
+            default: [],
+            type:           cc.Node
+        },
+        ruleNode:           cc.Node,
+        readyBtn:           cc.Node,
+        readyCountDownNode: cc.Node, //游戏开始倒计时节点
+        unStartLayer:       cc.Node,
+        waitTips:           cc.Node,
+        costTips:           cc.Node, //消耗台费提示
+
+        playerPrefab:       cc.Prefab,
+        dragonBonesNode:    cc.Prefab
+    },
+
+    // use this for initialization
+    onLoad: function () {
+        this.registListenr();
+        this.init();
+        //reconnect
+        this.reconnect();
+        this.onReConnectShow();
+        //添加互动动画
+        this.addDynAnimation();
+    },
+
+    init: function () {
+        this.playIntrSize = 'small';
+        this.playerSex = 1;
+        this.lastTime = 0;
+        this.headers = new Array();
+        this.onReadyFlag = true;
+        this.TipsFlag = true;
+        this.readyCountDownNode.active = false;
+        this.costTips.active = false;
+        this.quitRoomBtn.active = this.readyBtn.active;
+        this.showPlayers(this);
+    },
+
+    registListenr: function () {
+        registEvent('onRoomInfo', this, this.showPlayers);
+        registEvent('dynChat', this, this.dynChatHandler);
+        registEvent('onJoinerLost', this, this.showJoinerLost);
+        registEvent('onRoomChat', this, this.onRoomChatHandler);
+        registEvent('zhaJinHua-onGameInfo', this, this.onGameTurn);
+        registEvent('onZhaJinHuaRunEnd', this, this.showReadyNode);
+        registEvent('onReadyCountDown',this,this.onReadyCountDown);
+        registEvent('onJoinerConnect', this, this.showJoinerConnect);
+        registEvent('onPrepareInfo', this, this.onRoomReadyInfoHandler);
+        registEvent('zhaJinHua-onGameStart', this, this.onGameStartHandler);
+    },
+
+    onDestroy: function () {
+        unregistEvent('onRoomInfo', this, this.showPlayers);
+        unregistEvent('dynChat', this, this.dynChatHandler);
+        unregistEvent('onJoinerLost', this, this.showJoinerLost);
+        unregistEvent('onRoomChat', this, this.onRoomChatHandler);
+        unregistEvent('zhaJinHua-onGameInfo', this, this.onGameTurn);
+        unregistEvent('onZhaJinHuaRunEnd', this, this.showReadyNode);
+        unregistEvent('onReadyCountDown',this,this.onReadyCountDown);
+        unregistEvent('onJoinerConnect', this, this.showJoinerConnect);
+        unregistEvent('onPrepareInfo', this, this.onRoomReadyInfoHandler);
+        unregistEvent('zhaJinHua-onGameStart', this, this.onGameStartHandler);
+    },
+
+    showReadyNode: function() {
+        var self = this;
+        this.scheduleOnce(function(){
+            if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Card) {
+                self.readyNode.active = true;
+            }
+        },2);
+
+        for (var j = 0; j < GameData.joiners.length; j++) {
+            if (GameData.joiners[j]) {
+                var player = GameData.getPlayerByUid(GameData.joiners[j].uid);
+                if (player != null) {
+                    var userId = player.uid;
+                    var localIdx = GameData.getPlayerPosByUid(userId);
+                    var playerHeadScp = this.playersNode[localIdx].getChildByName('headNode').getComponent("pokerRoomPlayer");
+                    playerHeadScp.showZhuang(false);
+                    playerHeadScp.showCountDownEffect(false);
+                }
+            }
+        }
+        //金币场
+        var deytime = ZJH_roomData.isCompare ? 5.5:3.5;
+        if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin
+        && ZJH_roomData.gameInfo.status == ZJH_roomData.gameState.Settle) {
+            this.scheduleOnce(function () {
+                  self.quitRoomBtn.active = true;
+            },deytime)
+        }
+    },
+
+    onReadyCountDown: function(data) {
+        if (this.onReadyFlag) {
+            this.onReadyFlag = false;
+            this.readyCountDownNode.active = false;
+            this.unschedule(this.showReadyCountDown);
+            
+            if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin) {
+                this.lastTime = 5;
+                if (ZJH_roomData.isRunAnimation) {
+                    this.lastTime = 4;
+                }
+            } else {
+                this.lastTime = 4;
+            }
+            if (data == 1) {
+                RoomHandler.readyCountDown -= 2;
+            }
+            this.TipsFlag = true;
+            this.schedule(this.showReadyCountDown,1);
+        }
+        var wxShareBtn = cc.find('btnWeixin',this.unStartLayer);
+        var copyBtn = cc.find('btnCopy',this.unStartLayer);
+        wxShareBtn.active = false;
+        copyBtn.active = false;
+    },
+
+    showReadyCountDown: function() {
+        this.waitTips.active = false;
+        var isFirstPlayGame = this.isFirstPlayGame();
+        if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin) {
+            if (RoomHandler.readyCountDown <= 5 && RoomHandler.readyCountDown > 0 && !ZJH_roomData.isRunAnimation) {
+                this.readyCountDownNode.active = true;
+                if (this.TipsFlag
+                    && isFirstPlayGame
+                    && RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin) {
+                    this.showCostTips();
+                    this.TipsFlag = false;
+                }
+            }
+        }else{
+            this.readyCountDownNode.active = true;
+        }
+        var timeLb = cc.find('time',this.readyCountDownNode);
+        timeLb.getComponent(cc.Label).string  = this.lastTime - 1 + '';
+        RoomHandler.readyCountDown -- ;
+        if (this.readyCountDownNode.active) {
+            this.lastTime -- ;
+        }
+        if (this.lastTime <  0) {
+            this.onReadyFlag = true;
+            this.unschedule(this.showReadyCountDown);
+            this.readyCountDownNode.active = false;
+        }
+    },
+    showCostTips: function () {
+        var config = configMgr.getServerConfig();
+        var scoreLv = RoomHandler.room.opts.scorelv;
+        var costNum = config['matchCoin'][GameData.client.gameType].cost[scoreLv];
+        this.costTips.active = true;
+        this.scheduleOnce(function () {
+            this.costTips.active = false;
+        },2);
+        this.costTips.getComponent(cc.Label).string = '每局消耗' + costNum + '金币';
+
+    },
+
+    onYunwaUploaded: function (data) {
+        var soundurl = data.detail;
+        WriteLog('soundurl ：' + soundurl);
+        ChatHandler.getInstance().sendRecord(soundurl);
+    },
+
+    onRoomChatHandler: function (data) {
+        var uid = data.detail.uid;
+        var type = data.detail.msg.type;
+        this.playerSex = GameData.getPlayerSexByUid(data.detail.uid);
+        var localIdx = GameData.getPlayerPosByUid(uid);
+        var playerHeadScp = this.playersNode[localIdx].getChildByName('headNode');
+        if (playerHeadScp) {
+            var chatNode = cc.find('chatNode/chat' + localIdx, playerHeadScp);
+            if (chatNode != null) {
+                var wordNode = cc.find('word', chatNode);
+                var emoNode = cc.find('emo', chatNode);
+                var yuyinNode = cc.find('yuyinNode', chatNode);
+                if (type == 'word') {
+                    var content = data.detail.msg.data;
+
+                    var chatBg = cc.find('word/bg', chatNode);
+                    var chatLabel = cc.find('word/Label', chatNode).getComponent(cc.Label);
+                    var contentStr = content;
+                    chatBg.width = 20 + contentStr.length * 24;
+                    wordNode.getComponent('HideComponent').show(3);
+                    chatLabel.string = contentStr;
+                } else if (type == 'fast') {
+                    var soundKey = data.detail.msg.data.sound;
+                    var content = data.detail.msg.data.content;
+                    var chatBg = cc.find('word/bg', chatNode);
+                    var chatLabel = cc.find('word/Label', chatNode).getComponent(cc.Label);
+                    var contentStr = getShortStr(content, 10);
+                    chatBg.width = contentStr.length * 30;
+                    wordNode.getComponent('HideComponent').show(3);
+                    chatLabel.string = contentStr;
+                    soundMngr.instance.playAudioChat(soundKey, this.playerSex);
+
+                } else if (type == 'emo') {
+                    var animationName = data.detail.msg.data;
+                    cc.log('animationName:' + animationName);
+                    emoNode.getComponent(cc.Animation).play(animationName);
+                    emoNode.getComponent('HideComponent').show(3);
+                } else if (type == 'yuyin') {
+                    if (!GameData.isPlayVioce) {
+                        return;
+                    }
+                    var soundurl = data.detail.msg.data;
+                    if (cc.sys.OS_ANDROID == cc.sys.os) {
+                        jsb.reflection.callStaticMethod("org.cocos2dx.javascript.AppActivity", "playRecord", "(Ljava/lang/String;)V", soundurl);
+                    } else if (cc.sys.OS_IOS == cc.sys.os) {
+                        jsb.reflection.callStaticMethod("AppController", "playRecord:", String(soundurl));
+                    }
+                    var yuyinAnim = cc.find('yuyinAnimNode/yuyinAnim', yuyinNode);
+                    yuyinAnim.getComponent(cc.Animation).play("yuyinduihua");
+                    yuyinNode.getComponent('HideComponent').show(3);
+
+                }
+            }
+        }
+    },
+
+    getHeadPositionOnUid: function(uid){
+        for (var i = 0; i < this.headers.length; i++) {
+            var headerNode = this.headers[i];
+            if(headerNode == undefined){
+                continue;
+            }
+            var template = headerNode.getComponent('pokerRoomPlayer');
+            if(template == undefined){
+                continue;
+            }
+            if(template.uid != uid){
+                continue;
+            }
+            return headerNode.parent.position;
+        }
+        return 0;
+    },
+
+    dynChatHandler: function(data){
+        if(data == undefined || data.detail == undefined){
+            return;
+        }
+
+        var index = data.detail.chatId,
+            fromUid = data.detail.fromUid,
+            toUid = data.detail.toUid;
+
+        var animationNode = this.node.getChildByName('uiAnimationNode');
+        if(animationNode){
+            var template = animationNode.getComponent('tableDynAnimation');
+            if(template){
+                var fromPos = this.getHeadPositionOnUid(fromUid);
+                var toPos = this.getHeadPositionOnUid(toUid);
+
+                template.playAnimation(index, 0.65, fromPos, toPos);
+            }
+        }
+    },
+
+    addDynAnimation: function(){
+        var animationNode = this.node.getChildByName('uiAnimationNode');
+        if(animationNode == undefined){
+            animationNode = cc.instantiate(this.dragonBonesNode);
+            animationNode.parent = this.node;
+            animationNode.name = 'uiAnimationNode';
+        }
+    },
+
+    showReadyIcon: function (direction, showHand, showReading) {
+        cc.find('ready_hand_' + direction, this.readyNode).active = showHand;
+        cc.find('readying_' + direction, this.readyNode).active = showReading;
+    },
+
+
+    showPlayers: function() {
+        this.headers = [];
+        for (var i = 0; i<GameData.room.opts.joinermax; i++) {
+            this.showPlayer(i,this.playersNode[i]);
+        }
+        this.onRoomReadyInfoHandler();
+    },
+
+    showPlayer: function (pos, playerNode) {
+        //this.headers = [];
+        var player = GameData.getPlayerByPos(pos);
+        if (player != null) {
+            var headNode = playerNode.getChildByName('headNode');
+            if (headNode == null) {
+                headNode = cc.instantiate(this.playerPrefab);
+                headNode.name = 'headNode';
+                playerNode.addChild(headNode);
+            }
+            this.headers.push(headNode);
+            headNode.getComponent('pokerRoomPlayer').setPlayer(player);
+            headNode.getComponent('pokerRoomPlayer').setHeadIcon(player.headimgurl);
+            headNode.getComponent('pokerRoomPlayer').setName(player.name);
+            headNode.getComponent('pokerRoomPlayer').setIsOnline(player.uid);
+            headNode.getComponent('pokerRoomPlayer').showZhuang(player.uid == GameData.game.zhuangUid);
+            playerNode.active = true;
+        } else {
+            playerNode.active = false;
+        }
+
+    },
+
+
+    onReadyBtnClick: function () {
+        var self = this;
+        this.quitRoomBtn.active = false;
+        soundMngr.instance.playAudioOther('button');
+        GameNet.getInstance().request('room.roomHandler.ready', {}, function (rtn) {
+            self.readyBtn.active = false;
+        });
+    },
+
+
+    onRoomReadyInfoHandler: function () {
+
+        var readyChild = this.readyNode.children;
+        for (var i = 0; i < readyChild.length; i++) {
+            readyChild[i].active = false;
+        }
+
+        var readyData = RoomHandler.getRoomReadyData();
+        cc.log('readyData = '+JSON.stringify(readyData));
+        for (var i = 0; i < GameData.joiners.length; i++) {
+            if (GameData.joiners[i]) {
+                var uid = GameData.joiners[i].uid;
+                if (GameData.joiners[i] != null) {
+                    if (readyData[uid] == true) {
+                        var index = GameData.getPlayerPosByUid(uid);
+                        if (RoomHandler.room.opts.currencyType != gameDefine.currencyType.Currency_Coin) {
+                            this.showReadyIcon(index,true,false);
+                            if (uid === GameData.player.uid){
+                                this.quitRoomBtn.active = false;
+                            }
+                        }
+                        if (ZJH_roomData.gameInfo.status == ZJH_roomData.gameState.Settle
+                            &&RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Card
+                            && uid === GameData.player.uid) {
+                            this.waitTips.active = true;
+                        }
+
+                        if (ZJH_roomData.isGameEnd() && uid === GameData.player.uid) {
+                            if (RoomHandler.room.opts.currencyType != gameDefine.currencyType.Currency_Coin) {
+                                sendEvent('initTableUI');
+                            }
+                        }
+                    }else{
+                        var index = GameData.getPlayerPosByUid(uid);
+                        if (!ZJH_roomData.isGameEnd() && GameData.game.gameStart && uid === GameData.player.uid) {
+                            if (RoomHandler.room.opts.currencyType != gameDefine.currencyType.Currency_Coin) {
+                                sendEvent('initTableUI');
+                            }
+                        }
+                    }
+                }else{
+                    var index = GameData.getPlayerPosByUid(uid);
+                    this.showReadyIcon(index,false,false);
+                }
+            }
+        }
+
+    },
+
+    showJoinerLost: function (data) {
+        var nameStr = GameData.getPlayerByUid(data.detail.uid).name;
+        createMoveMessage('玩家[' + nameStr + ']掉线了');
+    },
+
+    showJoinerConnect: function (data) {
+        this.showPlayers();
+        var uid = data.detail.uid;
+        var nameStr = GameData.getPlayerByUid(uid).name;
+        createMoveMessage('玩家[' + nameStr + ']重新连接!');
+    },
+
+    backBtnClicked: function () {
+        soundMngr.instance.playAudioOther('button');
+        if (GameData.room.creator == GameData.player.uid) {
+            cc.director.loadScene('home');
+        } else {
+            RoomHandler.quitMjRoom(GameData.room.id);
+        }
+    },
+
+    wxInviteBtnClicked: function () {
+        soundMngr.instance.playAudioOther('button');
+        var title = "三张牌 "+"房间号:"+GameData.room.id;
+        var des = this.getInviteStr();
+        wxShareWeb(title, des);
+    },
+
+    getInviteStr: function () {
+        var str1 = "玩法:";
+        var str2 = "请您快速加入对局." ;
+        var str3 = GameData.room.opts.joinermin + '-' + GameData.room.opts.joinermax + '人,';
+        var des = str1 + str3 + getRuleStrZJH(GameData.room.opts) + str2;
+
+        console.log('des = ' + des);
+        return des;
+    },
+
+    onShareResult: function () {
+        wxShareTimeline("三张牌","我在扎金花等你!");
+    },
+
+    onShareFriend: function () {
+        wxShareWeb("三张牌","我在扎金花等你!");
+    },
+
+    onDeleteRoom: function () {
+        //RoomHandler.quitMjRoom(GameData.room.id);
+        NiuNiuMessageBox('解散房间不扣房卡，是否确定解散？', function () {
+            RoomHandler.deleteRoom(GameData.room.id, 'apply');
+        }, function () {});
+    },
+
+    onQuitRoom: function () {
+        soundMngr.instance.playAudioOther('button');
+
+        if (GameData.room.creator == GameData.player.uid) {
+            cc.director.loadScene('home');
+        } else {
+            GameData.player.roomid = undefined;
+            RoomHandler.quitRoom(GameData.room.id);
+        }
+    },
+
+    onCreatorQuit: function () {
+        GameData.player.roomid = undefined;
+        if (GameData.room.creator != GameData.player.uid) {
+            NiuNiuMessageBox('房主已经解散房间', function () {
+                cc.director.loadScene('home');
+            });
+        } else {
+            cc.director.loadScene('home');
+        }
+    },
+
+    onGameTurn: function(){
+        var self = this;
+        if(ZJH_roomData.gameInfo.status != ZJH_roomData.gameState.End) {
+            this.onGameStartHandler();
+        }
+
+        var turnUid = ZJH_roomData.gameInfo.currentPlayer;
+        for (var j = 0; j < GameData.joiners.length; j++) {
+            var player = GameData.joiners[j];
+             if (player != null) {
+                var isPlayer = ZJH_roomData.playersArr.indexOf(player.uid) != -1;
+                var userId = player.uid;
+                var localIdx = GameData.getPlayerPosByUid(userId);
+                var playerHeadScp = this.playersNode[localIdx].getChildByName('headNode').getComponent("pokerRoomPlayer");
+                playerHeadScp.showZhuang(player.uid == GameData.game.zhuangUid);
+                if (isPlayer) {
+                    var time = ZJH_roomData.gameInfo.remainSec;
+                    if (!ZJH_roomData.isGameEnd() && turnUid === userId) {
+                        playerHeadScp.showCountDownEffect(true,15 - time);
+                    }else{
+                        playerHeadScp.showCountDownEffect(false);
+                    }
+                }
+             }
+        }
+
+        var isDie = ZJH_roomData.losersArr.indexOf(GameData.player.uid) != -1;
+        var isGiveUp = ZJH_roomData.GiveUpArr.indexOf(GameData.player.uid) != -1;
+        var deytime = ZJH_roomData.isCompare ? 5.5:3.5;
+        if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin) {
+            if (isGiveUp) {
+                this.quitRoomBtn.active = true;
+            }else if (isDie && !isGiveUp && GameData.room.status == gameDefine.RoomState.GAMEING){
+                this.scheduleOnce(function () {
+                    self.quitRoomBtn.active = true;
+                },deytime);
+            }
+        }
+    },
+
+    //复制房间号
+    onCopyRoomInfo: function () {
+        var roomId = GameData.room.id;
+        if (roomId > 0) {
+            var title = "三张牌,"+"房间号:"+GameData.room.id+",";
+            var des = this.getInviteStr();
+            wxShareCommond(title+des);
+        }
+    },
+
+    onGameStartHandler: function (data) {
+        this.waitTips.active = false;
+        this.readyCountDownNode.active = false;
+        this.unschedule(this.showReadyCountDown);
+        this.onReadyFlag = true;
+        var isDie = ZJH_roomData.losersArr.indexOf(GameData.player.uid) != -1;
+        if (!RoomHandler.isPlayGameByUid(GameData.player.uid)) {
+            this.quitRoomBtn.active = true;
+        }else if (isDie && RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin) {
+                cc.log('zanbuchuli');
+        }else{
+            this.quitRoomBtn.active = !GameData.game.gameStart;
+        }
+
+        if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Card) {
+            this.readyNode.active = !GameData.game.gameStart;
+        }
+    },
+    reconnect: function () {
+        if (!RoomHandler.isPlayGameByUid(GameData.player.uid)) {
+            this.quitRoomBtn.active = true;
+        }else if (GameData.room.status > gameDefine.RoomState.WAIT) {
+            this.quitRoomBtn.active = false;
+            this.onGameTurn();
+        }
+
+        //金币场
+        if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Coin) {
+            if (RoomHandler.readyCountDown > 0) {
+                this.onReadyCountDown(1);
+            }
+            if (GameData.room.status > gameDefine.RoomState.WAIT) {
+                this.onGameTurn();
+            }
+        }
+    },
+    onReConnectShow: function() {
+        if (RoomHandler.room.opts.currencyType == gameDefine.currencyType.Currency_Card) {
+            if (GameData.room.status == gameDefine.RoomState.GAMEING) {
+                this.readyNode.active = !GameData.game.gameStart;
+            }
+
+        }
+    },
+    isFirstPlayGame: function () {
+        var data = RoomHandler.getScoreData();
+        for (var key in data){
+            if (key == GameData.player.uid) {
+                if (data[key] == 0) {
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+        }
+    }
+});

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chongsan2",
+    "texture": "37ZJH9N7pK4pO6TRJDV5/o",
+    "rect": [
+      1,
+      0,
+      101,
+      46
+    ],
+    "offset": [
+      -1,
+      0
+    ],
+    "originalSize": [
+      105,
+      46
+    ]
+  }
+}

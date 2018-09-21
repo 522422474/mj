@@ -1,0 +1,20 @@
+var roomUtil = require('roomUtil');
+var hhdz_roomUtil = require('hhdz_roomUtil');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+
+    },
+
+    onLoad: function () {
+    },
+
+    onDestroy: function () {
+    },
+
+    onEnable: function () {
+    },
+
+});

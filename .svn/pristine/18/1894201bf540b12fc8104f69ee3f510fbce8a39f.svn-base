@@ -1,0 +1,349 @@
+var HundredNiuHandler = require('hundredNiuHandler');
+var niuniuPokerHandler = require('niuniuPokerHandler');
+var roomHandler = require('roomHandler');
+var pokerAnimBase = require('pokerAnimationBase');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        playerNodes: [cc.Node],
+        //发牌器
+        dealerNode: cc.Node,
+        //扑克节点
+        pokerCradsNode: cc.Node,
+        //扑克牌型动画
+        pokerTypeNode: cc.Node,
+        otherPokerTypePrefab: cc.Prefab,
+    	//桌面上筹码数量
+    	selfCostChips: cc.Node,
+    	allCostChips: cc.Node,
+        //筹码飘飞
+        chipPrefab: cc.Prefab,
+        chipsNode: cc.Node,
+        //区域节点
+        areaNode: cc.Node,
+        //区域赢家动画
+        areaWin: cc.Node,
+        //倒计时节点
+        countNode: cc.Node,
+        //下注筹码选择
+        toggle0: cc.Toggle,
+        toggle1: cc.Toggle,
+        toggle2: cc.Toggle,
+        toggle3: cc.Toggle,
+        toggle4: cc.Toggle,
+    },
+
+    onLoad: function () {
+        this.handlerMsg();
+        this.pokerAnimBase = new pokerAnimBase();
+    	this.initUI();
+        this.savePokerData();
+    },
+    handlerMsg: function () {
+        registEvent('onRoomInfo', this, this.getRoomInfo);
+        registEvent('niuhun-onGameChips', this, this.changeChipsAndScore);
+    },
+    onDestroy: function () {
+        unregistEvent('onRoomInfo', this, this.getRoomInfo);
+        unregistEvent('niuhun-onGameChips', this, this.changeChipsAndScore);
+    },
+    //初始化
+    initUI: function () {
+        this.initRoundData();
+        this.initPokerCards();
+        this.initChipsOnDesk();
+    },
+    initChipsOnDesk: function () {
+        var selfCostLen = this.selfCostChips.childrenCount;
+        for (var i = 0; i < selfCostLen; i++) {
+            var child = this.selfCostChips.children[i];
+            if(child){
+                child.getComponent(cc.Label).string = 0;
+            }
+        }
+        var allCostLen = this.allCostChips.childrenCount;
+        for (var j = 0; j < allCostLen; j++) {
+            var child = this.allCostChips.children[j];
+            if(child){
+                child.getComponent(cc.Label).string = 0;
+            }
+        }
+    },
+    initRoundData: function () {
+        this.playSign = -1;
+        this.clipsList = [];
+        this.clipsChoose = 0;
+        this.countNode.active = false;
+        this.niuniuStayType = niuniuPokerHandler.getGameStatus();
+        this.niuniuPokerType = niuniuPokerHandler.getPokerType();
+        this.selectClipsNum();
+    },
+    initPokerCards: function () {
+        for (var index = 0; index<this.pokerCradsNode.childrenCount; index++) {
+            var poker = this.pokerCradsNode.children[index];
+            for (var i = 0; i < poker.childrenCount; i++) {
+                poker.children[i].active = false;
+                var pokerScp = poker.children[i].getComponent("niuNiuPoker");
+                pokerScp.initCardInfo(null);
+            }
+        }
+    },
+
+    getRoomInfo: function () {
+        this.clipsList = niuniuPokerHandler.XIAZHU[roomHandler.room.opts.scorelv];
+        cc.log('this.clipsList = '+JSON.stringify(this.clipsList));
+    },
+    //选择筹码
+    selectClipsNum: function () {
+        if (this.clipsList.length > 0) {
+            if (this.toggle0.isChecked) {
+                this.clipsChoose = this.clipsList[0];
+            }else if (this.toggle1.isChecked) {
+                this.clipsChoose = this.clipsList[1];
+            }else if (this.toggle2.isChecked) {
+                this.clipsChoose = this.clipsList[2];
+            }else if (this.toggle3.isChecked) {
+                this.clipsChoose = this.clipsList[3];
+            }else if (this.toggle4.isChecked) {
+                this.clipsChoose = this.clipsList[4];
+            }
+        }else {
+            this.clipsChoose = 0;
+        }
+        
+        cc.log('==========>> this.clipsChoose = '+this.clipsChoose);
+    },
+    clickSetClips: function (evt, area) {
+        cc.log('clickSetClips this.clipsChoose = '+this.clipsChoose);
+        cc.log('clickSetClips area = '+area);
+        HundredNiuHandler.requestSetChips(this.clipsChoose, area);
+    },
+
+    //发牌
+    savePokerData: function () {
+        this.pokerArr = [];
+        this.pokerPosArr = [];
+        for (var j = 0; j<this.pokerCradsNode.childrenCount; j++) {
+            var poker = this.pokerCradsNode.children[j];
+            for (var i = 0; i<6; i++) {
+                this.pokerArr.push(poker.children[i]);
+                this.pokerPosArr.push(poker.children[i].position);   
+            }
+        }
+        cc.log('save Pokerdata finish!');
+    },
+    //发牌动画
+    dealAction: function(callback) {
+        var self = this;
+        this.pokerAnimBase.dealAction(this.pokerArr,this.dealerNode.position,this.pokerPosArr,0.1,function(delayTime){
+            self.scheduleOnce(function () {
+                self.showAreaPokerCards();
+                callback();
+            },delayTime);
+        });
+    },
+
+    //亮牌
+    showAreaPokerCards: function () {
+        var pokerLen = this.pokerCradsNode.childrenCount;
+        var pokerCards = HundredNiuHandler.pokerCards;
+        for (var i = pokerLen - 1; i >= 0; i--) {
+            this.delayTimeShowPoker(this.pokerCradsNode.children[i], pokerCards[i], i);
+        }
+    },
+    //添加延时
+    delayTimeShowPoker: function (handCardNode, cards, index) {
+        var runNum = 5 - index;
+        var self = this;
+        setTimeout(function(){
+            var cardPos = true;
+            var playercardInfo = self.showPokerForm(index, cards, cardPos);
+            self.rotatePoker(handCardNode, playercardInfo.newHandCards, index);
+        },runNum*600);
+    },
+    //显示亮牌形式
+    showPokerForm: function (index, cards, cardPos) {
+        var pokerTypeCards = [];
+        if (HundredNiuHandler.pokerCards3[index]) {
+            pokerTypeCards = HundredNiuHandler.pokerCards3[index];
+        }
+        var newArray = pokerTypeCards.concat(cards);
+        var newHandCards = niuniuPokerHandler.unequally(newArray);
+        var cardsType = HundredNiuHandler.pokerType[index];
+        if (cardsType > this.niuniuPokerType.NIU_NONE && cardsType < this.niuniuPokerType.NIU_NIU) {
+            newHandCards.splice(3,0,0);  
+            cardPos = false;
+        }else {
+            newHandCards.splice(5,0,0);
+            cardPos = true;
+        }
+        return {newHandCards:newHandCards,cardPos:cardPos};
+    },
+    //翻牌动画
+    rotatePoker: function (handCardNode, cards, index) {
+        var self = this;
+
+        var rotate = function (pokerScp, card, index) {
+            var action1 = cc.scaleTo(0.25,0,0.25);
+            var action2 = cc.scaleTo(0.25,0.25,0.25);
+            pokerScp.runAction(cc.sequence(action1,action2, cc.callFunc(function () {
+                var pokerScpInfo = pokerScp.getComponent('niuNiuPoker');
+                self.showPokerContent(pokerScpInfo, card);
+                cc.log('index = '+index+',this.playSign = '+self.playSign);
+                if (index == 0 && self.playSign != index) {
+                    self.showWinIcon();
+                }
+                self.playCardType(index);
+            }, self)));
+        }
+        for (var j = 0; j < handCardNode.children.length; j++) {
+            var pokerScp = handCardNode.children[j];
+            rotate(pokerScp, cards[j], index);
+        }
+    },
+    //显示单张牌
+    showPokerContent: function (handCardNode, cards) {
+        if (cards == null) {
+            handCardNode.initCardInfo(null);
+        }else if (cards == 0) {
+            handCardNode.clearCardsUI();
+        }else {
+            handCardNode.turnOver();
+            handCardNode.initCardInfo(cards);  
+        }
+    },
+    //播放牌型
+    playCardType: function (localIndex) {
+        var record = null;
+        if (HundredNiuHandler.pokerType) {
+            record = HundredNiuHandler.pokerType[localIndex];
+        }
+        if (this.playSign == localIndex) return;
+        //播放牌型动画
+        if (record === undefined || record === null) return;
+        var actNode = cc.find("act" + localIndex,this.pokerTypeNode);
+        actNode.removeAllChildren();
+        var pokerTypePrefab = this.otherPokerTypePrefab;
+        pokerTypePrefab = cc.instantiate(pokerTypePrefab);
+        actNode.addChild(pokerTypePrefab);
+        pokerTypePrefab.getComponent("pokerTypeAnimation").initFanInfo(record);
+        pokerTypePrefab.scaleX = 0.5;
+        pokerTypePrefab.scaleY = 0.5;
+        var action = cc.scaleTo(0.3, 1, 1);
+        pokerTypePrefab.runAction(action);
+        this.playSign = localIndex;
+    },
+
+    //压筹码
+    changeChipsAndScore: function (data) {
+        if (!data) return;
+        var ChipsData = data.detail;
+        var turnUid = ChipsData.uid;
+        var chipsArea = ChipsData.idx;
+        var setChips = ChipsData.num;
+        var selfChipsNum = ChipsData.all;
+        var areaChipsNum = ChipsData.total;
+        this.addChip(setChips, turnUid, chipsArea);
+        this.addClipsNum(turnUid, chipsArea, selfChipsNum, areaChipsNum);
+    },
+    addClipsNum: function (turnUid, chipsArea, selfChipsNum, areaChipsNum) {
+        var sumAreaNode = cc.find('chips'+chipsArea, this.allCostChips);
+        var selfSetAreaNode = cc.find('chips'+chipsArea, this.selfCostChips);
+        if (turnUid == GameData.player.uid) {
+            selfSetAreaNode.getComponent(cc.Label).string = selfChipsNum;
+        }
+        sumAreaNode.getComponent(cc.Label).string = areaChipsNum;
+    },
+    addChip: function (score, turnerUid, toArea) {
+        var score = score;
+        var localIdx = HundredNiuHandler.getPlayerPosByUid(turnerUid);
+        var clipNode = cc.instantiate(this.chipPrefab);
+        var handenode;
+        if (localIdx == -1) {
+            handenode = cc.find('tableInfo/otherPlayer', this.node);
+        }else {
+            handenode = this.playerNodes[localIdx];
+        }
+        // clipNode.getComponent('poker_chipPrefab').setChipImg(score);
+        clipNode.parent = this.chipsNode;
+        clipNode.x = handenode.x;
+        clipNode.y = handenode.y;
+        clipNode.active = true;
+        this.clipFlyToTableAnimation(clipNode, toArea);
+    },
+    //筹码移动动画
+    clipFlyToTableAnimation: function (clipNode, toArea) {
+        var toAreaNode = cc.find('area'+toArea,this.areaNode);
+        var posX = toAreaNode.x;
+        var posY = toAreaNode.y;
+        var x = posX - this.randomNum(-75, 75);
+        var y = posY - this.randomNum(-100, 100);
+        var action1 = cc.moveTo(0.3, cc.p(x, y));
+        var action2 = cc.scaleTo(0.1, 0.8, 0.8);
+        var actionC = cc.scaleTo(0.1, 0.5, 0.5);
+        var action = cc.sequence(action1, action2, actionC);
+        var action3 = cc.callFunc(function () {
+            clipNode.removeFromParent(true);
+        }, clipNode);
+        var action4 = cc.fadeOut(0.1);
+        if (this.chipsNode.childrenCount > 80) {
+            clipNode.runAction(cc.sequence(action, action4, action3)).easing(cc.easeCubicActionOut());
+        } else {
+            clipNode.runAction(action).easing(cc.easeCubicActionOut());
+        }
+    },
+    randomNum: function (min, max) {
+        var distance = max - min;
+        var num = Math.random() * distance + min;
+        return parseInt(num, 10);
+    },
+
+    showWinIcon: function () {
+        for (var i = 0; i < this.areaWin.childrenCount; i++) {
+            var animationNode = this.areaWin.children[i];
+            if (HundredNiuHandler.pokerResult[i]) {
+                animationNode.active = false;
+            } else {
+                animationNode.active = true;
+                // var anim = animationNode.getComponent(dragonBones.ArmatureDisplay);
+                // anim.playAnimation('newAnimation',1);
+            }
+        }
+    },
+    //倒计时
+    gambleCountTime: function (callback) {
+        var self = this;
+        var updateCountDownTime = function () {
+            HundredNiuHandler.gameTimes --;
+            var countBg = cc.find('countBg',self.countNode);
+            var countLb1 = cc.find('countTime1',countBg);
+            var countLb2 = cc.find('countTime2',self.countNode);
+            self.countNode.active = true;
+            if (HundredNiuHandler.gameTimes > 3) {
+                countBg.active = true;
+                countLb2.active = false;
+                countLb1.getComponent(cc.Label).string = HundredNiuHandler.gameTimes;
+            } else if (HundredNiuHandler.gameTimes > 0 && HundredNiuHandler.gameTimes <= 3) {
+                countBg.active = false;
+                countLb2.active = true;
+                countLb2.getComponent(cc.Label).string = HundredNiuHandler.gameTimes;
+            } else if (HundredNiuHandler.gameTimes <= 0) {
+                countBg.active = false;
+                countLb2.active = false;
+                countLb2.getComponent(cc.Label).string = '';
+                countLb1.getComponent(cc.Label).string = '';
+                self.unschedule(updateCountDownTime);
+                callback();
+            }
+        };
+
+        if (HundredNiuHandler.gameTimes <= 0) {
+            this.unschedule(updateCountDownTime);
+            return;    
+        }
+        updateCountDownTime(callback);
+        this.schedule(updateCountDownTime, 1);
+    },
+
+});

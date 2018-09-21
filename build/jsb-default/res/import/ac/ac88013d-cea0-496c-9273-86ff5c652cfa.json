@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pingjuwumai",
+    "texture": "adYfns/XtJE6GQx7gRS4aN",
+    "rect": [
+      123,
+      30,
+      410,
+      243
+    ],
+    "offset": [
+      -1,
+      -15
+    ],
+    "originalSize": [
+      658,
+      273
+    ]
+  }
+}

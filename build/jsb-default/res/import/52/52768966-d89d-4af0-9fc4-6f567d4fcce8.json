@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tiandakengzi",
+    "texture": "d4eEsNHt9GOrEh6+ss0g3A",
+    "rect": [
+      0,
+      0,
+      117,
+      51
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      117,
+      51
+    ]
+  }
+}

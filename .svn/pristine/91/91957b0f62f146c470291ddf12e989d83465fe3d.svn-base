@@ -1,0 +1,155 @@
+var roomUtil = require('roomUtil');
+var roomHandler = require('roomHandler');
+var RuleHandler = require('ruleHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+
+        mainLayer: cc.Node,
+        powerLayer: cc.Node,
+        RuleLayer: cc.Node,
+        RuleTipsLayer: cc.Node,
+        timeLayer: cc.Node,
+        wifiLayer: cc.Node,
+        roomNumLayer: cc.Node,
+        yuyinLayer: cc.Node,
+        chatLayer: cc.Node,
+
+        talkBtn: cc.Button,
+
+        uiMain: cc.Prefab,
+        uiPower: cc.Prefab,
+        uiRuleTips: cc.Prefab,
+        uiRule: cc.Prefab,
+        uiTime: cc.Prefab,
+        uiWifi: cc.Prefab,
+        uiRoomNum: cc.Prefab,
+        uiYuYin: cc.Prefab,
+        uiChat: cc.Prefab
+    },
+
+    onLoad: function () {
+    },
+
+    onDestroy: function () {
+    },
+
+    onEnable: function () {
+        //添加主节点
+        this.addUIMain();
+        //添加电池
+        this.addUIPower();
+        //添加规则tips
+        this.addUIRuleTips();
+        //添加规则
+        this.addUIRule();
+        //添加时间
+        this.addUITime();
+        //添加wifi
+        this.addUIWifi();
+        //添加房间号
+        this.addUIRoomNum();
+        //添加语音动画
+        this.addUIYuYin();
+    },
+
+    addUIMain: function(){
+        var uiMain = this.mainLayer.getChildByName('uiMain');
+        if(uiMain == undefined){
+            uiMain = cc.instantiate(this.uiMain);
+            uiMain.parent = this.mainLayer;
+            uiMain.name = 'uiMain';
+        }
+    },
+    addUIPower: function(){
+        var uiPower = this.powerLayer.getChildByName('uiPower');
+        if(uiPower == undefined){
+            uiPower = cc.instantiate(this.uiPower);
+            uiPower.parent = this.powerLayer;
+            uiPower.name = 'uiPower';
+        }
+    },
+    addUIRuleTips: function(){
+        var uiRuleTips = this.RuleTipsLayer.getChildByName('uiRuleTips');
+        if(uiRuleTips == undefined){
+            uiRuleTips = cc.instantiate(this.uiRuleTips);
+            uiRuleTips.parent = this.RuleTipsLayer;
+            uiRuleTips.name = 'uiRuleTips';
+        }
+    },
+    addUIRule: function(){
+        var uiRule = this.RuleLayer.getChildByName('uiRule');
+        if(uiRule == undefined){
+            uiRule = cc.instantiate(this.uiRule);
+            uiRule.parent = this.RuleLayer;
+            uiRule.name = 'uiRule';
+        }
+    },
+    addUITime: function(){
+        var uiTime = this.timeLayer.getChildByName('uiTime');
+        if(uiTime == undefined){
+            uiTime = cc.instantiate(this.timeLayer);
+            uiTime.parent = this.RuleLayer;
+            uiTime.name = 'uiTime';
+        }
+    },
+    addUIWifi: function(){
+        var uiWifi = this.wifiLayer.getChildByName('uiWifi');
+        if(uiWifi == undefined){
+            uiWifi = cc.instantiate(this.uiWifi);
+            uiWifi.parent = this.wifiLayer;
+            uiWifi.name = 'uiWifi';
+        }
+    },
+    addUIRoomNum: function(){
+        var uiRoomNum = this.wifiLayer.getChildByName('uiRoomNum');
+        if(uiRoomNum == undefined){
+            uiRoomNum = cc.instantiate(this.uiRoomNum);
+            uiRoomNum.parent = this.roomNumLayer;
+            uiRoomNum.name = 'uiRoomNum';
+        }
+    },
+    addUIYuYin: function(){
+        var uiYuYin = this.wifiLayer.getChildByName('uiYuYin');
+        if(uiYuYin == undefined){
+            uiYuYin = cc.instantiate(this.uiYuYin);
+            uiYuYin.parent = this.yuyinLayer;
+            uiYuYin.name = 'uiYuYin';
+        }
+        var template = uiYuYin.getComponent('voiceView');
+        if(template){
+            template.setVoiceBtn(this.talkBtn.node);
+        }
+    },
+
+    onSettingClicked: function(evt) {
+        //sendEvent("runlamp");
+        openView('SettingsPanel');
+    },
+
+    onRuleClicked: function(evt) {
+        cc.log('..onRuleClicked.');
+        var uiRuleTips = this.RuleTipsLayer.getChildByName('uiRuleTips');
+        if(uiRuleTips){
+            var template = uiRuleTips.getComponent('ruleTipsView');
+            if(template){
+                template.showRuleTips();
+            }
+        }
+    },
+
+    onChatClicked: function(evt) {
+        if (inCD(3000)) return;
+
+        var uiChat = this.chatLayer.getChildByName('uiChat');
+        if(uiChat == undefined){
+            uiChat = cc.instantiate(this.uiChat);
+            uiChat.parent = this.chatLayer;
+            uiChat.name = 'uiChat';
+        }
+        uiChat.active = true;
+        //openView('ChatPanel');
+    }
+});

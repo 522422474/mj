@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hongdian",
+    "texture": "e6/omGWhNH/pB15PlSD1XG",
+    "rect": [
+      1,
+      2,
+      22,
+      23
+    ],
+    "offset": [
+      0,
+      -1
+    ],
+    "originalSize": [
+      24,
+      25
+    ]
+  }
+}

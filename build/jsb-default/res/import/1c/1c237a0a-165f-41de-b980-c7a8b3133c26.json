@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "weizidikuang",
+    "texture": "1188Neg0RDAYTkdm6vDnzS",
+    "rect": [
+      0,
+      0,
+      39,
+      39
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      39,
+      39
+    ],
+    "capInsets": [
+      8,
+      8,
+      11,
+      9
+    ]
+  }
+}

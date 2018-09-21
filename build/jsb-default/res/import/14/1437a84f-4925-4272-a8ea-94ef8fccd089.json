@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "anniuditu",
+    "texture": "8b6jN7LOZI1L7MDhZy3nhg",
+    "rect": [
+      0,
+      0,
+      605,
+      258
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      605,
+      258
+    ]
+  }
+}

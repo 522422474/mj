@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "qingzhunbei",
+    "texture": "57NxIsiCRN9bhoTD4Tgm/J",
+    "rect": [
+      0,
+      1,
+      121,
+      34
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      121,
+      35
+    ]
+  }
+}

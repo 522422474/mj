@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_threeFen_P",
+    "texture": "20j+L2iZtCTLVQCXDiBqwl",
+    "rect": [
+      0,
+      0,
+      248,
+      105
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      248,
+      105
+    ]
+  }
+}

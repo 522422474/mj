@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shenglijin",
+    "texture": "13snhY83dHZJ8LV0uY0RAG",
+    "rect": [
+      0,
+      0,
+      496,
+      158
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      496,
+      158
+    ]
+  }
+}

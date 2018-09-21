@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wuzhangdiban",
+    "texture": "d8QsgtRJ5MbqkHhSxaODuh",
+    "rect": [
+      0,
+      0,
+      687,
+      190
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      687,
+      193
+    ]
+  }
+}

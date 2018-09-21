@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "scliebiaodi",
+    "texture": "d44nLzQZpH3I0kaMMlN/wP",
+    "rect": [
+      0,
+      0,
+      47,
+      197
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      47,
+      197
+    ],
+    "capInsets": [
+      13,
+      14,
+      13,
+      14
+    ]
+  }
+}

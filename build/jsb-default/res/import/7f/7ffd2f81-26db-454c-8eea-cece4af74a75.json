@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_Pass_N",
+    "texture": "8c+ZPl1KhLmrdCmDP+JyW9",
+    "rect": [
+      1,
+      1,
+      224,
+      93
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      225,
+      95
+    ]
+  }
+}

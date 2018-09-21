@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "piaodaodi02",
+    "texture": "eat/wz+YhGE7byokb5rCBm",
+    "rect": [
+      0,
+      0,
+      309,
+      112
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      309,
+      114
+    ]
+  }
+}

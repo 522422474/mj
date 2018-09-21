@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "chongxuananniu1",
+    "texture": "fdlrLejQpBqaWVyP0GNfb9",
+    "rect": [
+      26,
+      11,
+      236,
+      128
+    ],
+    "offset": [
+      0,
+      7
+    ],
+    "originalSize": [
+      288,
+      164
+    ]
+  }
+}

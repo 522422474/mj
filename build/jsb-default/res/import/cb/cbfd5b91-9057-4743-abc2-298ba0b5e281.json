@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "youjinanniu",
+    "texture": "08k0+C6oBA55CCsHB323r3",
+    "rect": [
+      1,
+      1,
+      154,
+      118
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      156,
+      120
+    ]
+  }
+}

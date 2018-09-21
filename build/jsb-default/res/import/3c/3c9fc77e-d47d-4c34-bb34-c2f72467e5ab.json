@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pipeiquxiao02",
+    "texture": "ba1w/oiFxGzr+eXwqqkIk2",
+    "rect": [
+      0,
+      0,
+      273,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      273,
+      107
+    ]
+  }
+}

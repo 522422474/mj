@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jushuwenzikuang",
+    "texture": "e6UAr0EdJPJJGscrET1X2E",
+    "rect": [
+      0,
+      0,
+      354,
+      82
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      354,
+      82
+    ]
+  }
+}

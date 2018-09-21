@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ming2_icon",
+    "texture": "5e1oPo9oJB24egcerK04OK",
+    "rect": [
+      0,
+      0,
+      32,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      32,
+      37
+    ]
+  }
+}

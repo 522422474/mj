@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "erbeianniu02",
+    "texture": "d0mErgQ9NNNLn0gfW4W1Ys",
+    "rect": [
+      0,
+      0,
+      144,
+      87
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      144,
+      87
+    ]
+  }
+}

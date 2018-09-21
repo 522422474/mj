@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "ying_tex",
+  "_atlasJson": "{\"name\":\"ying\",\"imagePath\":\"ying_tex.png\",\"SubTexture\":[{\"width\":138,\"y\":1,\"height\":132,\"name\":\"ying02\",\"x\":1},{\"width\":205,\"y\":135,\"height\":57,\"name\":\"ying01\",\"x\":1},{\"width\":89,\"y\":1,\"height\":88,\"name\":\"ying03\",\"x\":141}]}",
+  "texture": {
+    "__uuid__": "1035DnTUJA4YdUtkidu6ax"
+  }
+}

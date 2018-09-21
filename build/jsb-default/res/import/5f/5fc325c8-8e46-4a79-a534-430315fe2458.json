@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fengxiangjt2",
+    "texture": "8fc+LKZlpBgL0M8cYu4SpP",
+    "rect": [
+      0,
+      0,
+      17,
+      26
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      17,
+      26
+    ]
+  }
+}

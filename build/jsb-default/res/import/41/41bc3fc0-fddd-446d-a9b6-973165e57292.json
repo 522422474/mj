@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "teshuguize01",
+    "texture": "4cVFJCCwpMcoj7Qen6Ps16",
+    "rect": [
+      0,
+      0,
+      249,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      249,
+      107
+    ]
+  }
+}

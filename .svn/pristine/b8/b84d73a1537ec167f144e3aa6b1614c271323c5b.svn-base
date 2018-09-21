@@ -1,0 +1,51 @@
+var gameDefine = require('gameDefine');
+
+var mission = {
+  missionTable: [
+    {"id":0, "desc":"分享游戏到微信", "event":"share",     "gameType":0,   "timeType":0, "count":1,   "reward":10001, "icon":"resources/home/jinbi02.png" }
+    // {"id":1, "desc":"完善资料奖励",   "event":"fullInfo",  "gameType":0,   "timeType":1, "count":1,   "reward":0, "icon":"" },
+    // {"id":2, "desc":"每日登录奖励",   "event":"login",     "gameType":0,   "timeType":0, "count":1,   "reward":0, "icon":"" },
+    // {"id":3, "desc":"斗地主场次奖励", "event":"plays",     "gameType":102, "timeType":0, "count":3,   "reward":0, "icon":"" },
+    // {"id":4, "desc":"斗地主连胜奖励", "event":"winStreak", "gameType":102, "timeType":0, "count":2,   "reward":0, "icon":"" },
+    // {"id":5, "desc":"斗地主分数奖励", "event":"winScore",  "gameType":102, "timeType":0, "count":20,  "reward":0, "icon":"" }
+  ],
+  rewardTable:{
+      10001:{type: gameDefine.taskRewardType.coin, count: 5000}
+  }
+
+};
+
+mission.getMissionData = function(missionId){
+    if(missionId == undefined){
+        return null;
+    }
+    for(var i = 0;i < mission.missionTable.length;i++){
+        var data = mission.missionTable[i];
+        if(data == undefined){
+            continue;
+        }
+        if(missionId == data.id){
+            return data;
+        }
+    }
+    return null;
+};
+
+mission.getMissionRewardData = function(missionId){
+    if(missionId == undefined){
+        return null;
+    }
+    var data = this.getMissionData(missionId);
+    if(data == null){
+        return null;
+    }
+    for(var key in mission.rewardTable){
+        if(key != data.reward){
+            continue;
+        }
+        return mission.rewardTable[key];
+    }
+    return null;
+};
+
+module.exports = mission;

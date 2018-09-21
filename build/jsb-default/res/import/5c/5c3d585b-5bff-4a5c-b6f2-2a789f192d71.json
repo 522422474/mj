@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xiaomajiang",
+    "texture": "65k6yemP5AWK+t+DBUlm4/",
+    "rect": [
+      0,
+      29,
+      258,
+      246
+    ],
+    "offset": [
+      0,
+      -14.5
+    ],
+    "originalSize": [
+      258,
+      275
+    ]
+  }
+}

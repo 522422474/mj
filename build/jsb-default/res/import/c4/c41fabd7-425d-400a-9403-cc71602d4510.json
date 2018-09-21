@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "haoyoudiban",
+    "texture": "d0/JNv4X5F7o7Ob4WYCWx6",
+    "rect": [
+      0,
+      0,
+      273,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      273,
+      79
+    ]
+  }
+}

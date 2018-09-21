@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_mianfeilingqu02",
+    "texture": "198tECeotB8bJ4iFc9w3Tb",
+    "rect": [
+      0,
+      0,
+      252,
+      88
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      252,
+      88
+    ]
+  }
+}

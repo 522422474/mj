@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shierhuangzu_tex",
+    "texture": "d9TYHYYylCoLKuL4MpqIRg",
+    "rect": [
+      1,
+      2,
+      720,
+      744
+    ],
+    "offset": [
+      -151,
+      138
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

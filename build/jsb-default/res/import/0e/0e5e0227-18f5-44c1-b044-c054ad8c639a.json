@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gerenxinxi",
+    "texture": "39KpBeWFpNM57K1I5IeoTX",
+    "rect": [
+      0,
+      0,
+      231,
+      74
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      231,
+      74
+    ]
+  }
+}

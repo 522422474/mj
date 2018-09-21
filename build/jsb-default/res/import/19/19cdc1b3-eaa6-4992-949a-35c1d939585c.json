@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "buti",
+    "texture": "96pbpFdi5A3ZDGlqBSo3O1",
+    "rect": [
+      0,
+      0,
+      111,
+      73
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      111,
+      73
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "qingnaixindengdai01",
+    "texture": "dagojuWIhFiL3Q1RJYJNTb",
+    "rect": [
+      0,
+      0,
+      1279,
+      322
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1279,
+      322
+    ]
+  }
+}

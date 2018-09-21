@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "b2e5387b-f554-45ce-b865-78c9786a99ae",
+  "atlasJson": "{\"imagePath\":\"qingnaixindengdai_tex.png\",\"name\":\"qingnaixindengdai\",\"SubTexture\":[{\"frameY\":0,\"y\":1,\"frameWidth\":181,\"frameX\":0,\"frameHeight\":22,\"width\":24,\"height\":22,\"name\":\"qingnaixindengdai04\",\"x\":184},{\"frameY\":0,\"y\":25,\"frameWidth\":181,\"frameX\":0,\"frameHeight\":22,\"width\":102,\"height\":22,\"name\":\"qingnaixindengdai03\",\"x\":1},{\"width\":181,\"y\":1,\"height\":22,\"name\":\"qingnaixindengdai02\",\"x\":1}]}",
+  "texture": "e5d11f59-83dd-43b8-92d4-ce0752bcad2e",
+  "subMetas": {}
+}

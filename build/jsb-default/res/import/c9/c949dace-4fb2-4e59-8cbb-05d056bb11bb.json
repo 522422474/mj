@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "difenkuang_beishu",
+    "texture": "3fg3sUqMlKs4Z4HZBjj4lM",
+    "rect": [
+      0,
+      0,
+      206,
+      53
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      206,
+      53
+    ]
+  }
+}

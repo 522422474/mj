@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huaanniu",
+    "texture": "7dvVnduVVCNb5kJW7NjQZg",
+    "rect": [
+      0,
+      0,
+      233,
+      68
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      233,
+      68
+    ],
+    "capInsets": [
+      33,
+      0,
+      31,
+      0
+    ]
+  }
+}

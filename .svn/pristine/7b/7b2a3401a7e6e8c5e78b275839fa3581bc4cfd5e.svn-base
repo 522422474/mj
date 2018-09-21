@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "9f04853c-98f2-4bed-bfa4-bba221e273fb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "momoqipailogo": {
+      "ver": "1.0.3",
+      "uuid": "44e48ab6-4ac3-4ca9-9808-bdfaaea01891",
+      "rawTextureUuid": "9f04853c-98f2-4bed-bfa4-bba221e273fb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 951,
+      "height": 411,
+      "rawWidth": 951,
+      "rawHeight": 411,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

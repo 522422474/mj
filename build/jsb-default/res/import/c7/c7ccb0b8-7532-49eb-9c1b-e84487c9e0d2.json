@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "languo_tex",
+    "texture": "f8juBIgQVPrIF4UsXa8ytP",
+    "rect": [
+      1,
+      2,
+      1726,
+      505
+    ],
+    "offset": [
+      -160,
+      1.5
+    ],
+    "originalSize": [
+      2048,
+      512
+    ]
+  }
+}

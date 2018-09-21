@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jibenwanfa",
+    "texture": "b2CIxty/hFpq9VSlzaqbaO",
+    "rect": [
+      2,
+      1,
+      139,
+      49
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      143,
+      51
+    ]
+  }
+}

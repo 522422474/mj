@@ -1,0 +1,129 @@
+var RoomHandler = require('roomHandler');
+var ZJH_roomData = require('ZJH-RoomData');
+var gameDefine = require('gameDefine');
+cc.Class({
+    extends: cc.Component,
+    properties: {
+        playerRender: cc.Prefab,
+        content: cc.Node,
+        panel: cc.Node
+    },
+
+    onLoad: function () {
+        this._roomInfo = RoomHandler;
+        this.handlerMsg();
+        require('util').registEvent('onZhaJinHuaRoomEnd', this, this.onShow);
+        if (GameData.game.close) {
+            this.initUI();
+        }
+    },
+    onEnable: function(){
+        //unrequire('util').registEvent('onGameAllResult', this, this.initUI);
+    },
+    //
+    onShow: function () {
+        var self = this;
+        if (GameData.room.status == gameDefine.RoomState.READY) {
+            this.initUI();
+        }
+        if (ZJH_RoomData.isCompare) {
+            this.scheduleOnce(function(){
+                self.initUI();
+            },5)
+        }
+        else if (GameData.room.roundNum == GameData.room.opts.roundMax){
+            this.scheduleOnce(function(){
+                self.initUI();
+            },3)
+        }
+        else{
+            this.initUI();
+        }
+    },
+
+    initUI: function () {
+
+        this.showTime(this._roomInfo.room.createtime, this._roomInfo.room.id);
+        this.content.removeAllChildren();
+        for (var i = 0; i < 6; i++) {
+            var playerRender = cc.instantiate(this.playerRender);
+            playerRender.x = 6+i*212;
+            this.content.addChild(playerRender);
+        }
+        var child = this.content.children;
+        for (var i = 0; i < child.length; i++) {
+            var playsLen = RoomHandler.getPlayGamePlayerArr().length;
+            if (GameData.room.status == gameDefine.RoomState.WAIT) {
+                playsLen = GameData.joiners.length;
+            }
+            if (i < playsLen) {
+                var playerRender = child[i];
+                var playerInfo = GameData.getPlayerByUid(RoomHandler.getPlayGamePlayerArr()[i]);
+                if (GameData.room.status == gameDefine.RoomState.WAIT) {
+                    playerInfo = GameData.joiners[i];
+                }
+                playerRender.getComponent("poker_ZJH_resultItemPrefab").initData(playerInfo);
+                playerRender.getComponent("poker_ZJH_resultItemPrefab").getActiveNode().active = true;
+
+            }else{
+                var playerRender = child[i];
+                playerRender.getComponent("poker_ZJH_resultItemPrefab").getActiveNode().active = false;
+            }
+        }
+    },
+
+    showTime: function (createTime, roomId) {
+        let roomID = cc.find('roomID', this.panel);
+        let dateNode = cc.find('date', this.panel);
+        let timeNode = cc.find('time', this.panel);
+
+        let date = new Date(createTime);
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        let hours = date.getHours();
+        if (hours < 10) {
+            hours = '0' + hours + ':';
+        } else {
+            hours = hours + ':';
+        }
+        let minute = date.getMinutes();
+        if (minute < 10) {
+            minute = '0' + minute + ':';
+        } else {
+            minute = minute + ':';
+        }
+        let second = date.getSeconds();
+        if (second < 10) {
+            second = '0' + second;
+        } else {
+            second = second;
+        }
+
+        roomID.getComponent("cc.Label").string = "房间号 : " + roomId;
+        dateNode.getComponent("cc.Label").string = year + "-" + month + "-" + day;
+        timeNode.getComponent("cc.Label").string = hours + minute + second;
+    },
+
+    btnBackOnClicked: function (evt) {
+        cc.log('summary to home');
+        GameData.player.roomid = undefined;
+        GameData.joiners = [];
+        GameData.game.onRoomDissolve = null;
+        cc.director.loadScene('home');
+    },
+
+    btnShareOnClicked: function () {
+        if (inCD(3000)) {
+            return;
+        }
+        screenShoot(wxShareTexture);
+    },
+
+    handlerMsg: function () {
+
+    },
+    onDestroy: function () {
+        unrequire('util').registEvent('onZhaJinHuaRoomEnd', this, this.initUI);
+    }
+});

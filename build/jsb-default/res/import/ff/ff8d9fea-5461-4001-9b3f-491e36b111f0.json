@@ -1,0 +1,47 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "Arrow",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Arrow",
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 1
+        }
+      },
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 1
+        },
+        "_defaultClip": {
+          "__uuid__": "e9vSEhbFdI76GxtwfYjAOW"
+        },
+        "_clips": [
+          {
+            "__uuid__": "e9vSEhbFdI76GxtwfYjAOW"
+          }
+        ],
+        "playOnLoad": true
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "ffjZ/qVGFAAZs/SR42sRHw"
+      },
+      "fileId": "357adqguCRJgaZj/+EnJwln"
+    }
+  }
+]

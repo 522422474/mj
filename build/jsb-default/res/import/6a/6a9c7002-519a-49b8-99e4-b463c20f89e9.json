@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "fuzhi01",
+    "texture": "0e+qA5oMJCGLnNdQkpXL1/",
+    "rect": [
+      0,
+      0,
+      119,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      119,
+      48
+    ]
+  }
+}

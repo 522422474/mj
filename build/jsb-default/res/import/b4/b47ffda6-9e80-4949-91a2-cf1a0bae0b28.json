@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "NewProject_tex",
+    "texture": "53xCAI0s9KNYLZKbjnFj8b",
+    "rect": [
+      1,
+      10,
+      939,
+      996
+    ],
+    "offset": [
+      -41.5,
+      4
+    ],
+    "originalSize": [
+      1024,
+      1024
+    ]
+  }
+}

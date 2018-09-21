@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_beishu",
+    "texture": "56fk/VyhVPkJsezDdJ7jhi",
+    "rect": [
+      0,
+      0,
+      64,
+      30
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      64,
+      30
+    ]
+  }
+}

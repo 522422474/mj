@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_dizhuSign",
+    "texture": "e4aVbTSb9IfLFzWPuJfwiL",
+    "rect": [
+      77,
+      0,
+      70,
+      70
+    ],
+    "offset": [
+      38.5,
+      66
+    ],
+    "originalSize": [
+      147,
+      202
+    ]
+  }
+}

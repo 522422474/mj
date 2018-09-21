@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shareBtn",
+    "texture": "bcqsTDEa5OgbcBBhEGgDVT",
+    "rect": [
+      0,
+      0,
+      138,
+      68
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      138,
+      68
+    ]
+  }
+}

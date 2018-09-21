@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "weixindenglu01",
+    "texture": "13k3lwp5xNg6+sJ8VpeRyw",
+    "rect": [
+      2,
+      2,
+      467,
+      175
+    ],
+    "offset": [
+      0,
+      1.5
+    ],
+    "originalSize": [
+      471,
+      182
+    ]
+  }
+}

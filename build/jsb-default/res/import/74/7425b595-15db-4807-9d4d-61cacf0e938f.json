@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "quxiaohui01",
+    "texture": "a7HKvU+H5LtrxAwrec9HFL",
+    "rect": [
+      0,
+      0,
+      269,
+      103
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      269,
+      105
+    ]
+  }
+}

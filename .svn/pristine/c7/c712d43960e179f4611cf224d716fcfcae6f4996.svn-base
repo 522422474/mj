@@ -1,0 +1,118 @@
+var soundMngr = require('SoundMngr');
+var roomUtil = require('roomUtil');
+var roomHandler = require('roomHandler');
+var RuleHandler = require('ruleHandler');
+var RoomHandler = require('roomHandler');
+var mahjongConfig = require('mahjongConfig');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        BaseLayer: cc.Node,
+        ReadyLayer: cc.Node,
+        FightLayer: cc.Node
+    },
+
+    onLoad: function () {
+        registEvent('ShowChatView', this, this.onShowViewByKey);
+        registEvent('ShowRuleTipsView', this, this.onShowViewByKey);
+    },
+
+    onDestroy: function () {
+        unregistEvent('ShowChatView', this, this.onShowViewByKey);
+        unregistEvent('ShowRuleTipsView', this, this.onShowViewByKey);
+    },
+
+    onEnable: function () {
+        cc.log('..mahjongScene onEnable.');
+        this.uiContents = {};
+
+        //添加游戏节点
+        this.addTableUIPrefab();
+
+        soundMngr.instance.playMusic('sound/beijyingyue');
+    },
+
+    addTableUIPrefab: function(){
+        if(mahjongConfig == undefined){
+            return;
+        }
+        var configData = mahjongConfig.table;
+        if(configData == undefined){
+            return;
+        }
+        openView('Loading');
+        var baseArray = this.getNeedPrefabPathArray(configData.base);
+        if(baseArray){
+            var fun = function(){
+                cc.log('..closeView Loading');
+                closeView('Loading');
+            };
+            createUIPrefabArray(baseArray, this.BaseLayer, fun);
+        }
+        var readyArray = this.getNeedPrefabPathArray(configData.ready);
+        if(readyArray){
+            createUIPrefabArray(readyArray, this.ReadyLayer, null);
+        }
+        // createUIPrefabArray(configData.fight, this.FightLayer, null);
+    },
+
+    getNeedPrefabPathArray: function(array){
+        var list = [];
+        if(array == undefined){
+            return list;
+        }
+        var prefabs = mahjongConfig.prefabs;
+        if(prefabs == undefined){
+            return list;
+        }
+        for(var i = 0;i < array.length;i++){
+            var key = array[i];
+            if(key == undefined){
+                continue;
+            }
+            var path = prefabs[key];
+            if(path == undefined || path.length <= 0){
+                continue;
+            }
+            list.push(path);
+        }
+        cc.log('..list:'+JSON.stringify(list));
+        return list;
+    },
+    getNeedPrefabPath: function(key){
+        var prefabs = mahjongConfig.prefabs;
+        if(prefabs == undefined){
+            return null;
+        }
+        var path = prefabs[key];
+        if(path == undefined || path.length <= 0){
+            return null;
+        }
+        cc.log('..path:'+path);
+        return path;
+    },
+
+    onShowViewByKey: function(data){
+        if(data == undefined || data.detail == undefined || data.detail.length <= 0){
+            return;
+        }
+        cc.log('..key:'+data.detail);
+        var viewNode = this.uiContents[data.detail];
+        if(viewNode == undefined){
+            var path = this.getNeedPrefabPath(data.detail);
+            if(path == null){
+                cc.log('..prefab path is null.');
+                return;
+            }
+            var self = this;
+            createUIPrefab(path, null, null, function(uiNode) {
+                self.uiContents[data.detail] = uiNode;
+                uiNode.active = true;
+            });
+        } else {
+            viewNode.active = true;
+        }
+    }
+});

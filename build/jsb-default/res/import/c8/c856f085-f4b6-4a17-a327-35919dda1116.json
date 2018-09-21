@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jinbiduihuananniu02",
+    "texture": "a9HVdpf7ZPnLOkYC+rwTt+",
+    "rect": [
+      0,
+      0,
+      267,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      267,
+      107
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wenziditu",
+    "texture": "1cR0w7lTRBPLPPkwpSU50g",
+    "rect": [
+      0,
+      0,
+      590,
+      27
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      590,
+      27
+    ]
+  }
+}

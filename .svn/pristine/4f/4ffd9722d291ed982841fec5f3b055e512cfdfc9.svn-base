@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "de9ff033-fd90-4a40-840a-5774fa2d0229",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "ico_jinbi_1": {
+      "ver": "1.0.3",
+      "uuid": "45102d15-d7e9-4aaf-a8f3-b8411e923847",
+      "rawTextureUuid": "de9ff033-fd90-4a40-840a-5774fa2d0229",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 6,
+      "trimY": 5,
+      "width": 29,
+      "height": 30,
+      "rawWidth": 40,
+      "rawHeight": 40,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

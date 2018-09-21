@@ -1,0 +1,80 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "DDZ-CardMask",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "CardMask",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "e8SOzoGDBETrR1AvcYIN6S"
+      },
+      "fileId": "7ac7cj1FB9HPpBqVbNg+503"
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "y": 0.5
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "New Sprite(Splash)",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 2
+        },
+        "_spriteFrame": {
+          "__uuid__": "e6fooq2b9N3rCqC60rc5xU"
+        },
+        "_type": 1,
+        "_sizeMode": 0
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "e8SOzoGDBETrR1AvcYIN6S"
+      },
+      "fileId": "6004asYSTVBzL2xFTjX4UOK"
+    },
+    "_opacity": 150,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 148,
+      "height": 208
+    },
+    "_scaleX": 0.97,
+    "_scaleY": 0.97,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 3,
+      "y": 2
+    }
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Img_GameTable_Warning_red",
+    "texture": "90dPkADgVEf5CQqV/d7pyf",
+    "rect": [
+      0,
+      3,
+      68,
+      62
+    ],
+    "offset": [
+      0,
+      -1.5
+    ],
+    "originalSize": [
+      68,
+      65
+    ]
+  }
+}

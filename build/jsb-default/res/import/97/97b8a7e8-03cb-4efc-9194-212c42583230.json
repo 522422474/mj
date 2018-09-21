@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dabao_tex",
+    "texture": "43OVra+KFCto2s7LplFmYg",
+    "rect": [
+      1,
+      1,
+      436,
+      207
+    ],
+    "offset": [
+      -37,
+      23.5
+    ],
+    "originalSize": [
+      512,
+      256
+    ]
+  }
+}

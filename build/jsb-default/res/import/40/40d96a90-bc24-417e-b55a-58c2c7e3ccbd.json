@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_face_xia_shou_41",
+    "texture": "7c4AhnsdNBp49DJRq07Psm",
+    "rect": [
+      4,
+      3,
+      84,
+      135
+    ],
+    "offset": [
+      -0.5,
+      -1
+    ],
+    "originalSize": [
+      93,
+      139
+    ]
+  }
+}

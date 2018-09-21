@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "tuoguanmengban",
+    "texture": "a922uZAfdM2KShwQjuPqKa",
+    "rect": [
+      0,
+      0,
+      214,
+      227
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      214,
+      227
+    ]
+  }
+}

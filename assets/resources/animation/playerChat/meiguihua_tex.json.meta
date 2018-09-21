@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "03d9a8be-e286-4835-8e60-ba30030f586b",
+  "atlasJson": "{\"SubTexture\":[{\"width\":28,\"y\":213,\"height\":34,\"name\":\"huaban1\",\"x\":37},{\"width\":27,\"y\":213,\"height\":28,\"name\":\"huaban2\",\"x\":99},{\"width\":23,\"y\":125,\"height\":25,\"name\":\"huaban3\",\"x\":93},{\"width\":34,\"y\":213,\"height\":33,\"name\":\"huaban4\",\"x\":1},{\"width\":186,\"y\":1,\"height\":122,\"name\":\"meiguihua\",\"x\":1},{\"width\":30,\"y\":213,\"height\":28,\"name\":\"xing\",\"x\":67},{\"frameX\":0,\"frameHeight\":86,\"y\":125,\"frameY\":0,\"frameWidth\":93,\"width\":90,\"height\":86,\"name\":\"meiguihua1\",\"x\":1}],\"name\":\"meiguihua\",\"imagePath\":\"meiguihua_tex.png\"}",
+  "texture": "2adc3f88-4db5-46c9-850b-8c9070481fd4",
+  "subMetas": {}
+}

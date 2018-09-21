@@ -1,0 +1,27 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_choumashuliangxianshibg",
+    "texture": "1bNks13ZdABY7Cjp5ng79F",
+    "rect": [
+      0,
+      0,
+      199,
+      54
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      199,
+      54
+    ],
+    "capInsets": [
+      4,
+      4,
+      4,
+      5
+    ]
+  }
+}

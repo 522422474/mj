@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "changyongyu",
+    "texture": "f9CnMB3ZRIha/V3hXlPWqd",
+    "rect": [
+      0,
+      0,
+      69,
+      231
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      69,
+      231
+    ]
+  }
+}

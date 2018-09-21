@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mj_back_shang_chu",
+    "texture": "97kMA2vZRIyod5RRwQiEWl",
+    "rect": [
+      1,
+      1,
+      48,
+      72
+    ],
+    "offset": [
+      -1.5,
+      6
+    ],
+    "originalSize": [
+      53,
+      86
+    ]
+  }
+}

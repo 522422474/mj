@@ -1,0 +1,87 @@
+var soundMngr = require('SoundMngr');
+var gameDefine = require('gameDefine');
+var configMgr = require('configMgr');
+var RuleHandler = require('ruleHandler');
+var RoomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        deleteRoomBtn: cc.Node,
+        quitRoomBtn: cc.Node
+    },
+
+    onLoad: function () {
+    },
+    onDestroy: function () {
+    },
+    onEnable: function(){
+        cc.log('..waitView onEnable.');
+        MjHandler.getInstance().requestReady();
+        scheduleLamp(this);
+    },
+
+    setUIBaseInfo: function () {
+        var roomData = RoomHandler.getRoomData();
+        var isCreator = roomData.creator == GameData.player.uid;
+        this.deleteRoomBtn.active = isCreator;
+        //this.quitRoomBtn.active = !isCreator;
+    },
+    backBtnClicked: function () {
+        var roomData = RoomHandler.getRoomData();
+        if (roomData.creator == GameData.player.uid) {
+            cc.director.loadScene('home');
+        } else {
+            RoomHandler.quitRoom(roomData.id);
+        }
+    },
+    wxInviteBtnClicked: function () {
+        var roomData = RoomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+        var gameName = getGameTypeNameString(roomData.opts.gameType);
+        var title = gameName + "房间号:" + roomData.id;
+        if (roomData.opts.costType == 4) {
+            title = gameName + "(代开)" + "房间号:" + roomData.id;
+        }
+        var des = this.getInviteStr();
+        wxShareText(title, des);
+    },
+    getInviteStr: function () {
+        var roomData = RoomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+        var str1 = "玩法:";
+        var str2 = ",请您快速加入对局.";
+        var playStr = getRoomRuleStrOnType(roomData);
+        return str1 + playStr + str2;
+    },
+    onDeleteRoom: function () {
+        createMessageBox('解散房间不扣房卡，是否确定解散？', function () {
+            var roomData = RoomHandler.getRoomData();
+            RoomHandler.deleteRoom(roomData.id, 'close');
+        }, function () {});
+    },
+    onQuitRoom: function () {
+        var roomData = RoomHandler.getRoomData();
+        if (roomData.creator == GameData.player.uid) {
+            cc.director.loadScene('home');
+        } else {
+            RoomHandler.quitRoom(roomData.id);
+        }
+    },
+    //复制房间号
+    onCopyRoomInfo: function () {
+        var roomData = RoomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+        var gameName = getGameTypeNameString(roomData.opts.gameType);
+        var title = gameName + "房间号:" + roomData.id + ",";
+        var des = this.getInviteStr();
+        wxShareCommond(title + des);
+    }
+});

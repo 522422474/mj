@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pingjutong",
+    "texture": "a7++Mizs1IPJ985NeqtOvf",
+    "rect": [
+      0,
+      11,
+      496,
+      147
+    ],
+    "offset": [
+      0,
+      -5.5
+    ],
+    "originalSize": [
+      496,
+      158
+    ]
+  }
+}

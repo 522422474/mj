@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "guizeanniu",
+    "texture": "a6jB1i3FFFy78aikjtBoNY",
+    "rect": [
+      0,
+      0,
+      103,
+      105
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      103,
+      105
+    ]
+  }
+}

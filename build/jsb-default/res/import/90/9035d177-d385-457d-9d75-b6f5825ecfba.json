@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gr_bq_dilei",
+    "texture": "27hQpvVcZByKR/9xf+kaBY",
+    "rect": [
+      0,
+      0,
+      87,
+      80
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      87,
+      80
+    ]
+  }
+}

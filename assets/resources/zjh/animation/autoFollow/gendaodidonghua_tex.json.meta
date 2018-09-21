@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e5ce5f99-0eac-449d-8a87-b75b03207d66",
+  "atlasJson": "{\"SubTexture\":[{\"width\":221,\"y\":1,\"height\":87,\"name\":\"01\",\"x\":1},{\"width\":221,\"y\":90,\"height\":87,\"name\":\"02\",\"x\":1}],\"name\":\"gendaodidonghua\",\"imagePath\":\"gendaodidonghua_tex.png\"}",
+  "texture": "d255d615-73c5-4b55-93dc-fe190bbbb7cb",
+  "subMetas": {}
+}

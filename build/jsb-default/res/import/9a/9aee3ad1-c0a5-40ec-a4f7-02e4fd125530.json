@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wulong1",
+    "texture": "c3RjFvLqpP1434ZM5s5Hgx",
+    "rect": [
+      0,
+      0,
+      278,
+      70
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      278,
+      70
+    ]
+  }
+}

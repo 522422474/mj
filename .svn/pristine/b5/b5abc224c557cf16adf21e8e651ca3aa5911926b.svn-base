@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "568f98ac-ffc5-4974-abfa-28df5284b91a",
+  "atlasJson": "{\"SubTexture\":[{\"width\":117,\"y\":1,\"height\":146,\"name\":\"danshui\",\"x\":1},{\"width\":117,\"y\":1,\"height\":140,\"name\":\"danqing\",\"x\":120},{\"width\":89,\"y\":149,\"height\":86,\"name\":\"danhuang\",\"x\":1},{\"width\":113,\"y\":1,\"height\":128,\"name\":\"dan\",\"x\":239},{\"width\":79,\"y\":131,\"height\":78,\"name\":\"dan1\",\"x\":353},{\"width\":95,\"y\":143,\"height\":89,\"name\":\"dan2\",\"x\":120},{\"width\":112,\"y\":131,\"height\":94,\"name\":\"dan3\",\"x\":239}],\"name\":\"rengjidan\",\"imagePath\":\"rengjidan_tex.png\"}",
+  "texture": "0e61233b-0211-49ea-92c8-b8f21d7dd50d",
+  "subMetas": {}
+}

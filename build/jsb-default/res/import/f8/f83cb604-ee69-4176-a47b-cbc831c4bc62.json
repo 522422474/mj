@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "kaishi_tex",
+    "texture": "desC9dhntP8LsYNcBj8YiZ",
+    "rect": [
+      1,
+      14,
+      1258,
+      913
+    ],
+    "offset": [
+      -394,
+      41.5
+    ],
+    "originalSize": [
+      2048,
+      1024
+    ]
+  }
+}

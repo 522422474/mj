@@ -1,0 +1,15 @@
+别名: ruoyumeme
+创建日期: 2018-2-6
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=wang, OU=ry, O=ry, L=xz, ST=xz, C=cn
+发布者: CN=wang, OU=ry, O=ry, L=xz, ST=xz, C=cn
+序列号: 64dd401e
+有效期开始日期: Tue Feb 06 16:23:52 CST 2018, 截止日期: Fri Sep 06 16:23:52 CST 2565
+证书指纹:
+         MD5: 4F:6E:2B:53:ED:1B:13:74:F5:49:36:ED:F3:77:89:8D
+         SHA1: 52:16:6D:DF:96:7C:89:E6:B7:B7:A8:7C:D2:15:5C:46:43:EF:AE:6A
+         SHA256: 3E:16:E1:D9:E5:2C:2C:D5:1E:60:E7:26:96:03:AA:D1:9A:ED:AB:09:EA:B9:4A:7D:71:69:C3:C5:2D:E5:C0:70
+         签名算法名称: SHA256withRSA
+         版本: 3

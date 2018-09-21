@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shensuanzixingxing_tex",
+    "texture": "8cZJSUEJZFULyQmyvXFzGB",
+    "rect": [
+      1,
+      1,
+      111,
+      68
+    ],
+    "offset": [
+      -7.5,
+      29
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jiaozhu_num_0",
+    "texture": "08B9UdesJOZppzwPtM9yCc",
+    "rect": [
+      0,
+      1,
+      239,
+      77
+    ],
+    "offset": [
+      -8.5,
+      88.5
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

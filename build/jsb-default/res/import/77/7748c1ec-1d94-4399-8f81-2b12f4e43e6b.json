@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "baisediban",
+    "texture": "5dRZuMxLdOFI5avbO6KdDb",
+    "rect": [
+      0,
+      0,
+      813,
+      102
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      813,
+      102
+    ]
+  }
+}

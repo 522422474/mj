@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "erShuiBtnOrdinary",
+    "texture": "50RQKJatpIJoA/D7KBhQp5",
+    "rect": [
+      0,
+      1,
+      269,
+      102
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      269,
+      105
+    ]
+  }
+}

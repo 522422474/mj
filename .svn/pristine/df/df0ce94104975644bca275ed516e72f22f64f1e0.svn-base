@@ -1,0 +1,79 @@
+var roomUtil = require('roomUtil');
+var hhdz_roomUtil = require('hhdz_roomUtil');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        _betId: undefined
+    },
+
+    onLoad: function () {
+    },
+
+    onDestroy: function () {
+    },
+
+    onEnable: function () {
+        this._betId = undefined;
+    },
+
+    setBetId: function(id){
+        cc.log('..setBetId:'+id);
+        if(id == undefined){
+            return;
+        }
+        this._betId = id;
+        this.loadBetImg();
+    },
+
+    setBetPosition: function(pos){
+        if(pos == undefined){
+            return;
+        }
+        this.node.active = true;
+        this.node.scale = 0.5;
+        this.node.position = pos;
+    },
+
+    loadBetImg: function(){
+        if(this._betId == undefined){
+            return;
+        }
+        var textureUrl = hhdz_roomUtil.getBetImgUrl(this._betId);
+        var texture = cc.textureCache.addImage(cc.url.raw(textureUrl));
+        if(texture){
+            this.node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture);
+        }
+    },
+
+    runActionToTable: function(starPos, endPos){
+        if(starPos == undefined || endPos == undefined){
+            return;
+        }
+        this.node.active = true;
+        this.node.scale = 1.1;
+        this.node.position = starPos;
+
+        var scale1 = cc.scaleTo(0.5, 0.8);
+        var scale2 = cc.scaleTo(1, 0.5);
+        var move1 = cc.moveTo(0.5, endPos);
+
+        this.node.stopAllActions();
+        this.node.runAction(cc.sequence(cc.spawn(scale1, move1), scale2));
+    },
+
+    runActionToPlayer: function(endPos){
+        if(endPos == undefined){
+            return;
+        }
+        var self = this;
+        var move = cc.moveTo(0.5, endPos);
+        var fun = cc.callFunc(function(){
+            self.node.active = false;
+        });
+
+        this.node.stopAllActions();
+        this.node.runAction(cc.sequence(move, fun));
+    }
+});

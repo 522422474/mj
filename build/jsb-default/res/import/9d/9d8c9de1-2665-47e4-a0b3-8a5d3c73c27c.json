@@ -1,0 +1,131 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "shensuanziPanel",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "shensuanziPanel",
+    "_children": [
+      {
+        "__id__": 2
+      },
+      {
+        "__id__": 3
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "82d1d49tBxFI4nVnGT4/RAy",
+        "node": {
+          "__id__": 1
+        },
+        "xingSp": {
+          "__id__": 2
+        },
+        "xingAnim": {
+          "__id__": 3
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "9djJ3hJmVH5KCzil08c8J8"
+      },
+      "fileId": "68ff27qqCtEDJEhoRfrvgZq"
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "xing",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 2
+        },
+        "_spriteFrame": {
+          "__uuid__": "34QYgfiAJAWK61eCx0vFGT"
+        }
+      },
+      {
+        "__type__": "cc.Button",
+        "node": {
+          "__id__": 2
+        },
+        "clickEvents": [
+          {
+            "__type__": "cc.ClickEvent",
+            "target": {
+              "__id__": 1
+            },
+            "component": "hundred_fortunePanel",
+            "handler": "cliskShowTips"
+          }
+        ],
+        "_N$target": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "9djJ3hJmVH5KCzil08c8J8"
+      },
+      "fileId": "8cc06Uw5XJKXYj9tEFlzHFf"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 33,
+      "height": 32
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "xingAnimation",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "dragonBones.ArmatureDisplay",
+        "node": {
+          "__id__": 3
+        },
+        "_armatureName": "armature",
+        "_animationName": "newAnimation",
+        "_N$dragonAsset": {
+          "__uuid__": "a9I6mmJx5Nl47Mh2jW1+Yu"
+        },
+        "_N$dragonAtlasAsset": {
+          "__uuid__": "88KNb7IXBNWokDb3rIVMmv"
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "9djJ3hJmVH5KCzil08c8J8"
+      },
+      "fileId": "933bfw+JF1LqqAulLXwceba"
+    }
+  }
+]

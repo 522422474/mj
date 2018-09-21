@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_zhuangIcon",
+    "texture": "45DbrkhC5FMpxpwQP/zU0V",
+    "rect": [
+      1,
+      2,
+      38,
+      40
+    ],
+    "offset": [
+      0,
+      -1
+    ],
+    "originalSize": [
+      40,
+      42
+    ]
+  }
+}

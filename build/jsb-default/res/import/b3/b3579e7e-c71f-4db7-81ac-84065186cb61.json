@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gerenxinxitkdaxiao",
+    "texture": "d4XpCwKupKbK+GGG5Ma1/l",
+    "rect": [
+      10,
+      9,
+      80,
+      80
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      100,
+      99
+    ]
+  }
+}

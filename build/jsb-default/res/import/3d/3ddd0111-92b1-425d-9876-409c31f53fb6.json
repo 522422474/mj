@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_quxiaotuoguan_N",
+    "texture": "26m5uY7X1JWLUlPIM0+NmM",
+    "rect": [
+      0,
+      0,
+      248,
+      102
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      248,
+      104
+    ]
+  }
+}

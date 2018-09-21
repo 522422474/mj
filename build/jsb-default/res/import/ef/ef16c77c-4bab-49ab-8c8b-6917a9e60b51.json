@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dan",
+    "texture": "67Fe2gw/BAaJWborS9cdaf",
+    "rect": [
+      0,
+      0,
+      128,
+      134
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      128,
+      134
+    ]
+  }
+}

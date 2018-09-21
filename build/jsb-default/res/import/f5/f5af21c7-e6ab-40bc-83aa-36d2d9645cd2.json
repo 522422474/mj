@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ddz_fuzhiyaoqingtaokouling01",
+    "texture": "faIST0CvZOBqUMaG3ayEdc",
+    "rect": [
+      0,
+      0,
+      469,
+      158
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      469,
+      158
+    ]
+  }
+}

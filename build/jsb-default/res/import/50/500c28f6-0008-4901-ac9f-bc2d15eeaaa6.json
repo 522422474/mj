@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dafuhao",
+    "texture": "71i2ulCQ1N4ZQhSBBhmean",
+    "rect": [
+      10,
+      5,
+      120,
+      75
+    ],
+    "offset": [
+      2,
+      -2.5
+    ],
+    "originalSize": [
+      136,
+      80
+    ]
+  }
+}

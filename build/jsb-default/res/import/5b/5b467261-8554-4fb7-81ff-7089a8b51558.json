@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "haixiu",
+  "_duration": 1.2666666666666666,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "d04NerYGVDJZcwfGACrk4V"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "62MnsXirVF7Y4U0s1AWtAh"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "50wAmM7JBIo55g2AUQCQ87"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "790IjQ+lJBKb4o7R2HZ2Kr"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "50wAmM7JBIo55g2AUQCQ87"
+            }
+          },
+          {
+            "frame": 1.25,
+            "value": {
+              "__uuid__": "790IjQ+lJBKb4o7R2HZ2Kr"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

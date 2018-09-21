@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liebiaodikuang",
+    "texture": "80Eygh1TdDPqBIV7rIQjGo",
+    "rect": [
+      0,
+      0,
+      1210,
+      237
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1210,
+      237
+    ]
+  }
+}

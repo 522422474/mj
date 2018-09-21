@@ -1,0 +1,15 @@
+别名: dongbeimajiang
+创建日期: 2018-2-1
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=ry, OU=ry, O=ry, L=xz, ST=xz, C=cn
+发布者: CN=ry, OU=ry, O=ry, L=xz, ST=xz, C=cn
+序列号: 7eb3641d
+有效期开始日期: Thu Feb 01 20:20:32 CST 2018, 截止日期: Sun Sep 01 20:20:32 CST 2565
+证书指纹:
+         MD5: B3:4B:59:54:A0:0E:02:F9:64:04:3A:2A:95:6F:97:E7
+         SHA1: 91:3D:A3:07:8E:35:B2:A7:93:06:AB:FA:72:86:8B:EA:CB:02:0E:1A
+         SHA256: 27:46:7F:BF:E4:76:EE:D1:74:FA:4D:FA:92:62:E3:C6:04:ED:0F:CB:77:A8:34:28:A5:EB:89:F4:E9:BB:D9:9F
+         签名算法名称: SHA256withRSA
+         版本: 3

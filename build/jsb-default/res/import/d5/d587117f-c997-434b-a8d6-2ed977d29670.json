@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "haoyoupaihangdiban",
+    "texture": "f0uADGEOxLwoZmRufjli93",
+    "rect": [
+      0,
+      3,
+      430,
+      494
+    ],
+    "offset": [
+      -3,
+      -1
+    ],
+    "originalSize": [
+      436,
+      498
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "shenqingliebiao",
+    "texture": "6cABiVEz9N+bk1G48qhUDI",
+    "rect": [
+      0,
+      0,
+      137,
+      42
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      137,
+      42
+    ]
+  }
+}

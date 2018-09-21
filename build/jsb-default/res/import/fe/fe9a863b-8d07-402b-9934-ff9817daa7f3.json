@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xishou3",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      266,
+      762,
+      92,
+      122
+    ],
+    "offset": [
+      4,
+      0
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

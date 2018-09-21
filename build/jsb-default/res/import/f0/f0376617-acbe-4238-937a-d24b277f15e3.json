@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_GameTable_Poker",
+    "texture": "93TL/EFR1Ebrm5NsWtxyEM",
+    "rect": [
+      0,
+      0,
+      256,
+      231
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      256,
+      231
+    ]
+  }
+}

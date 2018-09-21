@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "guilian3",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      454,
+      746,
+      96,
+      120
+    ],
+    "offset": [
+      -11,
+      -2
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biaotitou",
+    "texture": "89j5kBCMZBDajsxTXYMvUd",
+    "rect": [
+      3,
+      0,
+      467,
+      151
+    ],
+    "offset": [
+      -3,
+      0
+    ],
+    "originalSize": [
+      479,
+      151
+    ]
+  }
+}

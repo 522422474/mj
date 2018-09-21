@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_liangpai_P",
+    "texture": "19Z6q+WHVDXZnMudF7+moi",
+    "rect": [
+      0,
+      0,
+      237,
+      87
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      237,
+      87
+    ]
+  }
+}

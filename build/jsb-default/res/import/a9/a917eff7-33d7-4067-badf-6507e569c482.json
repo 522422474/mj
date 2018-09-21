@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gganzibangdingdaili1",
+    "texture": "4dHWazSL1BeJhfwOg/aRSR",
+    "rect": [
+      0,
+      0,
+      131,
+      41
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      131,
+      41
+    ]
+  }
+}

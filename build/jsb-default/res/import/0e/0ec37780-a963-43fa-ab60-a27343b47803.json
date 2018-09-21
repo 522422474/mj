@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_leaveRoom_N",
+    "texture": "87Tj48lyxIo5YeRfCy5j8C",
+    "rect": [
+      1,
+      1,
+      223,
+      93
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      225,
+      95
+    ]
+  }
+}

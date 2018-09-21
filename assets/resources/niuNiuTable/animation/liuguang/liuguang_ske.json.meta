@@ -1,0 +1,6 @@
+{
+  "ver": "1.0.0",
+  "uuid": "804edd3e-b4d4-455f-af39-966e354c8185",
+  "dragonBonesJson": "{\"frameRate\":24,\"isGlobal\":0,\"armature\":[{\"skin\":[{\"name\":\"\",\"slot\":[{\"display\":[{\"type\":\"image\",\"name\":\"liuguang\",\"transform\":{}}],\"name\":\"liuguang\"}]}],\"animation\":[{\"frame\":[],\"duration\":24,\"playTimes\":0,\"bone\":[{\"frame\":[{\"transform\":{},\"duration\":24,\"tweenEasing\":null}],\"name\":\"root\"},{\"frame\":[{\"transform\":{},\"duration\":24,\"tweenEasing\":0},{\"transform\":{\"skX\":-179.4376,\"skY\":-179.4376},\"duration\":0,\"tweenEasing\":null}],\"name\":\"bone\"}],\"ffd\":[],\"name\":\"newAnimation\",\"slot\":[]}],\"type\":\"Armature\",\"frameRate\":24,\"ik\":[],\"aabb\":{\"width\":156,\"y\":-73,\"height\":146,\"x\":-78},\"bone\":[{\"name\":\"root\",\"transform\":{}},{\"transform\":{},\"name\":\"bone\",\"parent\":\"root\"}],\"name\":\"armature\",\"slot\":[{\"name\":\"liuguang\",\"parent\":\"bone\",\"color\":{}}],\"defaultActions\":[{\"gotoAndPlay\":\"newAnimation\"}]}],\"name\":\"liuguang\",\"version\":\"4.5\"}",
+  "subMetas": {}
+}

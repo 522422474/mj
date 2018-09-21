@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jujue",
+    "texture": "934uLeKxNF4rW3xrc0MHmJ",
+    "rect": [
+      0,
+      0,
+      149,
+      74
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      149,
+      74
+    ]
+  }
+}

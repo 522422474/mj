@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "renwutiaoxingdiban",
+    "texture": "8fQRVanfxD4atZUvjCrXFy",
+    "rect": [
+      0,
+      0,
+      1000,
+      165
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1000,
+      165
+    ]
+  }
+}

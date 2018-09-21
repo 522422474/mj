@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "xianiao",
+  "_duration": 1.1666666666666667,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "c8tXymJ8RJwb3D/l4jO0m8"
+            }
+          },
+          {
+            "frame": 0.2833333333333333,
+            "value": {
+              "__uuid__": "b8ROjr6olJ9Y36RKlQzRwN"
+            }
+          },
+          {
+            "frame": 0.5833333333333334,
+            "value": {
+              "__uuid__": "65DNJbcRlJwaZYY4uhuNBv"
+            }
+          },
+          {
+            "frame": 0.8666666666666667,
+            "value": {
+              "__uuid__": "15VfL9j8NC/rdjGE3oapsM"
+            }
+          },
+          {
+            "frame": 1.15,
+            "value": {
+              "__uuid__": "c8tXymJ8RJwb3D/l4jO0m8"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

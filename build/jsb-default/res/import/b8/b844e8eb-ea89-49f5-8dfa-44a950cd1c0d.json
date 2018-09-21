@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "xianiao2",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      898,
+      104,
+      92,
+      114
+    ],
+    "offset": [
+      1,
+      1
+    ],
+    "originalSize": [
+      128,
+      128
+    ],
+    "rotated": 1
+  }
+}

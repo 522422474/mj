@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "mingci04",
+    "texture": "b2h4KaU2FC+I5vywI1hBZE",
+    "rect": [
+      0,
+      0,
+      40,
+      42
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      40,
+      42
+    ]
+  }
+}

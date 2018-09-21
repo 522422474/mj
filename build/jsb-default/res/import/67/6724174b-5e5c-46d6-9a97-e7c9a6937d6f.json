@@ -1,0 +1,58 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "poker_chipPrefab",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "poker_chipPrefab",
+    "_components": [
+      {
+        "__id__": 2
+      },
+      {
+        "__type__": "c930c78jCNCtpAI/zD6HIMK",
+        "node": {
+          "__id__": 1
+        },
+        "chipSp": {
+          "__id__": 2
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "8a9d0Z6IBtKFrkUGzZCh1G7"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 111,
+      "height": 86
+    },
+    "_scaleX": 0.5,
+    "_scaleY": 0.5,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "y": -177
+    }
+  },
+  {
+    "__type__": "cc.Sprite",
+    "node": {
+      "__id__": 1
+    },
+    "_spriteFrame": {
+      "__uuid__": "1eFrmch6xFybdpd+rXhqgo"
+    }
+  }
+]

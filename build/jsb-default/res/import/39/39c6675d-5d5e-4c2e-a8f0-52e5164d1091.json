@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yinghua",
+    "texture": "40D/vyN7FHCJoyVDjoQh2X",
+    "rect": [
+      0,
+      1,
+      230,
+      163
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      230,
+      164
+    ]
+  }
+}

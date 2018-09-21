@@ -1,0 +1,71 @@
+var exp = module.exports;
+
+exp.getRoomString = function(roomId) {
+	if (GameData.room.id >= 100000) {
+		return roomId.toString();
+	} else if (GameData.room.id >= 10000) {
+		return '0' + GameData.room.id;
+	} else if (GameData.room.id >= 1000) {
+		return '00' + GameData.room.id;
+	} else if (GameData.room.id >= 100) {
+		return '000' + GameData.room.id;
+	} else if (GameData.room.id >= 10) {
+		return '0000' + GameData.room.id;
+	} else if (GameData.room.id >= 1) {
+		return '00000' + GameData.room.id;
+	} else {
+		return '000000';
+	}
+};
+
+exp.getTimeString = function() {
+	var t = new Date();
+	var h = t.getHours();
+	var m = t.getMinutes();
+	h = h < 10 ? '0'+h : h;
+	m = m < 10 ? '0'+m : m;
+	var str = (h + ':' + m);
+	return str;
+};
+
+exp.getPower = function() {
+	try {
+		if (cc.sys.OS_ANDROID == cc.sys.os) {
+			jsb.reflection.callStaticMethod("org.cocos2dx.javascript.AppActivity", "electricQuantity", "()V");
+		} else if (cc.sys.OS_IOS == cc.sys.os) {
+			jsb.reflection.callStaticMethod("AppController", "electricQuantity");
+		}
+	} catch (e) {
+		WriteLog('Get energy error:'+JSON.stringify(e));
+	}
+};
+
+exp.getRoomRuleStrOnType = function(roomData){
+    var gameDefine = require('gameDefine');
+	if(roomData == undefined
+		|| roomData.opts == undefined
+		|| gameDefine == undefined){
+		return '';
+	}
+
+    var ruleStr = undefined;
+    switch (roomData.opts.gameType){
+        case gameDefine.GameType.Game_Mj_Tianjin:{ ruleStr = getRuleStrNiuNiu(roomData.opts); }break;
+        case gameDefine.GameType.Game_Mj_Shishi:{ ruleStr = getRuleStrShiShi(roomData.opts); }break;
+        case gameDefine.GameType.Game_Mj_AS:{}break;
+        case gameDefine.GameType.Game_Mj_HZ:{ ruleStr = getRuleStrHongZhong(roomData.opts); }break;
+        case gameDefine.GameType.Game_Mj_Heb:
+        case gameDefine.GameType.Game_Mj_CC:{ ruleStr = getRuleStrCC(roomData.opts); }break;
+        case gameDefine.GameType.Game_MJ_HuaDian:{ ruleStr = getRuleStrHd(roomData.opts); }break;
+        case gameDefine.GameType.Game_Poker_DDZ:{ ruleStr = getRuleStrDDZ(roomData.opts); }break;
+        case gameDefine.GameType.Game_Poker_TianjinDDZ:{ ruleStr = getRuleStrTJDDZ(roomData.opts); }break;
+        case gameDefine.GameType.Game_Poker_13shui:{ ruleStr = getRuleStr13(roomData.opts); }break;
+        case gameDefine.GameType.Game_niu_niu:
+        case gameDefine.GameType.Game_Niu_Niu_10:{ ruleStr = getRuleStrNiuNiu(roomData.opts); }break;
+        case gameDefine.GameType.Game_TDK:{ ruleStr = getRuleStrTDK(roomData.opts); }break;
+        case gameDefine.GameType.Game_Poker_paodekuai:{ ruleStr = getRuleStrPDK(roomData.opts); }break;
+        case gameDefine.GameType.Game_Poker_ZJH:{ ruleStr = getRuleStrZJH(roomData.opts); }break;
+    }
+    ruleStr == undefined ? ruleStr = '' : null;
+    return ruleStr;
+};

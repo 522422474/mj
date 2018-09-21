@@ -1,0 +1,354 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "UIGrop",
+    "data": {
+      "__id__": 1
+    },
+    "asyncLoadAssets": null
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "UIGrop",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "664f1LG5TpGCIucBF1ivLfV",
+        "node": {
+          "__id__": 1
+        },
+        "create_btn": {
+          "__id__": 4
+        },
+        "join_btn": {
+          "__id__": 6
+        },
+        "back_btn": {
+          "__id__": 8
+        }
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "12jUl+NFZMc4D2AMFzcHrX"
+      },
+      "fileId": "3e488xJWzdIKJborWiHHNh9"
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "room",
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 7
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Widget",
+        "node": {
+          "__id__": 2
+        },
+        "_alignFlags": 32,
+        "_right": 0.36000000000000004,
+        "_isAbsRight": false
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "12jUl+NFZMc4D2AMFzcHrX"
+      },
+      "fileId": "63665diglVIzrIGrIUFA47Z"
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "createroom",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 3
+        },
+        "_spriteFrame": {
+          "__uuid__": "68/iwJlAxGc5MKkyXG1ibZ"
+        }
+      },
+      {
+        "__id__": 4
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "12jUl+NFZMc4D2AMFzcHrX"
+      },
+      "fileId": "9ce984JBMBGko2b5wyy1d0Z"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 466,
+      "height": 452
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -250,
+      "y": -54
+    }
+  },
+  {
+    "__type__": "cc.Button",
+    "node": {
+      "__id__": 3
+    },
+    "transition": 3,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "zoomScale": 1.1,
+    "clickEvents": [
+      {
+        "__type__": "cc.ClickEvent",
+        "target": {
+          "__id__": 1
+        },
+        "component": "UIGroup",
+        "handler": "createBtnClicked"
+      }
+    ],
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$normalSprite": {
+      "__uuid__": "68/iwJlAxGc5MKkyXG1ibZ"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "2aSDdV1OFITrsE4m+8RgdH"
+    },
+    "pressedSprite": {
+      "__uuid__": "2aSDdV1OFITrsE4m+8RgdH"
+    },
+    "_N$target": {
+      "__id__": 3
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "joinroom",
+    "_parent": {
+      "__id__": 2
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 5
+        },
+        "_spriteFrame": {
+          "__uuid__": "44VwTN/GdE3LHP1V4kHr4r"
+        },
+        "_type": 1
+      },
+      {
+        "__id__": 6
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "12jUl+NFZMc4D2AMFzcHrX"
+      },
+      "fileId": "46a4fJTdxZDLLT1CbQSO8V8"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 491,
+      "height": 479
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 250,
+      "y": -50
+    }
+  },
+  {
+    "__type__": "cc.Button",
+    "node": {
+      "__id__": 5
+    },
+    "transition": 3,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "zoomScale": 1.1,
+    "clickEvents": [
+      {
+        "__type__": "cc.ClickEvent",
+        "target": {
+          "__id__": 1
+        },
+        "component": "UIGroup",
+        "handler": "joinBtnClicked"
+      }
+    ],
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$normalSprite": {
+      "__uuid__": "44VwTN/GdE3LHP1V4kHr4r"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "a51J3B4ZlMKJTj3uOfGaVe"
+    },
+    "pressedSprite": {
+      "__uuid__": "a51J3B4ZlMKJTj3uOfGaVe"
+    },
+    "_N$target": {
+      "__id__": 5
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "backroom",
+    "_parent": {
+      "__id__": 2
+    },
+    "_active": false,
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 7
+        },
+        "_spriteFrame": {
+          "__uuid__": "f8HxAO9jJL2ZXZKO09VLXp"
+        }
+      },
+      {
+        "__id__": 8
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "12jUl+NFZMc4D2AMFzcHrX"
+      },
+      "fileId": "21963zAJXlF/Kd06QxGTHjL"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 459,
+      "height": 476
+    },
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -250,
+      "y": -54
+    }
+  },
+  {
+    "__type__": "cc.Button",
+    "node": {
+      "__id__": 7
+    },
+    "transition": 3,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "zoomScale": 1.1,
+    "clickEvents": [
+      {
+        "__type__": "cc.ClickEvent",
+        "target": {
+          "__id__": 1
+        },
+        "component": "UIGroup",
+        "handler": "backBtnClicked"
+      }
+    ],
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "_N$normalSprite": {
+      "__uuid__": "f8HxAO9jJL2ZXZKO09VLXp"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "eewcJUQ3NKxripzs579Scc"
+    },
+    "pressedSprite": {
+      "__uuid__": "eewcJUQ3NKxripzs579Scc"
+    },
+    "_N$target": {
+      "__id__": 7
+    }
+  }
+]

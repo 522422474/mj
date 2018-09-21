@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "checkBtn_gendaodiduihao",
+    "texture": "5aGZ3TsqdK5LM9GE+JsIzT",
+    "rect": [
+      0,
+      1,
+      40,
+      38
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      40,
+      40
+    ]
+  }
+}

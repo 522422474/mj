@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_pokerMask",
+    "texture": "47hMG5V4tGTq+7D6CuxxWu",
+    "rect": [
+      0,
+      0,
+      117,
+      167
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      117,
+      167
+    ]
+  }
+}

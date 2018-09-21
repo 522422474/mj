@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "meihua",
+    "texture": "a6wlbZ3DxD+IpRex+Bnl1l",
+    "rect": [
+      0,
+      0,
+      214,
+      155
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      214,
+      155
+    ]
+  }
+}

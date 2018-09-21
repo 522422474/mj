@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "1fa8ee76-a233-4286-b410-7eec5459dc5f",
+  "atlasJson": "{\"imagePath\":\"piedilei_tex.png\",\"name\":\"piedilei\",\"SubTexture\":[{\"width\":132,\"y\":214,\"height\":120,\"name\":\"dilei\",\"x\":346},{\"width\":107,\"y\":336,\"height\":100,\"name\":\"huohua1\",\"x\":346},{\"width\":78,\"y\":403,\"height\":84,\"name\":\"huohua2\",\"x\":175},{\"width\":172,\"y\":214,\"height\":211,\"name\":\"dilei2\",\"x\":1},{\"width\":190,\"y\":1,\"height\":211,\"name\":\"dilei3\",\"x\":1},{\"width\":169,\"y\":214,\"height\":187,\"name\":\"dilei4\",\"x\":175}]}",
+  "texture": "94b0941c-d84f-4a1b-8f27-57accf3ece8a",
+  "subMetas": {}
+}

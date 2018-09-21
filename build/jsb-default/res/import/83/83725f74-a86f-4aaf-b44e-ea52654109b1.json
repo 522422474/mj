@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Btn_GameTable_NotRob_D",
+    "texture": "eb3qE2tfNAlLus4lf0uhos",
+    "rect": [
+      0,
+      0,
+      246,
+      105
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      246,
+      105
+    ]
+  }
+}

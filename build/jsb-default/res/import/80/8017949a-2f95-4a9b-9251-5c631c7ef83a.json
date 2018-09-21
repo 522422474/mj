@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "nn_mianfeilingquhui",
+    "texture": "8cYx/zoTZM84DVkACrv9Tt",
+    "rect": [
+      1,
+      1,
+      331,
+      98
+    ],
+    "offset": [
+      0,
+      2.5
+    ],
+    "originalSize": [
+      333,
+      105
+    ]
+  }
+}

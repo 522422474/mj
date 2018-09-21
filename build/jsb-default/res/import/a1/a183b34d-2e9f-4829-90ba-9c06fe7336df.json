@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "huier_bg",
+    "texture": "f07bPqs35FdpuuWow9rTgi",
+    "rect": [
+      0,
+      0,
+      82,
+      98
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      82,
+      98
+    ]
+  }
+}

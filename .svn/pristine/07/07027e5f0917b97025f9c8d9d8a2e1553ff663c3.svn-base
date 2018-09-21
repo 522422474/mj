@@ -1,0 +1,43 @@
+var roomUtil = require('roomUtil');
+var gameDefine = require('gameDefine');
+var roomHandler = require('roomHandler');
+
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+    },
+
+    onLoad: function () {
+    },
+    onDestroy: function () {
+    },
+    onEnable: function () {
+        cc.log('..ruleTipsView onEnable.');
+        this.showRuleTips();
+    },
+
+    showRuleTips: function(){
+        cc.log('..showRuleTips.');
+
+        var roomData = roomHandler.getRoomData();
+        if(roomData == undefined){
+            return;
+        }
+        var contentNode = cc.find('small/content', this.node);
+        if (contentNode) {
+            contentNode.getComponent(cc.Label).string = roomUtil.getRoomRuleStrOnType(roomData);
+
+            var self = this;
+            this.node.stopAllActions();
+            this.node.runAction(cc.sequence(
+                cc.moveTo(0.5, cc.p(0, 334)),
+                cc.delayTime(10),
+                cc.moveTo(0.5, cc.p(0, 434)),
+                cc.callFunc(function() {
+                    self.node.active = false;
+                })
+            ));
+        }
+    }
+});

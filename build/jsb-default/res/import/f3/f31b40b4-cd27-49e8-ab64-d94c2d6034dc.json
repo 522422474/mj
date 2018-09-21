@@ -1,0 +1,8 @@
+{
+  "__type__": "dragonBones.DragonBonesAtlasAsset",
+  "_name": "shengli_tex",
+  "_atlasJson": "{\"imagePath\":\"shengli_tex.png\",\"SubTexture\":[{\"width\":67,\"y\":1,\"height\":66,\"name\":\"sheng\",\"x\":1},{\"width\":65,\"y\":1,\"height\":67,\"name\":\"li\",\"x\":70}],\"name\":\"shengli\"}",
+  "texture": {
+    "__uuid__": "f5eV3Hp91CHrwiS1yySYyY"
+  }
+}

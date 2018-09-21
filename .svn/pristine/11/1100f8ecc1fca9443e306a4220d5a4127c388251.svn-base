@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f31b40b4-cd27-49e8-ab64-d94c2d6034dc",
+  "atlasJson": "{\"imagePath\":\"shengli_tex.png\",\"SubTexture\":[{\"width\":67,\"y\":1,\"height\":66,\"name\":\"sheng\",\"x\":1},{\"width\":65,\"y\":1,\"height\":67,\"name\":\"li\",\"x\":70}],\"name\":\"shengli\"}",
+  "texture": "f5795dc7-a7dd-421e-bc22-4b5cb2498c98",
+  "subMetas": {}
+}

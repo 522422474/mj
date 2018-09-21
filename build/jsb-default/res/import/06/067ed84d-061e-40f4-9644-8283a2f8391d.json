@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gaodetouxiangdaxiao",
+    "texture": "86HjQZFjNA4qyr8AvUmNcE",
+    "rect": [
+      1,
+      2,
+      90,
+      90
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      92,
+      93
+    ]
+  }
+}

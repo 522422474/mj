@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "artword_x",
+    "texture": "f461oHyt5KHIN/zJlUZEOJ",
+    "rect": [
+      0,
+      0,
+      36,
+      33
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      36,
+      33
+    ]
+  }
+}

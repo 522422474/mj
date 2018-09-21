@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "queding01",
+    "texture": "ddiKEca3RFM7Er4aONf7jR",
+    "rect": [
+      0,
+      0,
+      269,
+      103
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      269,
+      105
+    ]
+  }
+}

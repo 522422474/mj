@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "haixiu2",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      668,
+      122,
+      82,
+      118
+    ],
+    "offset": [
+      0,
+      -1
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

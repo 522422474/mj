@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "baoyuan2",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      2,
+      130,
+      88,
+      126
+    ],
+    "offset": [
+      -1,
+      -1
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

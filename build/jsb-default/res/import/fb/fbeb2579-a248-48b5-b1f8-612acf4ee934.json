@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "qiangyan3",
+    "texture": "55k2COX+VCAKAPA2iABCih",
+    "rect": [
+      0,
+      1,
+      134,
+      132
+    ],
+    "offset": [
+      -1,
+      -0.5
+    ],
+    "originalSize": [
+      136,
+      133
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gr_bq_banzhuan",
+    "texture": "b64hQiEVlNxofu+N9M8LmZ",
+    "rect": [
+      0,
+      0,
+      76,
+      80
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      76,
+      80
+    ]
+  }
+}

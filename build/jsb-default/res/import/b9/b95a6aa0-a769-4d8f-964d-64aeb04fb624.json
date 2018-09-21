@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wodetuiguangjin",
+    "texture": "0fhQeVumJMzb4Ryq2h+dpb",
+    "rect": [
+      0,
+      3,
+      692,
+      144
+    ],
+    "offset": [
+      0,
+      -1.5
+    ],
+    "originalSize": [
+      692,
+      147
+    ]
+  }
+}

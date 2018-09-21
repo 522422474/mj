@@ -1,0 +1,20 @@
+var RoomHandler = require('roomHandler');
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        
+    },
+
+    onLoad: function () {
+
+    },
+
+    quitRoomClick: function () {
+    	cc.log('RoomHandler.room.id = '+RoomHandler.room.id);
+    	RoomHandler.quitRoom(RoomHandler.room.id);
+    },
+    close: function () {
+        closeView(this.node.name);
+    },
+});

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "nangou1",
+    "texture": "5bbj1vIaxL6rjD0VwYCK6J",
+    "rect": [
+      96,
+      764,
+      88,
+      124
+    ],
+    "offset": [
+      2,
+      0
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}

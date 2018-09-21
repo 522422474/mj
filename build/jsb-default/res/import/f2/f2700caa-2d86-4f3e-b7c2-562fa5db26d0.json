@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biaotikuaisuzupai",
+    "texture": "e5KWgvBB9GU6RYNN+xdqBB",
+    "rect": [
+      0,
+      4,
+      240,
+      35
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      240,
+      43
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dong1",
+    "texture": "2cP9G0eqVGwbvvKYJT1irk",
+    "rect": [
+      0,
+      0,
+      35,
+      100
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      35,
+      100
+    ]
+  }
+}

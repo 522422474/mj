@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bulazhuang",
+    "texture": "d2PWQLAeBHkLBSuiJyl+HU",
+    "rect": [
+      1,
+      0,
+      108,
+      47
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      109,
+      47
+    ]
+  }
+}

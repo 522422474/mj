@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn-home-tjmj",
+    "texture": "07luL0/2pPbYqTGhNEUgk4",
+    "rect": [
+      0,
+      0,
+      281,
+      445
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      281,
+      445
+    ]
+  }
+}

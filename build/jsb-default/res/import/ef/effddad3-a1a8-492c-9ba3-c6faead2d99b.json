@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gr_bq_meigui",
+    "texture": "01twBjtzpLFb9OSi6uphVU",
+    "rect": [
+      0,
+      0,
+      66,
+      73
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      66,
+      73
+    ]
+  }
+}

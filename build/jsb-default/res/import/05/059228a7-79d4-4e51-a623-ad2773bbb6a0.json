@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "liketixian02",
+    "texture": "33vhRl4ytOZ44E08e0SGRt",
+    "rect": [
+      0,
+      0,
+      310,
+      115
+    ],
+    "offset": [
+      -2,
+      4
+    ],
+    "originalSize": [
+      314,
+      123
+    ]
+  }
+}

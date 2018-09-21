@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_jiazhuhui_D",
+    "texture": "3fOI7xvhtLpLIHz/wC+LhS",
+    "rect": [
+      0,
+      0,
+      216,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      216,
+      79
+    ]
+  }
+}

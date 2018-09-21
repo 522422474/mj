@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "paibanzhuan_tex",
+    "texture": "ceqNaCmE1HVZ3wBvmmQgo+",
+    "rect": [
+      1,
+      1,
+      243,
+      411
+    ],
+    "offset": [
+      -5.5,
+      49.5
+    ],
+    "originalSize": [
+      256,
+      512
+    ]
+  }
+}

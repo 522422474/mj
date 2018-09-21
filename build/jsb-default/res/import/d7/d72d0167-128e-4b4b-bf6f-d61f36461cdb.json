@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Img_GameTable_Win",
+    "texture": "2favc70V5DXp0ZTawTtpH9",
+    "rect": [
+      1,
+      0,
+      299,
+      172
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      300,
+      172
+    ]
+  }
+}

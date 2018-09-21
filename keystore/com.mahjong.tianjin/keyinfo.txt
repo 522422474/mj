@@ -1,0 +1,9 @@
+密钥库密码 tianjinmajiang2017
+密钥库别名 tianjinmajiang
+密钥库别名密码 mengfanqi
+
+MD5: 6A:ED:35:C5:33:53:08:BC:94:7E:31:21:44:69:7B:8A
+SHA1: 66:20:64:99:B8:97:7F:AF:8B:42:37:98:F0:C9:0D:6A:91:6C:37:89
+SHA256: 1F:90:FE:FF:A9:FA:46:BC:EC:29:09:72:50:F3:F3:83:3C:04:57:FE:D9:12:EE:86:DF:F1:F0:BE:41:4D:E8:04
+签名算法名称: SHA256withRSA
+版本: 3

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "buchashuianniu",
+    "texture": "51djVtWyxLFbbI72G+Xfh2",
+    "rect": [
+      0,
+      0,
+      269,
+      103
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      269,
+      105
+    ]
+  }
+}

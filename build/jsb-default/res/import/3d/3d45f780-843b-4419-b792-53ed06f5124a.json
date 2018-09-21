@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_gendaodi_N",
+    "texture": "58tnP3suZGgZwUBttY88Pu",
+    "rect": [
+      0,
+      0,
+      218,
+      79
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      218,
+      79
+    ]
+  }
+}

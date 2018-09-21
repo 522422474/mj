@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gendaodidonghua_tex",
+    "texture": "d2VdYVc8VLVZPc/hkLu7fL",
+    "rect": [
+      1,
+      1,
+      221,
+      176
+    ],
+    "offset": [
+      -16.5,
+      39
+    ],
+    "originalSize": [
+      256,
+      256
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ruoyumomo",
+    "texture": "1clYD8qE5LW5WUOlOEgEG7",
+    "rect": [
+      0,
+      0,
+      846,
+      409
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      846,
+      409
+    ]
+  }
+}

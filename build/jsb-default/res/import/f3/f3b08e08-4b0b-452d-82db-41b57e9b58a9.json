@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "guanbianniu2",
+    "texture": "f01D1o1F9FEqgK9IHoKQ7o",
+    "rect": [
+      11,
+      13,
+      76,
+      76
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      98,
+      101
+    ]
+  }
+}

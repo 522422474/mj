@@ -1,0 +1,21 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "zuoyoutongpaimb",
+    "texture": "a532a29BJHO7O+rDoo00e/",
+    "rect": [
+      0,
+      0,
+      80,
+      55
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      80,
+      55
+    ]
+  }
+}
